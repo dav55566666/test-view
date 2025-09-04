@@ -931,21 +931,21 @@ h6 {
   right: 0;
   transition: all 0.5s;
 }
-.modal.position-rigth .modal__container .close-btn {
+.modal.visible {
+  width: 100%;
+}
+.modal.visible .modal__container .close-btn {
   position: fixed;
   left: unset;
   right: 680px;
 }
 @media (max-width: 1024px) {
-  .modal.position-rigth .modal__container .close-btn {
+  .modal.visible .modal__container .close-btn {
     top: 16px;
     left: unset;
     right: 16px;
     position: absolute;
   }
-}
-.modal.visible {
-  width: 100%;
 }
 .modal .modal__container {
   padding: 48px 40px;
