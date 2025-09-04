@@ -1774,6 +1774,7 @@ h6 {
 }
 .header-mobile .header-mobile__links .header-mobile__link:first-child, .header-mobile .header-mobile__links .header-mobile__link:last-child {
   grid-column: span 2;
+  flex-direction: row;
 }
 
 .move-item {
