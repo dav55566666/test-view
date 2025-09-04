@@ -96,7 +96,10 @@ icon-burger
 <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
     <use xlink:href="img/sprite.svg#icon-burger"></use>
 </svg> 
-
+incon-user
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+    <use xlink:href="img/sprite.svg#icon-user"></use>
+</svg> 
 -->
 
 <svg>
