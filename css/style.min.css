@@ -1542,20 +1542,24 @@ h6 {
   max-width: 240px;
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .offer .offer__container .offer__content .big-items__item {
+    display: none;
+  }
+  .offer .offer__container .offer__content .big-items__item:first-child {
+    display: block;
+    max-width: unset;
+  }
+}
 .offer .offer__container .offer__content img {
   width: 100%;
-  max-width: 240px;
   height: 240px;
   object-fit: cover;
   border-radius: 20px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   .offer .offer__container .offer__content img {
-    display: none;
-  }
-  .offer .offer__container .offer__content img:first-child {
-    display: block;
-    max-width: unset;
+    height: 328px;
   }
 }
 .offer .offer__container .offer__content.big-items .big-items__item {
@@ -1828,6 +1832,57 @@ h6 {
 .header-mobile .header-mobile__links .header-mobile__link:first-child, .header-mobile .header-mobile__links .header-mobile__link:last-child {
   grid-column: span 2;
   flex-direction: row;
+}
+
+.movies {
+  width: 100%;
+  padding: 30px 16px;
+}
+.movies .movies__container .section-title {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.movies .movies__container .movies__tags {
+  margin-bottom: 60px;
+}
+@media (max-width: 1280px) {
+  .movies .movies__container .movies__tags {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+}
+.movies .movies__container .movies__tags .button {
+  max-width: max-content;
+  padding: 20px 32px;
+  font-size: 24px;
+  white-space: nowrap;
+}
+.movies .movies__container .movies__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 70px;
+}
+@media (max-width: 1680px) {
+  .movies .movies__container .movies__list {
+    gap: 40px;
+  }
+}
+@media (max-width: 1280px) {
+  .movies .movies__container .movies__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .movies .movies__container .movies__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movies .movies__container .movies__list .move-item .move-item__img {
+    height: 200px;
+  }
 }
 
 .move-item {
