@@ -1176,6 +1176,9 @@ h6 {
   .header .header__container .header__content .header__right .header__right-buttons .button {
     display: none;
   }
+  .header .header__container .header__content .header__right .header__right-buttons .button.search-btn {
+    display: flex;
+  }
 }
 .header .header__container .header__content .header__right .header__right-buttons .burger-btn {
   display: none;
@@ -1734,6 +1737,56 @@ h6 {
 }
 @media (max-width: 1680px) {
   #subscribe-modal .modal__container .subscribe-modal__bottom {
+    max-width: 1280px;
+  }
+}
+
+#search-modal .modal__container {
+  max-width: unset;
+  width: 100%;
+  padding: 54px 16px;
+}
+#search-modal .modal__container .search-modal__title {
+  position: relative;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto 80px;
+}
+@media (max-width: 1680px) {
+  #search-modal .modal__container .search-modal__title {
+    max-width: 1280px;
+  }
+}
+#search-modal .modal__container .search-modal__title .search-modal__title-text {
+  max-width: 500px;
+}
+#search-modal .modal__container .search-modal__title .button {
+  left: unset;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+#search-modal .modal__container .search-modal__input {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto 32px;
+}
+@media (max-width: 1680px) {
+  #search-modal .modal__container .search-modal__input {
+    max-width: 1280px;
+  }
+}
+#search-modal .modal__container .search-modal__input .input-text {
+  max-width: 784px;
+}
+#search-modal .modal__container .search-modal__bottom {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  display: none;
+}
+@media (max-width: 1680px) {
+  #search-modal .modal__container .search-modal__bottom {
     max-width: 1280px;
   }
 }
