@@ -7,7 +7,7 @@
                 </a>
                 <div class="header__subscribe">
                     <span class="text font-jost size-28 color-gray-400 weight-500">Фильмы и сериалы</span>
-                    <button class="button variant-2">Оформить подписку</button>
+                    <button class="button variant-2" onclick="openModal('subscribe-modal')">Оформить подписку</button>
                 </div>
             </div>
             <div class="header__right flex align-center justify-end">
@@ -40,3 +40,5 @@
         </div>
     </div>
 </header>
+
+@include('../HeaderMobileModal/_index.html')
