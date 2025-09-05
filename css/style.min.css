@@ -990,7 +990,11 @@ h6 {
 .input-text .input.is-error input {
   color: var(--red-500);
 }
-.input-text .input input {
+.input-text .input.textarea {
+  height: 240px;
+  padding: 16px;
+}
+.input-text .input input, .input-text .input textarea {
   color: var(--white);
   font-family: Manrope;
   font-size: 18px;
@@ -1003,8 +1007,11 @@ h6 {
   border: none;
   outline: none;
 }
-.input-text .input input::placeholder {
+.input-text .input input::placeholder, .input-text .input textarea::placeholder {
   color: var(--gray-600);
+}
+.input-text .input textarea {
+  resize: none;
 }
 
 .tabs {
@@ -1647,6 +1654,7 @@ h6 {
   flex-direction: column;
   gap: 20px;
   overflow: hidden;
+  width: 100%;
 }
 @media (max-width: 1280px) {
   .about .about__content {
@@ -1667,6 +1675,9 @@ h6 {
     width: 48px;
     height: 44px;
   }
+}
+.about .about__content p {
+  max-width: 1560px;
 }
 
 #auth-modal .modal__container {
@@ -1883,6 +1894,67 @@ h6 {
   .movies .movies__container .movies__list .move-item .move-item__img {
     height: 200px;
   }
+}
+
+.support {
+  width: 100%;
+  padding: 60px 16px;
+}
+.support .support__container .support__title {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.support .support__container .support__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.support .support__container .support__content .support__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.support .support__container .support__content .support__item .support__item-feedback {
+  padding: 32px;
+  border-radius: 16px;
+}
+
+#callback-modal .modal__container {
+  max-width: 580px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  overflow: unset;
+}
+@media (max-width: 1024px) {
+  #callback-modal .modal__container {
+    padding: 30px 16px;
+  }
+}
+#callback-modal .modal__container .close-btn {
+  top: 20px;
+  right: -80px;
+  position: absolute;
+}
+#callback-modal .modal__container .callback-modal__content {
+  width: 100%;
+}
+#callback-modal .modal__container .callback-modal__content .callback-modal__title {
+  margin-bottom: 60px;
+}
+#callback-modal .modal__container .callback-modal__content .callback-modal__form .button {
+  height: 56px;
+}
+#callback-modal .modal__container .callback-modal__content form {
+  width: 100%;
+}
+#callback-modal .modal__container .callback-modal__content .input-text {
+  width: 100%;
+}
+#callback-modal .modal__container .callback-modal__content .callback-modal__inputs {
+  width: 100%;
 }
 
 .move-item {
