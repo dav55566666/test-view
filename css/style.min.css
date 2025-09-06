@@ -2874,6 +2874,125 @@ h6 {
   }
 }
 
+#treiler-modal .modal__container {
+  max-width: 1680px;
+  width: 100%;
+  height: calc(100vh - 200px);
+  border-radius: 20px;
+  overflow: unset;
+}
+@media (max-width: 1680px) {
+  #treiler-modal .modal__container {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1024px) {
+  #treiler-modal .modal__container {
+    padding: 30px 16px;
+    height: 220px;
+  }
+}
+#treiler-modal .modal__container .close-btn {
+  top: 20px;
+  right: -80px;
+  position: absolute;
+}
+@media (max-width: 1024px) {
+  #treiler-modal .modal__container .close-btn {
+    right: 16px;
+    top: -56px;
+  }
+}
+#treiler-modal .modal__container .treiler-modal__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  #treiler-modal .modal__container .treiler-modal__content .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+#description-modal {
+  padding: 0 20px;
+}
+@media (max-width: 1024px) {
+  #description-modal {
+    padding: 0;
+  }
+}
+#description-modal .modal__container {
+  max-width: 1680px;
+  width: 100%;
+  height: calc(100vh - 200px);
+  border-radius: 20px;
+  overflow: unset;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media (max-width: 1680px) {
+  #description-modal .modal__container {
+    max-width: 1280px;
+  }
+}
+#description-modal .modal__container .close-btn {
+  top: 20px;
+  right: -80px;
+  position: absolute;
+}
+@media (max-width: 1024px) {
+  #description-modal .modal__container .close-btn {
+    right: 16px;
+    top: -56px;
+  }
+}
+#description-modal .modal__container .description-modal__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  gap: 0;
+  padding: 24px 40px;
+}
+@media (max-width: 1024px) {
+  #description-modal .modal__container .description-modal__content {
+    padding: 24px 16px;
+  }
+}
+#description-modal .modal__container .description-modal__content .text {
+  width: 100%;
+  margin-bottom: 24px;
+}
+@media (max-width: 1024px) {
+  #description-modal .modal__container .description-modal__content .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+#description-modal .modal__container .description-modal__content p, #description-modal .modal__container .description-modal__content li {
+  color: var(--gray-100);
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  width: 100%;
+}
+#description-modal .modal__container .description-modal__content ul {
+  width: 100%;
+  margin-left: 40px;
+}
+#description-modal .modal__container .description-modal__content ul li {
+  list-style: disc;
+}
+
 .move-item {
   width: 100%;
   display: flex;
