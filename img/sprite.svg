@@ -130,6 +130,21 @@ icon-check
 <svg class="icon" width="18" height="12" viewBox="0 0 18 12">
     <use xlink:href="img/sprite.svg#icon-check"></use>
 </svg>
+
+icon-kino-poisk
+<svg class="icon" width="32" height="32" viewBox="0 0 32 32">
+    <use xlink:href="img/sprite.svg#icon-kino-poisk"></use>
+</svg>
+
+icon-imdb
+<svg class="icon" width="32" height="32" viewBox="0 0 32 32">
+    <use xlink:href="img/sprite.svg#icon-imdb"></use>
+</svg>
+
+icon-kinopoisk
+<svg class="icon" width="32" height="32" viewBox="0 0 32 32">
+    <use xlink:href="img/sprite.svg#icon-kinopoisk"></use>
+</svg>
 -->
 
 <svg>
