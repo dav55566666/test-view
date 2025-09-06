@@ -3,6 +3,7 @@
 <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
     <use xlink:href="img/sprite.svg#icon-search"></use>
 </svg> 
+
 icon-wishlist 
 <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
     <use xlink:href="img/sprite.svg#icon-wishlist"></use>
@@ -100,6 +101,35 @@ incon-user
 <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
     <use xlink:href="img/sprite.svg#icon-user"></use>
 </svg> 
+icon-personal-info
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+    <use xlink:href="img/sprite.svg#icon-personal-info"></use>
+</svg>
+icon-history
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+    <use xlink:href="img/sprite.svg#icon-history"></use>
+</svg>
+icon-recs
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+    <use xlink:href="img/sprite.svg#icon-recs"></use>
+</svg>
+icon-wallet
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+    <use xlink:href="img/sprite.svg#icon-wallet"></use>
+</svg>
+icon-payment-methods
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+    <use xlink:href="img/sprite.svg#icon-payment-methods"></use>
+</svg>
+icon-logout
+<svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+    <use xlink:href="img/sprite.svg#icon-logout"></use>
+</svg>
+
+icon-check
+<svg class="icon" width="18" height="12" viewBox="0 0 18 12">
+    <use xlink:href="img/sprite.svg#icon-check"></use>
+</svg>
 -->
 
 <svg>
