@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+	 <head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+    <div class="header__container container">
+        <div class="header__content flex align-end justify-between">
+            <div class="header__left flex align-center">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="header__subscribe">
+                    <span class="text font-jost size-28 color-gray-400 weight-500">Фильмы и сериалы</span>
+                    <button class="button variant-2" onclick="openModal('subscribe-modal')">Оформить подписку</button>
+                </div>
+            </div>
+            <div class="header__right flex align-center justify-end">
+                <ul class="menu flex align-center justify-end">
+                    <li><a href="catalog.html" class="text color-gray-400 size-18 font-manrope">Каталог</a></li>
+                    <li><a href="recomendation.html" class="text color-gray-400 size-18 font-manrope">Рекомендации</a></li>
+                    <li><a href="" class="text color-gray-400 size-18 font-manrope">Обучение</a></li>
+                    <li><a href="movies.html" class="text color-gray-400 size-18 font-manrope">Фильмы</a></li>
+                    <li><a href="" class="text color-gray-400 size-18 font-manrope">Сериалы</a></li>
+                </ul>
+                <div class="header__right-buttons flex align-center justify-end">
+                    <button class="button variant-3 only-icon search-btn" onclick="openModal('search-modal')">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg> 
+                    </button>
+                    <a href="wishlist.html" class="button variant-3 only-icon">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="img/sprite.svg#icon-wishlist"></use>
+                        </svg>  
+                    </a>
+                    <button class="button variant-3" onclick="openModal('auth-modal')">Войти</button>
+                    <button class="button variant-3 only-icon burger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="header-mobile">
+    <div class="header-mobile__links">
+        <button class="header-mobile__link mobile-login-btn">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+            </svg> 
+            Авторизоваться
+        </button>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>                
+            Поиск
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-wishlist-fill"></use>
+            </svg>             
+            Избранное
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-catalog"></use>
+            </svg>              
+            Каталог
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-recs"></use>
+            </svg>             
+            Рекомендации
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-movies"></use>
+            </svg>             
+            Фильмы
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-series"></use>
+            </svg>            
+            Сериалы
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+                <use xlink:href="img/sprite.svg#icon-education"></use>
+            </svg>                            
+            Обучение
+        </a>
+    </div>
+</div>
+<div class="modal" id="search-modal">
+    <div class="modal__container">
+        <div class="search-modal__title">
+            <div class="search-modal__title-text flex direction-column gap-32">
+                <h2 class="text color-white weight-500 famaly-manrope size-32">Поиск</h2>
+            </div>
+            <button class="button variant-3 only-icon close-btn">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg> 
+            </button>
+        </div>
+        <div class="search-modal__input">
+            <label for="" class="input-text">
+                <span class="input">
+                    <input type="text" placeholder="Поиск">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                </span>
+            </label>
+        </div>
+        <section class="movies-swiper small-items">
+    <div class="movies-swiper__container container">
+      <div class="section-title">
+        <h2>
+          <a href="" class="text size-24 weitgh-500 font-manrope color-white">
+            Часто ищут
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    </div>
+</div>
+			<main class="page">
+                <section class="error-page">
+                    <div class="error-page__container container">
+                        <h1 class="text size-48 weight-500 font-jose color-white">Что то пошло не так</h1>
+                        <img src="img/Frame 2087326499.png" alt="">
+                        <a href="/" class="button variant-3">Вернуться на главную</a>
+                    </div>
+                </section>
+			</main>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://wowjs.uk/dist/wow.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+<script>new WOW().init();</script>
+	</body>
+</html>

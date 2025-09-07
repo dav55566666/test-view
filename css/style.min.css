@@ -1130,6 +1130,35 @@ h6 {
   flex: 1 1 auto;
 }
 
+.error-page {
+  width: 100%;
+  padding: 60px 16px;
+}
+.error-page .error-page__container {
+  width: 100%;
+  max-width: 832px;
+}
+.error-page .error-page__container h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+.error-page .error-page__container img {
+  display: block;
+  width: 100%;
+  margin-bottom: 60px;
+}
+.error-page .error-page__container .button {
+  max-width: 382px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .error-page .error-page__container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
 .header {
   width: 100%;
   padding: 20px 16px;
