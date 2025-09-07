@@ -2917,9 +2917,6 @@ h6 {
   }
 }
 
-#description-modal {
-  padding: 0 20px;
-}
 @media (max-width: 1024px) {
   #description-modal {
     padding: 0;
@@ -2991,6 +2988,80 @@ h6 {
 }
 #description-modal .modal__container .description-modal__content ul li {
   list-style: disc;
+}
+
+.actor-detail {
+  width: 100%;
+  padding: 60px 16px;
+}
+.actor-detail .actor-detail__container {
+  max-width: 1240px;
+}
+.actor-detail .actor-detail__container .actor-detail__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .actor-detail .actor-detail__container .actor-detail__top {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.actor-detail .actor-detail__container .actor-detail__top .actor-detail__img {
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 1024px) {
+  .actor-detail .actor-detail__container .actor-detail__top .actor-detail__img {
+    max-width: unset;
+  }
+}
+.actor-detail .actor-detail__container .actor-detail__top .actor-detail__img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.actor-detail .actor-detail__container .actor-detail__top .actor-detail__bio {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--gray-900);
+  max-width: 780px;
+}
+@media (max-width: 1024px) {
+  .actor-detail .actor-detail__container .actor-detail__top .actor-detail__bio {
+    max-width: unset;
+  }
+}
+.actor-detail .actor-detail__container .actor-detail__top .actor-detail__bio .actor-detail__bio-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.actor-detail .actor-detail__container .actor-detail__movies {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.actor-detail .actor-detail__container .actor-detail__movies .grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1024px) {
+  .actor-detail .actor-detail__container .actor-detail__movies .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 }
 
 .move-item {
@@ -3370,6 +3441,7 @@ h6 {
 .actor-item .actor-item__img {
   width: 100%;
   margin-bottom: 12px;
+  display: block;
 }
 .actor-item .actor-item__img img {
   width: 100%;
