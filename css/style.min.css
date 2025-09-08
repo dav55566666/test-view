@@ -1983,6 +1983,13 @@ h6 {
   padding: 20px 32px;
   font-size: 24px;
   white-space: nowrap;
+  order: 2;
+  border: 1px solid transparent;
+}
+.movies .movies__container .movies__tags .button.active {
+  border: 1px solid var(--beige-500);
+  color: var(--beige-500);
+  order: 1;
 }
 .movies .movies__container .movies__list {
   display: grid;
@@ -3280,6 +3287,14 @@ h6 {
   width: 100%;
   position: relative;
   padding-top: 132px;
+}
+.genere-item .alllink {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 .genere-item .genere-item__images {
   width: 100%;
