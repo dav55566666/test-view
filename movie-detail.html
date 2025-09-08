@@ -552,10 +552,13 @@
                 <div class="movies-detail__central-buttons">
                     <button class="button default bg-red-600 color-white">Смотреть</button>
                     <button class="button variant-3" onclick="openModal('treiler-modal')">Трейлер</button>
-                    <button class="button variant-3 only-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button class="button variant-3 only-icon wishlist-btn">
+                        <svg class="active-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.62 20.8096C12.28 20.9296 11.72 20.9296 11.38 20.8096C8.48 19.8196 2 15.6896 2 8.68961C2 5.59961 4.49 3.09961 7.56 3.09961C9.38 3.09961 10.99 3.97961 12 5.33961C13.01 3.97961 14.63 3.09961 16.44 3.09961C19.51 3.09961 22 5.59961 22 8.68961C22 15.6896 15.52 19.8196 12.62 20.8096Z" fill="#F45E3F"/>
+                        </svg>             
+                        <svg class="inactive-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.62 20.8096C12.28 20.9296 11.72 20.9296 11.38 20.8096C8.48 19.8196 2 15.6896 2 8.68961C2 5.59961 4.49 3.09961 7.56 3.09961C9.38 3.09961 10.99 3.97961 12 5.33961C13.01 3.97961 14.63 3.09961 16.44 3.09961C19.51 3.09961 22 5.59961 22 8.68961C22 15.6896 15.52 19.8196 12.62 20.8096Z" stroke="#EFF1F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
+                        </svg>                                                                      
                     </button>
                     <button class="button variant-3 only-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -567,46 +570,33 @@
             <div class="movies-detail__right">
                 <div class="movies-detail__right-info">
                     <div class="buttons">
-                        <button class="active">Описание</button>
-                        <button>Детали</button>
+                        <button class="active description-btn">Описание</button>
+                        <button class="details-btn">Детали</button>
                     </div>
                     <div class="movies-detail__description">
-                        <p class="text size-16 weight-500 famaly-manrope color-gray-100">Действие разворачивается в футуристическом парке развлечений, где богатые гости могут погрузиться в детально воссозданную атмосферу Дикого Запада. Парк населен андроидами — «хостами», созданными, чтобы удовлетворять любые желания посетителей, будь то приключения, романтика или насилие. Однако с развитием сюжета хосты начинают проявлять признаки самосознания, и грань между реальностью и искусственным миром постепенно стирается.
+                        <p class="text size-18 weight-500 famaly-manrope color-gray-100">Действие разворачивается в футуристическом парке развлечений, где богатые гости могут погрузиться в детально воссозданную атмосферу Дикого Запада. Парк населен андроидами — «хостами», созданными, чтобы удовлетворять любые желания посетителей, будь то приключения, романтика или насилие. Однако с развитием сюжета хосты начинают проявлять признаки самосознания, и грань между реальностью и искусственным миром постепенно стирается.
                             Сериал поднимает глубокие философские вопросы о сознании, свободе воли, природе реальности и морали. Каждый сезон расширяет рамки повествования, выходя за пределы парка и исследуя влияние искусственного интеллекта на общество и человечество.</p>
                         <button class="show-all-btn" onclick="openModal('description-modal')">Развернуть описание</button>
                     </div>
-                </div>
-                <div class="movies-detail__right-rating">
-                    <div class="title-flex">
-                        <h4>Оцените сериал</h4>
-                        <span> Оценка после просмотра</span>
-                    </div>
-                    <div class="flex">
-                        <button class="set-rating-btn">
-                            <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.174 18.9893C40.3621 20.2164 40.9186 26.9876 38.1158 30.4981C36.9801 16.0629 28.025 15.3715 30.8103 0C20.5591 3.81673 12.4815 15.1343 13.196 25.9721C9.82407 20.094 13.4417 18.5096 10.1074 11.6007C8.9767 16.5298 5.57216 20.1884 3.12782 24.745C0.134438 30.3323 -1.72076 39.5016 2.34312 48C8.96165 43.2648 17.0242 40.4839 25.7286 40.4839C34.433 40.4839 42.4805 43.2597 49.094 47.9847C52.5362 34.7384 45.4288 22.4692 40.174 18.9867V18.9893ZM40.9938 14.226C42.824 12.5294 42.2824 8.23047 41.1292 6.17413C40.7256 5.45466 39.7554 3.66876 40.515 1.07409C37.479 2.96715 35.0647 6.61295 35.8695 10.3506C36.3609 12.6263 38.7601 16.2976 40.9938 14.226Z" fill="#757B8A"/>
-                            </svg>                                
-                            Плохо
-                        </button>
-                        <button class="set-rating-btn">
-                            <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.174 18.9893C40.3621 20.2164 40.9186 26.9876 38.1158 30.4981C36.9801 16.0629 28.025 15.3715 30.8103 0C20.5591 3.81673 12.4815 15.1343 13.196 25.9721C9.82407 20.094 13.4417 18.5096 10.1074 11.6007C8.9767 16.5298 5.57216 20.1884 3.12782 24.745C0.134438 30.3323 -1.72076 39.5016 2.34312 48C8.96165 43.2648 17.0242 40.4839 25.7286 40.4839C34.433 40.4839 42.4805 43.2597 49.094 47.9847C52.5362 34.7384 45.4288 22.4692 40.174 18.9867V18.9893ZM40.9938 14.226C42.824 12.5294 42.2824 8.23047 41.1292 6.17413C40.7256 5.45466 39.7554 3.66876 40.515 1.07409C37.479 2.96715 35.0647 6.61295 35.8695 10.3506C36.3609 12.6263 38.7601 16.2976 40.9938 14.226Z" fill="#FEC382"/>
-                            </svg>                                
-                            Нормально
-                        </button>
-                        <button class="set-rating-btn">
-                            <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_3056_19665)">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.174 18.9893C40.3621 20.2164 40.9186 26.9876 38.1158 30.4981C36.9801 16.0629 28.025 15.3715 30.8103 0C20.5591 3.81673 12.4815 15.1343 13.196 25.9721C9.82407 20.094 13.4417 18.5096 10.1074 11.6007C8.9767 16.5298 5.57216 20.1884 3.12782 24.745C0.134438 30.3323 -1.72076 39.5016 2.34312 48C8.96165 43.2648 17.0242 40.4839 25.7286 40.4839C34.433 40.4839 42.4805 43.2597 49.094 47.9847C52.5362 34.7384 45.4288 22.4692 40.174 18.9867V18.9893ZM40.9938 14.226C42.824 12.5294 42.2824 8.23047 41.1292 6.17413C40.7256 5.45466 39.7554 3.66876 40.515 1.07409C37.479 2.96715 35.0647 6.61295 35.8695 10.3506C36.3609 12.6263 38.7601 16.2976 40.9938 14.226Z" fill="#F45E3F"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_3056_19665">
-                                <rect width="50" height="48" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            Супер                                
-                        </button>
+                    <div class="movies-detail__parameters">
+                        <div class="flex direction-column gap-24">
+                            <div class="movies-detail__parameters-item flex direction-column gap-16">
+                                <span class="text size-16 weight-500 famaly-manrope color-gray-400">Оригинальное название</span>
+                                <span class="text size-16 weight-500 famaly-manrope color-gray-100">Original Name </span>
+                            </div>
+                            <div class="movies-detail__parameters-item flex direction-column gap-16">
+                                <span class="text size-16 weight-500 famaly-manrope color-gray-400">Возрастной рейтинг</span>
+                                <span class="text size-16 weight-500 famaly-manrope color-gray-100">16 +</span>
+                            </div>
+                            <div class="movies-detail__parameters-item flex direction-column gap-16">
+                                <span class="text size-16 weight-500 famaly-manrope color-gray-400">Страна</span>
+                                <div class="flex align-center gap-16">
+                                    <span class="text size-16 weight-500 famaly-manrope color-gray-100">США</span>
+                                    <span class="text size-16 weight-500 famaly-manrope color-gray-100">Канада</span>
+                                    <span class="text size-16 weight-500 famaly-manrope color-gray-100">Япония</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
