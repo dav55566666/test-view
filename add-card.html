@@ -65,6 +65,12 @@
     </div>
 </header>
 
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 <div class="header-mobile">
     <div class="header-mobile__links">
         <a href="profile.html" class="header-mobile__link mobile-user-btn">
@@ -540,6 +546,85 @@
     </div>
   </section>
   
+        <section class="movies-swiper actors-swiper">
+    <div class="movies-swiper__container container">
+      <div class="section-title">
+        <h2>
+          <a href="" class="text size-24 weitgh-500 font-manrope color-white">
+            Актеры и режиссеры
+          </a>
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
     </div>
 </div>
 <div class="modal" id="logout-modal">
@@ -754,7 +839,7 @@
 </footer>
 <div class="modal position-rigth" id="auth-modal">
     <div class="modal__container">
-        <button class="button variant-3 only-icon close-btn">
+        <button class="button variant-3 only-icon close-btn" onclick="setTab('auth-modal-tab', '1')">
             <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
                 <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg> 
