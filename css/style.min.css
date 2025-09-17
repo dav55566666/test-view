@@ -1788,6 +1788,18 @@ h6 {
     height: 200px;
   }
 }
+.movies-swiper .subscribe-btn {
+  margin-top: 80px;
+}
+.movies-swiper .subscribe-btn svg {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 1280px) {
+  .movies-swiper .subscribe-btn {
+    margin-top: 40px;
+  }
+}
 
 .banner {
   width: 100%;
@@ -3371,6 +3383,19 @@ h6 {
   border-radius: 20px;
   position: relative;
 }
+.move-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(180deg, rgba(157, 46, 23, 0) 0%, #BD3418 62.98%);
+}
 .move-item .all-link {
   position: absolute;
   top: 0;
@@ -3409,7 +3434,12 @@ h6 {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 4;
   gap: 6px;
+  transition: all 0.5s;
+  left: 0;
+  bottom: 0;
 }
 .move-item.in-main {
   position: relative;
@@ -3468,6 +3498,17 @@ h6 {
     font-size: 14px;
     line-height: 14px;
   }
+}
+.move-item.active::before {
+  opacity: 1;
+}
+.move-item.active .move-item__img .rating {
+  z-index: 4;
+}
+.move-item.active .move-item__content {
+  left: 10px;
+  bottom: 10px;
+  padding-right: 20px;
 }
 
 .top-item {
