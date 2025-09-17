@@ -1389,6 +1389,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 500px;
 }
 .tv-header .header__container .menu li {
   width: 100%;
@@ -1681,6 +1682,31 @@ h6 {
 .main .main__container .main__subscribe .button .icon {
   width: 24px;
   height: 24px;
+}
+.main.tv-main .main__swiper .slide-prev, .main.tv-main .main__swiper .slide-next {
+  height: 120px;
+  padding: 0;
+  background: unset;
+  width: 120px;
+}
+.main.tv-main .main__swiper .swiper {
+  height: 640px;
+}
+.main.tv-main .main__swiper .swiper .swiper-wrapper {
+  left: -60px;
+}
+.main.tv-main .main__swiper .swiper .swiper-wrapper .swiper-slide {
+  max-width: 950px;
+  height: 540px;
+  margin-right: -320px;
+}
+.main.tv-main .main__swiper .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+  max-width: 1120px;
+  height: 640px;
+}
+.main.tv-main .main__swiper .swiper .swiper-wrapper .swiper-slide.swiper-slide-next, .main.tv-main .main__swiper .swiper .swiper-wrapper .swiper-slide.swiper-slide-prev {
+  max-width: 950px;
+  height: 540px;
 }
 
 .movies-swiper {
