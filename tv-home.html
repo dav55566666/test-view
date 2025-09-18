@@ -1217,7 +1217,7 @@
 </div></div>
         </div>
       </div>
-      <button class="button variant-2 gap-24 subscribe-btn">
+      <button class="button variant-2 gap-24 subscribe-btn" onclick="openModal('subscribe-modal')">
           <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
               <use xlink:href="img/sprite.svg#icon-fire"></use>
           </svg> 
@@ -4375,12 +4375,16 @@
     </div>
 </div>
 			</main>
- 			<div class="modal" id="subscribe-modal">
+ 			<div class="modal tv-subscribe-modal" id="subscribe-modal">
     <div class="modal__container">
         <div class="subscribe-modal__title">
-            <div class="subscribe-modal__title-text flex direction-column gap-32">
-                <h2 class="text color-white weight-500 famaly-manrope size-32">Оформить подписку</h2>
-                <p class="text color-white weight-500 famaly-manrope size-16">
+            <div class="subscribe-modal__title-text flex direction-column gap-36">
+                <h2 class="text color-white weight-500 famaly-manrope size-32">Оформить подписку
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                </h2>
+                <p class="text color-white weight-500 famaly-manrope size-32">
                     Гарантируем качество! При подключения подписки мы дарим вам <span class="color-beige-500">3 дня бесплатно</span> (без списания средств): если сервис не понравится, просто отключите подписку в этот период
                 </p>
             </div>
@@ -4391,7 +4395,7 @@
             </button>
         </div>
         <div class="subscribe-modal__items flex justify-between align-center">
-            <div class="subscribe-item">
+            <div class="subscribe-item" onclick="openModal('payment-modal')">
     <div class="subscribe-item__content">
         <div class="subscribe-item__content-top">
             <span class="tag text color-white weight-500 famaly-manrope size-20 bg-violet-700">Оплата 1 раз в месяц</span>
@@ -4429,41 +4433,9 @@
                 </li>
             </ul>
         </div>
-        <div class="subscribe-item__bottom">
-            <button class="button default bg-red-600">Оформить подписку</button>
-            <span class="text size-14 weight-500 famaly-manrope color-gray-500">Сумма единоразового списания: 749 руб</span>
-        </div>
-    </div>
-    <div class="subscribe-item__advantages mobile-advantages">
-        <ul>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Отсутствие рекламы
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Доступ к эксклюзивам
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Поддержка всех устройств
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Безлимитный просмотр
-            </li>
-        </ul>
     </div>
 </div>
-            <div class="subscribe-item active">
+            <div class="subscribe-item active" onclick="openModal('payment-modal')">
     <div class="subscribe-item__content">
         <div class="subscribe-item__content-top">
             <span class="tag text color-white weight-500 famaly-manrope size-20 bg-violet-900">Оплата 1 раз в месяц</span>
@@ -4501,41 +4473,9 @@
                 </li>
             </ul>
         </div>
-        <div class="subscribe-item__bottom">
-            <button class="button default bg-red-600">Оформить подписку</button>
-            <span class="text size-14 weight-500 famaly-manrope color-gray-500">Сумма единоразового списания: 749 руб</span>
-        </div>
-    </div>
-    <div class="subscribe-item__advantages mobile-advantages">
-        <ul>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Отсутствие рекламы
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Доступ к эксклюзивам
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Поддержка всех устройств
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Безлимитный просмотр
-            </li>
-        </ul>
     </div>
 </div>
-            <div class="subscribe-item">
+            <div class="subscribe-item" onclick="openModal('payment-modal')">
     <div class="subscribe-item__content">
         <div class="subscribe-item__content-top">
             <span class="tag text color-white weight-500 famaly-manrope size-20 bg-gray-500">Оплата 1 раз в месяц</span>
@@ -4573,38 +4513,6 @@
                 </li>
             </ul>
         </div>
-        <div class="subscribe-item__bottom">
-            <button class="button default bg-red-600">Оформить подписку</button>
-            <span class="text size-14 weight-500 famaly-manrope color-gray-500">Сумма единоразового списания: 749 руб</span>
-        </div>
-    </div>
-    <div class="subscribe-item__advantages mobile-advantages">
-        <ul>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Отсутствие рекламы
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Доступ к эксклюзивам
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Поддержка всех устройств
-            </li>
-            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
-                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
-                    <use xlink:href="img/sprite.svg#icon-fire"></use>
-                </svg> 
-                Безлимитный просмотр
-            </li>
-        </ul>
     </div>
 </div>
         </div>
@@ -4612,6 +4520,65 @@
             <p class="text color-white weight-500 famaly-manrope size-16">
                 Гарантируем качество! При подключения подписки мы дарим вам <span class="color-beige-500">3 дня бесплатно</span> (без списания средств): если сервис не понравится, просто отключите подписку в этот период
             </p>
+        </div>
+    </div>
+</div>
+
+<div class="tv-payment-modal modal" id="payment-modal">
+    <div class="modal__container">
+        <div class="tv-payment-modal__body flex direction-column gap-80">
+            <div class="payment-modal__top flex direction-column gap-60">
+                <div class="flex align-center gap-40">
+                    <button class="button variant-3" onclick="closeModal('payment-modal')">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5004 36.5205L15.547 24.5671C14.1354 23.1555 14.1354 20.8455 15.547 19.4338L27.5004 7.48047" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Назад                    
+                    </button>
+                    <h2 class="text color-white weight-600 famaly-manrope size-36">Детали оплаты</h2>
+                </div>
+                <span class="text color-gray-100 weight-500 famaly-manrope size-28">
+                    Подписка <span class="color-beige-500">REDHEADSOUND PRO</span>
+                </span>
+            </div>
+            <div class="payment-modal__content flex direction-column gap-40">
+                <div class="flex align-center gap-80">
+                    <div class="bank-card-form border border-width-2 border-gray-500 border-radius-20">
+    <span class="title text font-manrope weight-500 size-32 color-gray-100">Данные карты</span>
+    <div class="bank-card-form__inputs grid column-2 gap-24">
+        <label for="" class="input-text">
+            <span class="input"><input type="text" placeholder="Номер карты"></span>
+        </label>
+        <label for="" class="input-text">
+            <span class="input"><input type="text" placeholder="ММ/ГГ"></span>
+        </label>
+        <label for="" class="input-text">
+            <span class="input"><input type="text" placeholder="CVV/CVC"></span>
+        </label>
+    </div>
+</div>
+                    <div class="keyboard-numbers grid column-3 gap-24">
+    <button class="button variant-3">7</button>
+    <button class="button variant-3">8</button>
+    <button class="button variant-3">9</button>
+    <button class="button variant-3">4</button>
+    <button class="button variant-3">5</button>
+    <button class="button variant-3">6</button>
+    <button class="button variant-3">1</button>
+    <button class="button variant-3">2</button>
+    <button class="button variant-3">3</button>
+    <button class="button variant-3">0</button>
+    <button class="button variant-3">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5594 40.5H33.9994C39.5194 40.5 43.9994 36.02 43.9994 30.5V17.5C43.9994 11.98 39.5194 7.5 33.9994 7.5H20.5594C17.7394 7.5 15.0594 8.68 13.1594 10.78L6.09938 18.54C3.27938 21.64 3.27938 26.36 6.09938 29.46L13.1594 37.22C15.0594 39.32 17.7394 40.5 20.5594 40.5Z" stroke="#B0B4BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M31.9991 28.9386L22.1191 19.0586" stroke="#B0B4BF" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22.1191 28.9386L31.9991 19.0586" stroke="#B0B4BF" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>            
+    </button>
+</div>
+                </div>
+                <button class="button variant-3">Продолжить</button>
+            </div>
         </div>
     </div>
 </div>
