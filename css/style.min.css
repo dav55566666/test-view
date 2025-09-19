@@ -1402,14 +1402,14 @@ h6 {
 .tv-header .header__container .menu li {
   width: 100%;
 }
-.tv-header .header__container .menu li a {
+.tv-header .header__container .menu li a, .tv-header .header__container .menu li button {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 72px;
 }
-.tv-header .header__container .menu li a .icon {
+.tv-header .header__container .menu li a .icon, .tv-header .header__container .menu li button .icon {
   width: 100px;
   height: 100%;
   display: flex;
@@ -1419,7 +1419,7 @@ h6 {
   transition: all 0.5s;
   position: relative;
 }
-.tv-header .header__container .menu li a .icon::before {
+.tv-header .header__container .menu li a .icon::before, .tv-header .header__container .menu li button .icon::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1431,13 +1431,13 @@ h6 {
   background: var(--red-500);
   opacity: 0;
 }
-.tv-header .header__container .menu li a .text {
+.tv-header .header__container .menu li a .text, .tv-header .header__container .menu li button .text {
   display: none;
 }
-.tv-header .header__container .menu li:hover a .icon {
+.tv-header .header__container .menu li:hover a .icon, .tv-header .header__container .menu li:hover button .icon {
   opacity: 1;
 }
-.tv-header .header__container .menu li:hover a .icon::before {
+.tv-header .header__container .menu li:hover a .icon::before, .tv-header .header__container .menu li:hover button .icon::before {
   opacity: 1;
 }
 .tv-header.active {
@@ -1458,7 +1458,7 @@ h6 {
   padding: 0;
   margin: 0;
 }
-.tv-header.active .header__container .menu li a .text {
+.tv-header.active .header__container .menu li a .text, .tv-header.active .header__container .menu li button .text {
   display: block;
 }
 
@@ -2171,6 +2171,29 @@ h6 {
   #search-modal .modal__container .search-modal__bottom {
     max-width: 1280px;
   }
+}
+#search-modal.tv-search-modal .modal__container .search-modal__title {
+  justify-content: flex-start;
+  align-items: center;
+}
+#search-modal.tv-search-modal .modal__container .search-modal__title .button {
+  max-width: 192px;
+  height: 76px;
+  font-size: 32px;
+  position: unset;
+  inset: 0;
+  margin: 0;
+}
+#search-modal.tv-search-modal .modal__container .search-modal__input {
+  width: 100%;
+  max-width: 912px;
+  margin: 0;
+}
+#search-modal.tv-search-modal .modal__container .search-modal__input .input-text .input {
+  height: 76px;
+}
+#search-modal.tv-search-modal .modal__container .search-modal__input .input-text .input input {
+  font-size: 32px;
 }
 
 .header-mobile {
@@ -3442,6 +3465,23 @@ h6 {
 .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content {
   width: 100%;
 }
+.tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo {
+  max-width: 720px;
+}
+.tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .input-text, .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .button, .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .promocode {
+  width: 100%;
+}
+.tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .input-text .input, .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .button .input, .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .promocode .input {
+  height: 76px;
+}
+.tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .input-text .input input, .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .button .input input, .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .promocode .input input {
+  font-size: 32px;
+}
+.tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content.payment-modal__content-promo .promocode {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content .flex {
   width: 100%;
 }
@@ -3454,6 +3494,69 @@ h6 {
   max-width: 264px;
 }
 .tv-payment-modal .modal__container .tv-payment-modal__body .payment-modal__content .button {
+  max-width: 720px;
+  height: 76px;
+  font-size: 32px;
+}
+
+.tv-success-payment-modal {
+  padding: 0;
+}
+.tv-success-payment-modal .modal__container {
+  width: 100%;
+  height: 100%;
+  max-width: unset;
+  padding: 50px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body {
+  width: 100%;
+  max-width: 1064px;
+  margin: 0 auto;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__top {
+  width: 100%;
+  max-width: 720px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__top .flex {
+  width: 100%;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__top .flex .button {
+  max-width: 192px;
+  height: 76px;
+  font-size: 32px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content {
+  width: 100%;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo {
+  max-width: 720px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .input-text, .tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .button, .tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .promocode {
+  width: 100%;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .input-text .input, .tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .button .input, .tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .promocode .input {
+  height: 76px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .input-text .input input, .tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .button .input input, .tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .promocode .input input {
+  font-size: 32px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content.payment-modal__content-promo .promocode {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content .flex {
+  width: 100%;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content .bank-card-form {
+  width: 100%;
+  max-width: 720px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content .keyboard-numbers {
+  width: 100%;
+  max-width: 264px;
+}
+.tv-success-payment-modal .modal__container .tv-success-payment-modal__body .success-payment-modal__content .button {
   max-width: 720px;
   height: 76px;
   font-size: 32px;
@@ -3981,7 +4084,7 @@ h6 {
 
 .bank-card-form {
   width: 100%;
-  padding: 24px;
+  padding: 24px 24px 32px;
 }
 .bank-card-form .title {
   display: block;
@@ -4005,8 +4108,9 @@ h6 {
 }
 .keyboard-numbers .button {
   width: 100%;
-  height: 72px;
+  height: 72px !important;
   font-size: 32px;
+  line-height: 38px;
 }
 .keyboard-numbers .button:last-child {
   grid-column: span 2;
