@@ -2087,6 +2087,33 @@ h6 {
   font-weight: 500;
   line-height: normal;
 }
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .reg-pass-input, #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .login-pass-input {
+  width: 100%;
+  padding-right: 96px;
+  position: relative;
+  margin-bottom: 32px;
+  display: none;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .reg-pass-input .toggle-pass-btn, #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .login-pass-input .toggle-pass-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 76px;
+  width: 76px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .reg-pass-input .toggle-pass-btn .show-eye-icon, #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .login-pass-input .toggle-pass-btn .show-eye-icon {
+  display: none;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__login {
+  width: 100%;
+  display: none;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__login .login-step-btn {
+  margin-top: 32px;
+  width: 100%;
+  height: 76px;
+  font-size: 32px;
+}
 #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration {
   width: 100%;
   display: none;
@@ -2098,22 +2125,6 @@ h6 {
   font-size: 32px;
 }
 #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input, #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .registration-code {
-  display: none;
-}
-#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input {
-  width: 100%;
-  padding-right: 96px;
-  position: relative;
-  margin-bottom: 32px;
-}
-#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input .toggle-pass-btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 76px;
-  width: 76px;
-}
-#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input .toggle-pass-btn .show-eye-icon {
   display: none;
 }
 #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .code-inputs {
