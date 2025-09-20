@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ru">
+	 <head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<div class="wrapper tv-wrapper">
+			<header class="tv-header">
+    <div class="header__container container">
+        <a href="tv-home.html" class="logo">
+            <img src="img/tv-logo.png" alt="logo">
+        </a>
+        <span class="subscribe text color-red-500 size-28 font-jost weight-500">RHS Pro</span>
+        <ul class="menu">
+            <li><button onclick="openModal('search-modal')">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M31 54C41.4934 54 50 45.4934 50 35C50 24.5066 41.4934 16 31 16C20.5066 16 12 24.5066 12 35C12 45.4934 20.5066 54 31 54Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M52 56L48 52" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                               
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Поиск</span>
+            </button></li>
+            <li><a href="">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.08 25.6404L36.56 17.5804C33.42 15.3804 28.6 15.5004 25.58 17.8404L15.56 25.6604C13.56 27.2204 11.98 30.4204 11.98 32.9404V46.7404C11.98 51.8404 16.12 56.0004 21.22 56.0004H42.78C47.88 56.0004 52.02 51.8604 52.02 46.7604V33.2004C52.02 30.5004 50.28 27.1804 48.08 25.6404ZM33.5 48.0004C33.5 48.8204 32.82 49.5004 32 49.5004C31.18 49.5004 30.5 48.8204 30.5 48.0004V42.0004C30.5 41.1804 31.18 40.5004 32 40.5004C32.82 40.5004 33.5 41.1804 33.5 42.0004V48.0004Z" fill="white"/>
+                    </svg>                                                                 
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Главная</span>
+            </a></li>
+            <li><a href="">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40.8799 19.7002C46.1844 19.7002 50.4998 24.0214 50.5 29.3799C50.5 31.5966 50.1469 33.6412 49.5332 35.5381L49.5293 35.5479C48.0567 40.2079 45.0333 43.9816 41.7451 46.8076C38.4503 49.6393 34.9762 51.4451 32.7568 52.2002L32.7412 52.2061C32.6117 52.2518 32.3428 52.2998 32 52.2998C31.6572 52.2998 31.3883 52.2518 31.2588 52.2061L31.2432 52.2002L30.8125 52.0459C28.5901 51.2149 25.3436 49.4622 22.2549 46.8076C18.9667 43.9816 15.9433 40.2079 14.4707 35.5479L14.4668 35.5381C13.8531 33.6412 13.5 31.5966 13.5 29.3799C13.5002 24.0214 17.8156 19.7002 23.1201 19.7002C26.2453 19.7002 29.0486 21.2193 30.7988 23.5586L32 25.1641L33.2012 23.5586C34.9514 21.2193 37.7547 19.7002 40.8799 19.7002Z" stroke="white" stroke-width="3"/>
+                    </svg>                                                     
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Избранное</span>
+            </a></li>
+            <li><a href="">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.4601 19.0203L38.9801 26.0603C39.4601 27.0403 40.7401 27.9803 41.8201 28.1603L48.2001 29.2203C52.2801 29.9003 53.2401 32.8603 50.3001 35.7803L45.3401 40.7403C44.5001 41.5803 44.0401 43.2003 44.3001 44.3603L45.7201 50.5003C46.8401 55.3603 44.2601 57.2403 39.9601 54.7003L33.9801 51.1603C32.9001 50.5203 31.1201 50.5203 30.0201 51.1603L24.0401 54.7003C19.7601 57.2403 17.1601 55.3403 18.2801 50.5003L19.7001 44.3603C19.9601 43.2003 19.5001 41.5803 18.6601 40.7403L13.7001 35.7803C10.7801 32.8603 11.7201 29.9003 15.8001 29.2203L22.1801 28.1603C23.2401 27.9803 24.5201 27.0403 25.0001 26.0603L28.5201 19.0203C30.4401 15.2003 33.5601 15.2003 35.4601 19.0203Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                                        
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Рекомендации</span>
+            </a></li>
+            <li><a href="tv-catalog.html">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M52 33.8V20.2C52 17.2 50.72 16 47.54 16H39.46C36.28 16 35 17.2 35 20.2V33.8C35 36.8 36.28 38 39.46 38H47.54C50.72 38 52 36.8 52 33.8Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M52 51.8V48.2C52 45.2 50.72 44 47.54 44H39.46C36.28 44 35 45.2 35 48.2V51.8C35 54.8 36.28 56 39.46 56H47.54C50.72 56 52 54.8 52 51.8Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M29 38.2V51.8C29 54.8 27.72 56 24.54 56H16.46C13.28 56 12 54.8 12 51.8V38.2C12 35.2 13.28 34 16.46 34H24.54C27.72 34 29 35.2 29 38.2Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M29 20.2V23.8C29 26.8 27.72 28 24.54 28H16.46C13.28 28 12 26.8 12 23.8V20.2C12 17.2 13.28 16 16.46 16H24.54C27.72 16 29 17.2 29 20.2Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Каталог</span>
+            </a></li>
+            <li><a href="tv-movies.html">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26 56H38C48 56 52 52 52 42V30C52 20 48 16 38 16H26C16 16 12 20 12 30V42C12 52 16 56 26 56Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26.2 36V33.04C26.2 29.22 28.9 27.68 32.2 29.58L34.76 31.06L37.32 32.54C40.62 34.44 40.62 37.56 37.32 39.46L34.76 40.94L32.2 42.42C28.9 44.32 26.2 42.76 26.2 38.96V36Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Фильмы</span>
+            </a></li>
+            <li><a href="tv-series.html">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M52 42V30C52 20 48 16 38 16H26C16 16 12 20 12 30V42C12 52 16 56 26 56H38C48 56 52 52 52 42Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.04 26.2197H50.96" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.04 16.2197V25.9397" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M38.96 16.2197V25.0397" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M27.5 40.9002V38.5002C27.5 35.4202 29.68 34.1602 32.34 35.7002L34.42 36.9002L36.5 38.1002C39.16 39.6402 39.16 42.1602 36.5 43.7002L34.42 44.9002L32.34 46.1002C29.68 47.6402 27.5 46.3802 27.5 43.3002V40.9002V40.9002Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Сериалы</span>
+            </a></li>
+            <li><button onclick="openModal('auth-modal')">
+                <span class="icon">
+                    <svg width="64" height="72" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 36C37.5228 36 42 31.5228 42 26C42 20.4772 37.5228 16 32 16C26.4772 16 22 20.4772 22 26C22 31.5228 26.4772 36 32 36Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M49.1801 56C49.1801 48.26 41.4801 42 32.0001 42C22.5201 42 14.8201 48.26 14.8201 56" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </span>
+                <span class="text color-white font-manrope size-32 weight-500">Войти</span>
+            </button></li>
+        </ul>
+    </div>
+</header>
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="header-mobile">
+    <div class="header-mobile__links">
+        <button class="header-mobile__link mobile-login-btn">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+            </svg> 
+            Авторизоваться
+        </button>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>                
+            Поиск
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-wishlist-fill"></use>
+            </svg>             
+            Избранное
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-catalog"></use>
+            </svg>              
+            Каталог
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-recs"></use>
+            </svg>             
+            Рекомендации
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-movies"></use>
+            </svg>             
+            Фильмы
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-series"></use>
+            </svg>            
+            Сериалы
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+                <use xlink:href="img/sprite.svg#icon-education"></use>
+            </svg>                            
+            Обучение
+        </a>
+    </div>
+</div>
+<div class="tv-search-modal modal" id="search-modal">
+    <div class="modal__container">
+        <div class="search-modal__title flex align-center gap-80">
+            <button class="button variant-3" onclick="closeModal('search-modal')">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.5004 36.5205L15.547 24.5671C14.1354 23.1555 14.1354 20.8455 15.547 19.4338L27.5004 7.48047" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад                    
+            </button>
+            <div class="search-modal__input">
+                <label for="" class="input-text">
+                    <span class="input">
+                        <input type="text" placeholder="Поиск">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <section class="movies-swiper small-items">
+    <div class="movies-swiper__container container">
+      <div class="section-title">
+        <h2>
+          <a href="" class="text size-24 weitgh-500 font-manrope color-white">
+            Часто ищут
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+        <span class="tag bg-orange-dark size-20 weight-500 famaly-manrope color-white">Action</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+        <span class="tag bg-orange-dark size-20 weight-500 famaly-manrope color-white">Action</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+        <span class="tag bg-orange-dark size-20 weight-500 famaly-manrope color-white">Action</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+        <section class="movies-swiper actors-swiper">
+    <div class="movies-swiper__container container">
+      <div class="section-title">
+        <h2>
+          <a href="" class="text size-24 weitgh-500 font-manrope color-white">
+            Актеры и режиссеры
+          </a>
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    </div>
+</div>
+			<main class="page">
+                <section class="movies">
+    <div class="movies__container container">
+        <div class="section-title">
+            <h2 class="text size-32 weight-700 font-manrope color-white">Фильмы</h2>
+        </div>
+        <div class="movies__tags flex wrap gap-20">
+            <button class="movie-genere-btn button variant-3">Фильмы</button>
+            <button class="movie-genere-btn button variant-3">Сериалы</button>
+            <button class="movie-genere-btn button variant-3">Мультфильмы</button>
+            <button class="movie-genere-btn button variant-3">Историческое кино</button>
+            <button class="movie-genere-btn button variant-3">Историческое кино</button>
+            <button class="movie-genere-btn button variant-3">Историческое кино</button>
+            <button class="movie-genere-btn button variant-3">Дорамы</button>
+            <button class="movie-genere-btn button variant-3">Спорт</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+            <button class="movie-genere-btn button variant-3">Природа</button>
+        </div>
+        <div class="movies__list">
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+                <div class="offer">
+    <div class="offer__container container">
+        <div class="offer__content flex justify-between align-center">
+            <div class="big-items__item">
+                <img src="img/offer0item.png" alt="">
+            </div>
+            <div class="big-items__item">
+                <img src="img/offer0item.png" alt="">
+            </div>
+            <div class="big-items__item">
+                <img src="img/offer0item.png" alt="">
+            </div>
+            <div class="big-items__item">
+                <img src="img/offer0item.png" alt="">
+            </div>
+            <div class="big-items__item">
+                <img src="img/offer0item.png" alt="">
+            </div>
+        </div>
+        <div class="offer__subscribe">
+            <button class="button variant-2 gap-24">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Подписка за 299 рублей!
+            </button>
+        </div>
+    </div>
+</div>
+			</main>
+			<div class="modal tv-subscribe-modal" id="subscribe-modal">
+    <div class="modal__container">
+        <div class="subscribe-modal__title">
+            <div class="subscribe-modal__title-text flex direction-column gap-36">
+                <h2 class="text color-white weight-500 famaly-manrope size-32">Оформить подписку
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                </h2>
+                <p class="text color-white weight-500 famaly-manrope size-32">
+                    Гарантируем качество! При подключения подписки мы дарим вам <span class="color-beige-500">3 дня бесплатно</span> (без списания средств): если сервис не понравится, просто отключите подписку в этот период
+                </p>
+            </div>
+            <button class="button variant-3 only-icon close-btn">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg> 
+            </button>
+        </div>
+        <div class="subscribe-modal__items flex justify-between align-center">
+            <div class="subscribe-item" onclick="openModal('payment-modal')">
+    <div class="subscribe-item__content">
+        <div class="subscribe-item__content-top">
+            <span class="tag text color-white weight-500 famaly-manrope size-20 bg-violet-700">Оплата 1 раз в месяц</span>
+            <span class="limit text color-white weight-500 famaly-manrope size-32">3 месяца</span>
+        </div>
+        <div class="subscribe-item__content-price">
+            <span class="price text color-beige-500 weight-700 size-64">249</span>
+            <span class="text color-gray-500 weight-500 famaly-manrope size-24">руб/месяц</span>
+        </div>
+        <div class="subscribe-item__advantages">
+            <ul>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Отсутствие рекламы
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Доступ к эксклюзивам
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Поддержка всех устройств
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Безлимитный просмотр
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+            <div class="subscribe-item active" onclick="openModal('payment-modal')">
+    <div class="subscribe-item__content">
+        <div class="subscribe-item__content-top">
+            <span class="tag text color-white weight-500 famaly-manrope size-20 bg-violet-900">Оплата 1 раз в месяц</span>
+            <span class="limit text color-white weight-500 famaly-manrope size-32">6 месяцев</span>
+        </div>
+        <div class="subscribe-item__content-price">
+            <span class="price text color-beige-500 weight-700 size-64">216</span>
+            <span class="text color-gray-500 weight-500 famaly-manrope size-24">руб/месяц</span>
+        </div>
+        <div class="subscribe-item__advantages">
+            <ul>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Отсутствие рекламы
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Доступ к эксклюзивам
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Поддержка всех устройств
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Безлимитный просмотр
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+            <div class="subscribe-item" onclick="openModal('payment-modal')">
+    <div class="subscribe-item__content">
+        <div class="subscribe-item__content-top">
+            <span class="tag text color-white weight-500 famaly-manrope size-20 bg-gray-500">Оплата 1 раз в месяц</span>
+            <span class="limit text color-white weight-500 famaly-manrope size-32">1 месяц</span>
+        </div>
+        <div class="subscribe-item__content-price">
+            <span class="price text color-beige-500 weight-700 size-64">349</span>
+            <span class="text color-gray-500 weight-500 famaly-manrope size-24">руб/месяц</span>
+        </div>
+        <div class="subscribe-item__advantages">
+            <ul>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Отсутствие рекламы
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Доступ к эксклюзивам
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Поддержка всех устройств
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Безлимитный просмотр
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="subscribe-modal__bottom">
+            <p class="text color-white weight-500 famaly-manrope size-16">
+                Гарантируем качество! При подключения подписки мы дарим вам <span class="color-beige-500">3 дня бесплатно</span> (без списания средств): если сервис не понравится, просто отключите подписку в этот период
+            </p>
+        </div>
+    </div>
+</div>
+			<div class="tv-payment-modal modal" id="payment-modal">
+    <div class="modal__container">
+        <div class="tv-payment-modal__body flex direction-column gap-80">
+            <div class="payment-modal__top flex direction-column gap-60">
+                <div class="flex align-center gap-40">
+                    <button class="button variant-3" onclick="closeModal('payment-modal')">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5004 36.5205L15.547 24.5671C14.1354 23.1555 14.1354 20.8455 15.547 19.4338L27.5004 7.48047" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Назад                    
+                    </button>
+                    <h2 class="text color-white weight-600 famaly-manrope size-36">Детали оплаты</h2>
+                </div>
+                <span class="text color-gray-100 weight-500 famaly-manrope size-28">
+                    Подписка <span class="color-beige-500">REDHEADSOUND PRO</span>
+                </span>
+            </div>
+            <div class="tabs" id="payment-modal-tab">
+                <div class="tab-content">
+                    <div class="tab-content__item active" data-tab="1">
+                        <div class="payment-modal__content flex direction-column gap-40">
+                            <div class="flex align-center gap-80">
+                                <div class="bank-card-form border border-width-2 border-gray-500 border-radius-20">
+    <span class="title text font-manrope weight-500 size-32 color-gray-100">Данные карты</span>
+    <div class="bank-card-form__inputs grid column-2 gap-24">
+        <label for="" class="input-text">
+            <span class="input"><input type="text" placeholder="Номер карты"></span>
+        </label>
+        <label for="" class="input-text">
+            <span class="input"><input type="text" placeholder="ММ/ГГ"></span>
+        </label>
+        <label for="" class="input-text">
+            <span class="input"><input type="password" placeholder="CVV/CVC"></span>
+        </label>
+    </div>
+</div>
+                                <div class="keyboard-numbers grid column-3 gap-24">
+    <button class="button variant-3">7</button>
+    <button class="button variant-3">8</button>
+    <button class="button variant-3">9</button>
+    <button class="button variant-3">4</button>
+    <button class="button variant-3">5</button>
+    <button class="button variant-3">6</button>
+    <button class="button variant-3">1</button>
+    <button class="button variant-3">2</button>
+    <button class="button variant-3">3</button>
+    <button class="button variant-3">0</button>
+    <button class="button variant-3">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5594 40.5H33.9994C39.5194 40.5 43.9994 36.02 43.9994 30.5V17.5C43.9994 11.98 39.5194 7.5 33.9994 7.5H20.5594C17.7394 7.5 15.0594 8.68 13.1594 10.78L6.09938 18.54C3.27938 21.64 3.27938 26.36 6.09938 29.46L13.1594 37.22C15.0594 39.32 17.7394 40.5 20.5594 40.5Z" stroke="#B0B4BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M31.9991 28.9386L22.1191 19.0586" stroke="#B0B4BF" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22.1191 28.9386L31.9991 19.0586" stroke="#B0B4BF" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>            
+    </button>
+</div>
+                            </div>
+                            <button class="button default bg-red-600 text size-32 color-white weight-600" onclick="setTab('payment-modal-tab', '2')">Продолжить</button>
+                        </div>
+                    </div>
+                    <div class="tab-content__item" data-tab="2">
+                        <div class="payment-modal__content payment-modal__content-promo flex direction-column gap-80">
+                            <div class="payment-modal__price flex justify-between align-center">
+                                <span class="price text size-48 color-beige-500 weight-700 famaly-manrope">1299 руб</span>
+                                <span class="date text size-24 color-gray-500 weight-500 famaly-manrope">Раз в 6 месяцев</span>
+                            </div>
+                            <div class="promocode">
+                                <label for="" class="input-text">
+                                    <span class="input">
+                                        <input type="text" placeholder="Промокод">
+                                    </span>
+                                </label>
+                                <button class="button default bg-red-600 text size-32 color-white weight-600 end-payment-btn" >Оплатить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+			<div class="tv-success-payment-modal modal" id="success-payment-modal">
+    <div class="modal__container">
+        <div class="tv-success-payment-modal__body flex direction-column gap-80">
+            <div class="success-payment-modal__top flex direction-column gap-60">
+                <div class="flex align-center gap-40">
+                    <h2 class="text color-white weight-600 famaly-manrope size-36">Успешно</h2>
+                </div>
+                <div class="description-text">
+                    <span class="text color-gray-100 weight-500 famaly-manrope size-28">Спасибо за вашу поддержку! Желаем вам в полной мере насладиться нашим сервисом и качественным контентом.</span>
+                    <span class="text color-gray-100 weight-500 famaly-manrope size-28">
+                        Команда <span class="color-beige-500">REDHEADSOUND</span>
+                    </span>
+                </div>
+            </div>
+            <div class="success-payment-modal__content flex direction-column gap-40">
+                <button class="button default bg-red-600 text size-32 color-white weight-600" onclick="closeModal('success-payment-modal')">Продолжить</button>
+            </div>
+        </div>
+    </div>
+</div>
+			<div class="tv-auth-modal modal" id="auth-modal">
+    <div class="modal__container">
+        <div class="auth-modal__content">
+            <div class="auth-modal__top flex direction-column gap-60">
+                <div class="flex align-center gap-40">
+                    <button class="button variant-3" onclick="closeModal('auth-modal')">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.5004 36.5205L15.547 24.5671C14.1354 23.1555 14.1354 20.8455 15.547 19.4338L27.5004 7.48047" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Назад                    
+                    </button>
+                    <h2 class="text color-white weight-600 famaly-manrope size-36 tv-auth-modal__title">Войдите или зарегистрируйтесь</h2>
+                </div>
+                <span class="text color-gray-100 weight-500 famaly-manrope size-28 tv-auth-modal__description">
+                    Чтобы получить доступ ко всем <span class="color-beige-500">функциям REDHEADSOUND</span>
+                </span>
+            </div>
+            <div class="auth-modal__body">
+                <div class="auth-modal__type">
+                    <button class="button variant-3 auth-modal__type-item" value="0">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51.4624 58.6663C52.1812 58.6663 52.8446 58.2807 53.2003 57.6561L55.3744 53.8388C55.7565 53.1679 55.7149 52.3392 55.2054 51.7592C52.8767 49.108 45.3531 41.9997 31.625 41.9997C17.861 41.9997 10.8329 49.1452 8.70938 51.7799C8.24679 52.3538 8.22768 53.1402 8.5925 53.7807L10.7997 57.6561" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32 29.0367C38.6274 29.0367 44 23.7305 44 17.1849C44 10.6393 38.6274 5.33301 32 5.33301C25.3726 5.33301 20 10.6393 20 17.1849C20 23.7305 25.3726 29.0367 32 29.0367Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        Войти
+                    </button>
+                    <button class="button variant-3 auth-modal__type-item" value="1">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 30C36.9036 30 42.5 24.4036 42.5 17.5C42.5 10.5964 36.9036 5 30 5C23.0964 5 17.5 10.5964 17.5 17.5C17.5 24.4036 23.0964 30 30 30Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.52344 55C8.52344 45.325 18.1484 37.5 29.9984 37.5C32.3984 37.5 34.7235 37.825 36.8985 38.425" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M55 45C55 45.8 54.9 46.575 54.7 47.325C54.475 48.325 54.075 49.3 53.55 50.15C51.825 53.05 48.65 55 45 55C42.425 55 40.1 54.0249 38.35 52.4249C37.6 51.7749 36.95 51 36.45 50.15C35.525 48.65 35 46.875 35 45C35 42.3 36.075 39.8251 37.825 38.0251C39.65 36.1501 42.2 35 45 35C47.95 35 50.625 36.275 52.425 38.325C54.025 40.1 55 42.45 55 45Z" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M48.7234 44.9492H41.2734" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M45 41.2998V48.7748" stroke="#B0B4BF" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Зарегистрироваться
+                    </button>
+                </div>
+                <div class="auth-modal__registration">
+                    <label for="" class="input-text email-input">
+                        <span class="input">
+                            <input type="email" placeholder="Email">
+                        </span>
+                    </label>
+                    <div class="reg-pass-input">
+                        <label for="" class="input-text">
+                            <span class="input">
+                                <input type="password" placeholder="Пароль" class="pass">
+                            </span>
+                        </label>
+                        <button class="button variant-3 only-icon toggle-pass-btn">
+                            <svg class="hide-eye-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.2185 15.7832L15.7852 24.2165C14.7018 23.1332 14.0352 21.6499 14.0352 19.9999C14.0352 16.6999 16.7018 14.0332 20.0018 14.0332C21.6518 14.0332 23.1352 14.6999 24.2185 15.7832Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6997 9.6168C26.7831 7.4168 23.4497 6.2168 19.9997 6.2168C14.1164 6.2168 8.63307 9.68346 4.81641 15.6835C3.31641 18.0335 3.31641 21.9835 4.81641 24.3335C6.13307 26.4001 7.66641 28.1835 9.33307 29.6168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.0352 32.5501C15.9352 33.3501 17.9518 33.7835 20.0018 33.7835C25.8852 33.7835 31.3685 30.3168 35.1852 24.3168C36.6852 21.9668 36.6852 18.0168 35.1852 15.6668C34.6352 14.8001 34.0352 13.9835 33.4185 13.2168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.8484 21.167C25.4151 23.517 23.4984 25.4337 21.1484 25.867" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.782 24.2168L3.33203 36.6668" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36.6648 3.33301L24.2148 15.783" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                            <svg class="show-eye-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.2185 15.7832L15.7852 24.2165C14.7018 23.1332 14.0352 21.6499 14.0352 19.9999C14.0352 16.6999 16.7018 14.0332 20.0018 14.0332C21.6518 14.0332 23.1352 14.6999 24.2185 15.7832Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6997 9.6168C26.7831 7.4168 23.4497 6.2168 19.9997 6.2168C14.1164 6.2168 8.63307 9.68346 4.81641 15.6835C3.31641 18.0335 3.31641 21.9835 4.81641 24.3335C6.13307 26.4001 7.66641 28.1835 9.33307 29.6168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.0352 32.5501C15.9352 33.3501 17.9518 33.7835 20.0018 33.7835C25.8852 33.7835 31.3685 30.3168 35.1852 24.3168C36.6852 21.9668 36.6852 18.0168 35.1852 15.6668C34.6352 14.8001 34.0352 13.9835 33.4185 13.2168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.8484 21.167C25.4151 23.517 23.4984 25.4337 21.1484 25.867" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.782 24.2168L3.33203 36.6668" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36.6648 3.33301L24.2148 15.783" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                         
+                        </button>
+                    </div>
+                    <div class="reg-pass-input">
+                        <label for="" class="input-text">
+                            <span class="input">
+                                <input type="password" placeholder="Повторите пароль" class="pass-confirm">
+                            </span>
+                        </label>
+                        <button class="button variant-3 only-icon toggle-pass-btn">
+                            <svg class="hide-eye-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.2185 15.7832L15.7852 24.2165C14.7018 23.1332 14.0352 21.6499 14.0352 19.9999C14.0352 16.6999 16.7018 14.0332 20.0018 14.0332C21.6518 14.0332 23.1352 14.6999 24.2185 15.7832Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6997 9.6168C26.7831 7.4168 23.4497 6.2168 19.9997 6.2168C14.1164 6.2168 8.63307 9.68346 4.81641 15.6835C3.31641 18.0335 3.31641 21.9835 4.81641 24.3335C6.13307 26.4001 7.66641 28.1835 9.33307 29.6168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.0352 32.5501C15.9352 33.3501 17.9518 33.7835 20.0018 33.7835C25.8852 33.7835 31.3685 30.3168 35.1852 24.3168C36.6852 21.9668 36.6852 18.0168 35.1852 15.6668C34.6352 14.8001 34.0352 13.9835 33.4185 13.2168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.8484 21.167C25.4151 23.517 23.4984 25.4337 21.1484 25.867" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.782 24.2168L3.33203 36.6668" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36.6648 3.33301L24.2148 15.783" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                            <svg class="show-eye-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.2185 15.7832L15.7852 24.2165C14.7018 23.1332 14.0352 21.6499 14.0352 19.9999C14.0352 16.6999 16.7018 14.0332 20.0018 14.0332C21.6518 14.0332 23.1352 14.6999 24.2185 15.7832Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6997 9.6168C26.7831 7.4168 23.4497 6.2168 19.9997 6.2168C14.1164 6.2168 8.63307 9.68346 4.81641 15.6835C3.31641 18.0335 3.31641 21.9835 4.81641 24.3335C6.13307 26.4001 7.66641 28.1835 9.33307 29.6168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.0352 32.5501C15.9352 33.3501 17.9518 33.7835 20.0018 33.7835C25.8852 33.7835 31.3685 30.3168 35.1852 24.3168C36.6852 21.9668 36.6852 18.0168 35.1852 15.6668C34.6352 14.8001 34.0352 13.9835 33.4185 13.2168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.8484 21.167C25.4151 23.517 23.4984 25.4337 21.1484 25.867" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.782 24.2168L3.33203 36.6668" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36.6648 3.33301L24.2148 15.783" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                         
+                        </button>
+                    </div>
+                    <div class="registration-code">
+                        <div class="code-inputs grid column-6 gap-24">
+                            <label for="code-1-1" class="input-text">
+                                <span class="input">
+                                    <input type="text" id="code-1-1" max="1" name="code1">
+                                </span>
+                            </label>
+                            <label for="code-2-1" class="input-text">
+                                <span class="input">
+                                    <input type="text" id="code-2-1" max="1" name="code2">
+                                </span>
+                            </label>
+                            <label for="code-3-1" class="input-text">
+                                <span class="input">
+                                    <input type="text" id="code-3-1" max="1" name="code3">
+                                </span>
+                            </label>
+                            <label for="code-4-1" class="input-text">
+                                <span class="input">
+                                    <input type="text" id="code-4-1" max="1" name="code4">
+                                </span>
+                            </label>
+                            <label for="code-5-1" class="input-text">
+                                <span class="input">
+                                    <input type="text" id="code-5-1" max="1" name="code5">
+                                </span>
+                            </label>
+                            <label for="code-6-1" class="input-text">
+                                <span class="input">
+                                    <input type="text" id="code-6-1" max="1" name="code6">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="button default bg-red-600 color-white reg-step-btn">Продолжить</button>
+                </div>
+                <div class="auth-modal__login">
+                    <label for="" class="input-text login-email-input">
+                        <span class="input">
+                            <input type="email" placeholder="Email">
+                        </span>
+                    </label>
+                    <div class="login-pass-input">
+                        <label for="" class="input-text">
+                            <span class="input">
+                                <input type="password" placeholder="Пароль" class="pass">
+                            </span>
+                        </label>
+                        <button class="button variant-3 only-icon toggle-pass-btn">
+                            <svg class="hide-eye-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.2185 15.7832L15.7852 24.2165C14.7018 23.1332 14.0352 21.6499 14.0352 19.9999C14.0352 16.6999 16.7018 14.0332 20.0018 14.0332C21.6518 14.0332 23.1352 14.6999 24.2185 15.7832Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6997 9.6168C26.7831 7.4168 23.4497 6.2168 19.9997 6.2168C14.1164 6.2168 8.63307 9.68346 4.81641 15.6835C3.31641 18.0335 3.31641 21.9835 4.81641 24.3335C6.13307 26.4001 7.66641 28.1835 9.33307 29.6168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.0352 32.5501C15.9352 33.3501 17.9518 33.7835 20.0018 33.7835C25.8852 33.7835 31.3685 30.3168 35.1852 24.3168C36.6852 21.9668 36.6852 18.0168 35.1852 15.6668C34.6352 14.8001 34.0352 13.9835 33.4185 13.2168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.8484 21.167C25.4151 23.517 23.4984 25.4337 21.1484 25.867" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.782 24.2168L3.33203 36.6668" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36.6648 3.33301L24.2148 15.783" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>    
+                            <svg class="show-eye-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.2185 15.7832L15.7852 24.2165C14.7018 23.1332 14.0352 21.6499 14.0352 19.9999C14.0352 16.6999 16.7018 14.0332 20.0018 14.0332C21.6518 14.0332 23.1352 14.6999 24.2185 15.7832Z" stroke="#B0B4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6997 9.6168C26.7831 7.4168 23.4497 6.2168 19.9997 6.2168C14.1164 6.2168 8.63307 9.68346 4.81641 15.6835C3.31641 18.0335 3.31641 21.9835 4.81641 24.3335C6.13307 26.4001 7.66641 28.1835 9.33307 29.6168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.0352 32.5501C15.9352 33.3501 17.9518 33.7835 20.0018 33.7835C25.8852 33.7835 31.3685 30.3168 35.1852 24.3168C36.6852 21.9668 36.6852 18.0168 35.1852 15.6668C34.6352 14.8001 34.0352 13.9835 33.4185 13.2168" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25.8484 21.167C25.4151 23.517 23.4984 25.4337 21.1484 25.867" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.782 24.2168L3.33203 36.6668" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36.6648 3.33301L24.2148 15.783" stroke="#B0B4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                         
+                        </button>
+                    </div>
+                    <button class="button default bg-red-600 color-white login-step-btn">Продолжить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://wowjs.uk/dist/wow.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+<script>new WOW().init();</script>
+	</body>
+</html>
