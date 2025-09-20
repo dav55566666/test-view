@@ -2034,6 +2034,91 @@ h6 {
 #auth-modal .modal__container .auth-modal__content .auth-modal__form .button {
   height: 56px;
 }
+#auth-modal.tv-auth-modal .input-text .input {
+  height: 76px;
+}
+#auth-modal.tv-auth-modal .input-text .input input {
+  font-size: 32px;
+}
+#auth-modal.tv-auth-modal .modal__container {
+  max-width: unset;
+  width: 100%;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content {
+  max-width: 1020px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__top {
+  width: 100%;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__top .flex {
+  width: 100%;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__top .button {
+  max-width: 192px;
+  height: 76px;
+  font-size: 32px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body {
+  width: 100%;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__type .auth-modal__type-item {
+  height: 356px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--Grey-100, #EFF1F5);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration {
+  width: 100%;
+  display: none;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-step-btn {
+  margin-top: 32px;
+  width: 100%;
+  height: 76px;
+  font-size: 32px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input, #auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .registration-code {
+  display: none;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input {
+  width: 100%;
+  padding-right: 96px;
+  position: relative;
+  margin-bottom: 32px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input .toggle-pass-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 76px;
+  width: 76px;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .reg-pass-input .toggle-pass-btn .show-eye-icon {
+  display: none;
+}
+#auth-modal.tv-auth-modal .modal__container .auth-modal__content .auth-modal__body .auth-modal__registration .code-inputs {
+  grid-template-columns: repeat(6, 1fr);
+}
 
 #subscribe-modal .modal__container {
   max-width: unset;
