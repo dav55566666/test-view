@@ -1721,6 +1721,13 @@ h6 {
   width: 100%;
   padding: 30px 16px 20px;
 }
+.movies-swiper .seazon-btn {
+  border: 2px solid transparent;
+}
+.movies-swiper .seazon-btn:focus {
+  box-shadow: unset;
+  border: 2px solid var(--red-500);
+}
 .movies-swiper .movies-swiper__container {
   display: flex;
   flex-direction: column;
@@ -3741,7 +3748,7 @@ h6 {
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1000;
+  z-index: 10;
 }
 .move-item .move-item__content {
   width: 100%;
