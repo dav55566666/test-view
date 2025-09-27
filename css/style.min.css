@@ -3024,6 +3024,104 @@ body._lock .wrapper {
   display: block;
 }
 
+.header-home-mobile {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.15);
+  width: 0;
+  overflow: hidden;
+}
+.header-home-mobile .header-home-mobile__content {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 350px;
+  padding: 26px 20px 20px;
+  border-radius: 20px 0 0 20px;
+  background: #FFF;
+  box-shadow: 0 4px 4px 0 rgba(105, 105, 105, 0.25);
+  overflow: auto;
+  height: 100%;
+  min-width: 350px;
+}
+@media (max-width: 520px) {
+  .header-home-mobile .header-home-mobile__content {
+    min-width: 280px;
+  }
+}
+.header-home-mobile .header-home-mobile__content .close-btn {
+  position: absolute;
+  right: 22px;
+  top: 26px;
+}
+.header-home-mobile .header-home-mobile__content .logo {
+  width: 100%;
+  max-width: 160px;
+  display: block;
+  margin-bottom: 36px;
+}
+.header-home-mobile .header-home-mobile__content .logo img {
+  width: 100%;
+}
+.header-home-mobile .header-home-mobile__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #BFBFBF;
+  margin-bottom: 10px;
+}
+.header-home-mobile .header-home-mobile__content ul:nth-child(6) {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.header-home-mobile .header-home-mobile__content ul li a {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.header-home-mobile .header-home-mobile__content .select-city {
+  position: relative;
+  margin-bottom: 28px;
+  display: block;
+}
+.header-home-mobile .header-home-mobile__content .select-city .city {
+  border: unset;
+  background: transparent;
+  outline: none;
+}
+.header-home-mobile .header-home-mobile__content .soc {
+  max-width: 194px;
+  width: 100%;
+}
+.header-home-mobile .header-home-mobile__content .soc .flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.header-home-mobile .header-home-mobile__content .soc span {
+  color: #B2B2B2;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%;
+}
+
 .footer {
   width: 100%;
   padding: 30px 16px 26px;
