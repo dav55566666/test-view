@@ -3096,7 +3096,6 @@ body._lock .wrapper {
   z-index: 1000;
   width: 0;
   overflow: hidden;
-  transition: all 0.7s;
 }
 .header-home-mobile .header-home-mobile__content {
   width: 100%;
@@ -3571,10 +3570,10 @@ body._lock .wrapper {
 }
 @media (max-width: 1024px) {
   .footer-home .footer__container .footer__bottom .footer__left {
-    order: 2;
+    order: 3;
   }
 }
-.footer-home .footer__container .footer__bottom .footer__left span {
+.footer-home .footer__container .footer__bottom .footer__left span, .footer-home .footer__container .footer__bottom .footer__left a {
   color: #000;
   font-family: Inter;
   font-size: 12px;
@@ -3595,7 +3594,7 @@ body._lock .wrapper {
 }
 @media (max-width: 1024px) {
   .footer-home .footer__container .footer__bottom ul {
-    order: 3;
+    order: 2;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -5307,9 +5306,6 @@ body._lock .wrapper {
 @media (max-width: 1024px) {
   .home-product-swiper .container .swiper-pagination {
     bottom: 40px;
-    justify-content: center !important;
-    width: 300px !important;
-    padding-left: 150px;
   }
 }
 .home-product-swiper .container .swiper-pagination .swiper-pagination-bullet {
@@ -17537,6 +17533,11 @@ body._lock .wrapper {
 .blog-home .container .blog-inner .blog-home__bottom button:hover {
   background: transparent;
 }
+@media (max-width: 1024px) {
+  .blog-home .container .blog-inner .blog-home__bottom button {
+    max-width: unset;
+  }
+}
 
 #upload-avatar-modal .modal-container {
   max-width: 600px;
@@ -18512,7 +18513,7 @@ body._lock .wrapper {
 }
 @media (max-width: 768px) {
   .home-main .home-main__container .home-main__stories .swiper .swiper-wrapper .swiper-slide {
-    max-width: 50px;
+    max-width: 70px;
   }
 }
 .home-main .home-main__container .home-main__stories .swiper .swiper-wrapper .swiper-slide .home-main__stories-item {
@@ -18536,7 +18537,7 @@ body._lock .wrapper {
 }
 @media (max-width: 768px) {
   .home-main .home-main__container .home-main__stories .swiper .swiper-wrapper .swiper-slide .home-main__stories-item .img {
-    height: 50px;
+    height: 70px;
     padding: 4px;
   }
 }
@@ -18561,7 +18562,7 @@ body._lock .wrapper {
 }
 @media (max-width: 768px) {
   .home-main .home-main__container .home-main__stories .swiper .swiper-wrapper .swiper-slide .home-main__stories-item span {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .home-main .home-main__container .home-main__about {
@@ -18601,6 +18602,7 @@ body._lock .wrapper {
 @media (max-width: 1024px) {
   .home-main .home-main__container .home-main__about .home-main__about-text {
     max-width: unset;
+    padding-top: 16px;
   }
   .home-main .home-main__container .home-main__about .home-main__about-text::before {
     opacity: 1;
@@ -18671,7 +18673,7 @@ body._lock .wrapper {
 }
 @media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text h2 {
-    font-size: 16px;
+    font-size: 18px;
     max-width: 242px;
   }
 }
@@ -18697,7 +18699,7 @@ body._lock .wrapper {
   .home-main .home-main__container .home-main__about .home-main__about-text p {
     max-width: 170px;
     margin-bottom: 126px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 100%;
   }
 }
@@ -18710,8 +18712,8 @@ body._lock .wrapper {
   .home-main .home-main__container .home-main__about .home-main__about-text .button {
     max-width: 198px;
     border-radius: 12px;
-    height: 30px;
-    font-size: 11px;
+    height: 38px;
+    font-size: 14px;
   }
 }
 .home-main .home-main__container .home-main__about .home-main__about-img {
@@ -18811,7 +18813,7 @@ body._lock .wrapper {
 }
 @media (max-width: 1024px) {
   .home-main .home-main__container .home-main__partner .home-main__partner-box .text h3 {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 28px;
   }
 }
@@ -18836,9 +18838,9 @@ body._lock .wrapper {
 }
 @media (max-width: 768px) {
   .home-main .home-main__container .home-main__partner .home-main__partner-box .button {
-    border-radius: 12px;
-    height: 30px;
-    font-size: 11px;
+    border-radius: 20px;
+    height: 38px;
+    font-size: 14px;
     max-width: unset;
   }
 }
@@ -19273,7 +19275,8 @@ body._lock .wrapper {
     bottom: 20px;
     left: unset;
     right: 20px;
-    font-size: 20px;
+    font-size: 24px;
+    text-align: right;
   }
 }
 .home-products .container .grid .home-products__item .icon {
@@ -19342,6 +19345,11 @@ body._lock .wrapper {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .home-products .container .grid .home-products__item.small-img .img img {
+    max-width: 190px;
   }
 }
 
