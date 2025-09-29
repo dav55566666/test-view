@@ -3045,6 +3045,13 @@ body._lock .wrapper {
   padding-top: 40px;
   display: none;
 }
+@media (max-width: 1024px) {
+  .header-home .header__container .header__right .user-home .user-menu-hiden {
+    padding-top: 0px;
+    top: 50px;
+    right: -60px;
+  }
+}
 .header-home .header__container .header__right .user-home .user-menu-hiden .user-menu {
   border-radius: 16px;
   border: 2px solid #FEBECE;
@@ -3088,13 +3095,22 @@ body._lock .wrapper {
 .header-home .header__container .header__right .user-home .user-menu-hiden .user-menu ul li a:hover svg circle {
   stroke: #000;
 }
-.header-home .header__container .header__right .user-home:hover .user-menu-hiden {
-  display: block;
+@media (min-width: 1024px) {
+  .header-home .header__container .header__right .user-home:hover .user-menu-hiden {
+    display: block;
+  }
+  .header-home .header__container .header__right .user-home:hover .user-btn svg path {
+    stroke: #FEBECE !important;
+  }
+  .header-home .header__container .header__right .user-home:hover .user-btn svg circle {
+    stroke: #FEBECE !important;
+    fill: #FEBECE !important;
+  }
 }
-.header-home .header__container .header__right .user-home:hover .user-btn svg path {
+.header-home .header__container .header__right .user-home.active .user-btn svg path {
   stroke: #FEBECE !important;
 }
-.header-home .header__container .header__right .user-home:hover .user-btn svg circle {
+.header-home .header__container .header__right .user-home.active .user-btn svg circle {
   stroke: #FEBECE !important;
   fill: #FEBECE !important;
 }
@@ -19015,6 +19031,11 @@ body._lock .wrapper {
 @media (max-width: 620px) {
   .matching-about .matching-about_container .matching-about__text p {
     margin-bottom: 274px;
+  }
+}
+@media (max-width: 500px) {
+  .matching-about .matching-about_container .matching-about__text p {
+    max-width: 344px;
   }
 }
 @media (max-width: 340px) {
