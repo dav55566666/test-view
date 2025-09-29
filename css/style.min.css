@@ -18647,24 +18647,8 @@ body._lock .wrapper {
 }
 @media (max-width: 670px) {
   .home-main .home-main__container .home-main__about .home-main__about-text::before {
-    width: 239px;
-    height: 290px;
-  }
-}
-@media (max-width: 600px) {
-  .home-main .home-main__container .home-main__about .home-main__about-text::before {
-    width: 231px;
-    height: 280px;
-  }
-}
-@media (max-width: 500px) {
-  .home-main .home-main__container .home-main__about .home-main__about-text {
-    padding: 10px;
-    padding-top: 30px;
-  }
-  .home-main .home-main__container .home-main__about .home-main__about-text::before {
-    width: 178px;
-    height: 216px;
+    width: 238px;
+    height: 288px;
   }
 }
 .home-main .home-main__container .home-main__about .home-main__about-text .subtitle {
@@ -18692,19 +18676,9 @@ body._lock .wrapper {
 }
 @media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text .subtitle {
-    position: absolute;
-    right: 16px;
-    top: 22px;
-    font-size: 10px;
-  }
-}
-@media (max-width: 500px) {
-  .home-main .home-main__container .home-main__about .home-main__about-text .subtitle {
-    padding: 8px 16px;
-    transform: rotate(40deg);
-    right: 0px;
-    top: 30px;
-    font-size: 8px;
+    transform: rotate(0);
+    margin-bottom: 20px;
+    font-size: 14px;
   }
 }
 .home-main .home-main__container .home-main__about .home-main__about-text h2 {
@@ -18718,6 +18692,9 @@ body._lock .wrapper {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+.home-main .home-main__container .home-main__about .home-main__about-text h2 br {
+  display: none;
+}
 @media (max-width: 1024px) {
   .home-main .home-main__container .home-main__about .home-main__about-text h2 {
     font-size: 24px;
@@ -18726,14 +18703,11 @@ body._lock .wrapper {
 }
 @media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text h2 {
-    font-size: 18px;
-    max-width: 302px;
+    font-size: 20px;
+    max-width: unset;
   }
-}
-@media (max-width: 500px) {
-  .home-main .home-main__container .home-main__about .home-main__about-text h2 {
-    font-size: 16px;
-    max-width: 260px;
+  .home-main .home-main__container .home-main__about .home-main__about-text h2 br {
+    display: block;
   }
 }
 .home-main .home-main__container .home-main__about .home-main__about-text p {
@@ -18747,6 +18721,9 @@ body._lock .wrapper {
   max-width: 488px;
   margin-bottom: 104px;
 }
+.home-main .home-main__container .home-main__about .home-main__about-text p br {
+  display: none;
+}
 @media (max-width: 1024px) {
   .home-main .home-main__container .home-main__about .home-main__about-text p {
     font-size: 14px;
@@ -18757,15 +18734,11 @@ body._lock .wrapper {
 @media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text p {
     max-width: 300px;
-    margin-bottom: 126px;
+    margin-bottom: 196px;
     line-height: 100%;
   }
-}
-@media (max-width: 500px) {
-  .home-main .home-main__container .home-main__about .home-main__about-text p {
-    max-width: 260px;
-    font-size: 12px;
-    margin-bottom: 160px;
+  .home-main .home-main__container .home-main__about .home-main__about-text p br {
+    display: block;
   }
 }
 @media (max-width: 1024px) {
@@ -18882,6 +18855,13 @@ body._lock .wrapper {
     line-height: 28px;
   }
 }
+@media (max-width: 600px) {
+  .home-main .home-main__container .home-main__partner .home-main__partner-box .text h3 {
+    font-size: 24px;
+    line-height: 90%;
+    letter-spacing: -1px;
+  }
+}
 .home-main .home-main__container .home-main__partner .home-main__partner-box .text p {
   color: #FFF;
   font-family: Inter;
@@ -18893,6 +18873,12 @@ body._lock .wrapper {
 @media (max-width: 1024px) {
   .home-main .home-main__container .home-main__partner .home-main__partner-box .text p {
     font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .home-main .home-main__container .home-main__partner .home-main__partner-box .text p {
+    font-size: 13px;
+    line-height: 100%;
   }
 }
 .home-main .home-main__container .home-main__partner .home-main__partner-box .button {
