@@ -18612,8 +18612,8 @@ body._lock .wrapper {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 320px;
-  height: 380px;
+  width: 284px;
+  height: 344px;
   background-image: url("../img/image 29.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -18628,15 +18628,22 @@ body._lock .wrapper {
     opacity: 1;
   }
 }
+@media (max-width: 670px) {
+  .home-main .home-main__container .home-main__about .home-main__about-text::before {
+    width: 239px;
+    height: 290px;
+  }
+}
 @media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text::before {
     width: 231px;
     height: 280px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .home-main .home-main__container .home-main__about .home-main__about-text {
-    padding-top: 60px;
+    padding: 10px;
+    padding-top: 30px;
   }
   .home-main .home-main__container .home-main__about .home-main__about-text::before {
     width: 178px;
@@ -18674,6 +18681,15 @@ body._lock .wrapper {
     font-size: 10px;
   }
 }
+@media (max-width: 500px) {
+  .home-main .home-main__container .home-main__about .home-main__about-text .subtitle {
+    padding: 8px 16px;
+    transform: rotate(40deg);
+    right: 0px;
+    top: 30px;
+    font-size: 8px;
+  }
+}
 .home-main .home-main__container .home-main__about .home-main__about-text h2 {
   color: #232323;
   font-family: "Peace Sans";
@@ -18688,13 +18704,19 @@ body._lock .wrapper {
 @media (max-width: 1024px) {
   .home-main .home-main__container .home-main__about .home-main__about-text h2 {
     font-size: 24px;
-    max-width: 298px;
+    max-width: 398px;
   }
 }
 @media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text h2 {
     font-size: 18px;
-    max-width: 242px;
+    max-width: 302px;
+  }
+}
+@media (max-width: 500px) {
+  .home-main .home-main__container .home-main__about .home-main__about-text h2 {
+    font-size: 16px;
+    max-width: 260px;
   }
 }
 .home-main .home-main__container .home-main__about .home-main__about-text p {
@@ -18712,15 +18734,21 @@ body._lock .wrapper {
   .home-main .home-main__container .home-main__about .home-main__about-text p {
     font-size: 14px;
     margin-bottom: 40px;
-    max-width: 238px;
+    max-width: 340px;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 600px) {
   .home-main .home-main__container .home-main__about .home-main__about-text p {
-    max-width: 170px;
+    max-width: 300px;
     margin-bottom: 126px;
-    font-size: 12px;
     line-height: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home-main .home-main__container .home-main__about .home-main__about-text p {
+    max-width: 260px;
+    font-size: 12px;
+    margin-bottom: 160px;
   }
 }
 @media (max-width: 1024px) {
@@ -18879,7 +18907,7 @@ body._lock .wrapper {
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 16px;
   position: relative;
 }
@@ -18951,13 +18979,18 @@ body._lock .wrapper {
 @media (max-width: 1024px) {
   .matching-about .matching-about_container .matching-about__text h2 {
     font-size: 16px;
-    max-width: 238px;
+    max-width: 400px;
   }
 }
 @media (max-width: 620px) {
   .matching-about .matching-about_container .matching-about__text h2 {
     font-size: 20px;
     max-width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .matching-about .matching-about_container .matching-about__text h2 {
+    font-size: 18px;
   }
 }
 .matching-about .matching-about_container .matching-about__text p {
@@ -18974,8 +19007,8 @@ body._lock .wrapper {
 @media (max-width: 1024px) {
   .matching-about .matching-about_container .matching-about__text p {
     font-size: 12px;
-    margin-bottom: 20px;
-    max-width: 224px;
+    margin-bottom: 60px;
+    max-width: 400px;
   }
 }
 @media (max-width: 620px) {
@@ -19010,9 +19043,12 @@ body._lock .wrapper {
 .matching-about .matching-about_container .matching-about__img {
   width: 100%;
   max-width: 450px;
-  padding: 10px;
+  padding: 0px;
   border-radius: 16px;
   border: 10px solid #FFF;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   background: #FEBECE;
 }
 @media (max-width: 1024px) {
@@ -19035,8 +19071,6 @@ body._lock .wrapper {
 }
 .matching-about .matching-about_container .matching-about__img img {
   position: relative;
-  top: 10px;
-  right: 20px;
 }
 @media (max-width: 1024px) {
   .matching-about .matching-about_container .matching-about__img img {
