@@ -3107,6 +3107,7 @@ body._lock .wrapper {
   z-index: 1000;
   width: 0;
   overflow: hidden;
+  transition: all 0.5s;
 }
 .header-home-mobile .header-home-mobile__content {
   width: 100%;
