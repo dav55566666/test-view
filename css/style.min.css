@@ -18991,9 +18991,15 @@ body._lock .wrapper {
     max-width: unset;
   }
 }
+@media (max-width: 500px) {
+  .matching-about .matching-about_container .matching-about__text h2 {
+    max-width: 330px;
+  }
+}
 @media (max-width: 420px) {
   .matching-about .matching-about_container .matching-about__text h2 {
     font-size: 18px;
+    max-width: 306px;
   }
 }
 .matching-about .matching-about_container .matching-about__text p {
