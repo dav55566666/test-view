@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="ru">
+	 <head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+    <div class="header__container container">
+        <div class="header__content flex align-end justify-between">
+            <div class="header__left flex align-center">
+                <a href="/" class="logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="header__subscribe">
+                    <span class="text font-jost size-28 color-gray-400 weight-500">Фильмы и сериалы</span>
+                    <button class="button variant-2" onclick="openModal('subscribe-modal')">Оформить подписку</button>
+                </div>
+            </div>
+            <div class="header__right flex align-center justify-end">
+                <ul class="menu flex align-center justify-end">
+                    <li><a href="catalog.html" class="text color-gray-400 size-18 font-manrope">Каталог</a></li>
+                    <li><a href="recomendation.html" class="text color-gray-400 size-18 font-manrope">Рекомендации</a></li>
+                    <li><a href="" class="text color-gray-400 size-18 font-manrope">Обучение</a></li>
+                    <li><a href="movies.html" class="text color-gray-400 size-18 font-manrope">Фильмы</a></li>
+                    <li><a href="" class="text color-gray-400 size-18 font-manrope">Сериалы</a></li>
+                </ul>
+                <div class="header__right-buttons flex align-center justify-end">
+                    <button class="button variant-3 only-icon search-btn" onclick="openModal('search-modal')">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg> 
+                    </button>
+                    <a href="wishlist.html" class="button variant-3 only-icon">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="img/sprite.svg#icon-wishlist"></use>
+                        </svg>  
+                    </a>
+                    <button class="button variant-3" onclick="openModal('auth-modal')">Войти</button>
+                    <button class="button variant-3 only-icon burger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="header-mobile">
+    <div class="header-mobile__links">
+        <button class="header-mobile__link mobile-login-btn">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+            </svg> 
+            Авторизоваться
+        </button>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>                
+            Поиск
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-wishlist-fill"></use>
+            </svg>             
+            Избранное
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-catalog"></use>
+            </svg>              
+            Каталог
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-recs"></use>
+            </svg>             
+            Рекомендации
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-movies"></use>
+            </svg>             
+            Фильмы
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-series"></use>
+            </svg>            
+            Сериалы
+        </a>
+        <a href="" class="header-mobile__link">
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+                <use xlink:href="img/sprite.svg#icon-education"></use>
+            </svg>                            
+            Обучение
+        </a>
+    </div>
+</div>
+<div class="modal" id="search-modal">
+    <div class="modal__container">
+        <div class="search-modal__title">
+            <div class="search-modal__title-text flex direction-column gap-32">
+                <h2 class="text color-white weight-500 famaly-manrope size-32">Поиск</h2>
+            </div>
+            <button class="button variant-3 only-icon close-btn">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg> 
+            </button>
+        </div>
+        <div class="search-modal__input">
+            <label for="" class="input-text">
+                <span class="input">
+                    <input type="text" placeholder="Поиск">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                </span>
+            </label>
+        </div>
+        <section class="movies-swiper small-items">
+    <div class="movies-swiper__container container">
+      <div class="section-title">
+        <h2>
+          <a href="" class="text size-24 weitgh-500 font-manrope color-white">
+            Часто ищут
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24">
+              <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+        <span class="tag bg-orange-dark size-20 weight-500 famaly-manrope color-white">Action</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+        <span class="tag bg-orange-dark size-20 weight-500 famaly-manrope color-white">Action</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+        <span class="tag bg-orange-dark size-20 weight-500 famaly-manrope color-white">Action</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-green-500">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+        <section class="movies-swiper actors-swiper">
+    <div class="movies-swiper__container container">
+      <div class="section-title">
+        <h2>
+          <a href="" class="text size-24 weitgh-500 font-manrope color-white">
+            Актеры и режиссеры
+          </a>
+        </h2>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+          <div class="swiper-slide"><div class="actor-item">
+    <a href="actor-detail.html" class="actor-item__img">
+        <img src="img/actor.png" alt="">
+    </a>
+    <div class="actor-item__content">
+        <h4><a href="actor-detail.html" class="text color-white famaly-manrope weight-500 size-16">Джонатан <br> Нолан</a></h4>
+        <span class="text color-gray-300 famaly-manrope weight-500 size-14">Режиссер</span>
+    </div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    </div>
+</div>
+			<main class="page">
+                <section class="reviews">
+    <div class="reviews__container container">
+        <div class="reviews__flex">
+            <div class="reviews__product">
+                <div class="move-item">
+    <a href="movie-detail.html" class="move-item__img">
+        <img src="img/center.png" alt="">
+        <span class="rating color-white size-20 weight-500 famaly-manrope bg-8.5Bg">8.5</span>
+    </a>
+    <div class="move-item__content">
+        <h4 class="title"><a href="movie-detail.html" class="text color-white size-18 weight-500 famaly-manrope">The Dark Knight</a></h4>
+        <div class="flex">
+            <div class="flex">
+                <a href="" class="text color-gray-300 size-14 weight-400 famaly-manrope">Action</a>
+            </div>
+            <span class="year text color-gray-300 size-14 weight-400 famaly-manrope">2025</span>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="reviews__right">
+                <a href="" class="back-btn">
+                    <span class="icon">
+                        <svg  width="24" height="24" viewBox="0 0 24 24">
+                            <use xlink:href="img/sprite.svg#icon-back"></use>
+                        </svg>
+                    </span>
+                    <span class="text size-18 weight-500 font-manrope color-white">Назад</span>
+                </a>
+                <div class="reviews__form">
+                    <label for="" class="input-text">
+                        <span class="input textarea">
+                            <textarea name="" id="" placeholder="Напишите свой отзыв"></textarea>
+                        </span>
+                    </label>
+                    <div class="reviews__right-rating">
+                        <div class="title-flex">
+                            <h4>Оцените сериал</h4>
+                            <span> Оценка после просмотра</span>
+                        </div>
+                        <div class="flex">
+                            <button class="set-rating-btn">
+                                <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.174 18.9893C40.3621 20.2164 40.9186 26.9876 38.1158 30.4981C36.9801 16.0629 28.025 15.3715 30.8103 0C20.5591 3.81673 12.4815 15.1343 13.196 25.9721C9.82407 20.094 13.4417 18.5096 10.1074 11.6007C8.9767 16.5298 5.57216 20.1884 3.12782 24.745C0.134438 30.3323 -1.72076 39.5016 2.34312 48C8.96165 43.2648 17.0242 40.4839 25.7286 40.4839C34.433 40.4839 42.4805 43.2597 49.094 47.9847C52.5362 34.7384 45.4288 22.4692 40.174 18.9867V18.9893ZM40.9938 14.226C42.824 12.5294 42.2824 8.23047 41.1292 6.17413C40.7256 5.45466 39.7554 3.66876 40.515 1.07409C37.479 2.96715 35.0647 6.61295 35.8695 10.3506C36.3609 12.6263 38.7601 16.2976 40.9938 14.226Z" fill="#757B8A"/>
+                                </svg>                                
+                                Плохо
+                            </button>
+                            <button class="set-rating-btn">
+                                <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.174 18.9893C40.3621 20.2164 40.9186 26.9876 38.1158 30.4981C36.9801 16.0629 28.025 15.3715 30.8103 0C20.5591 3.81673 12.4815 15.1343 13.196 25.9721C9.82407 20.094 13.4417 18.5096 10.1074 11.6007C8.9767 16.5298 5.57216 20.1884 3.12782 24.745C0.134438 30.3323 -1.72076 39.5016 2.34312 48C8.96165 43.2648 17.0242 40.4839 25.7286 40.4839C34.433 40.4839 42.4805 43.2597 49.094 47.9847C52.5362 34.7384 45.4288 22.4692 40.174 18.9867V18.9893ZM40.9938 14.226C42.824 12.5294 42.2824 8.23047 41.1292 6.17413C40.7256 5.45466 39.7554 3.66876 40.515 1.07409C37.479 2.96715 35.0647 6.61295 35.8695 10.3506C36.3609 12.6263 38.7601 16.2976 40.9938 14.226Z" fill="#FEC382"/>
+                                </svg>                                
+                                Нормально
+                            </button>
+                            <button class="set-rating-btn">
+                                <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_3056_19665)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.174 18.9893C40.3621 20.2164 40.9186 26.9876 38.1158 30.4981C36.9801 16.0629 28.025 15.3715 30.8103 0C20.5591 3.81673 12.4815 15.1343 13.196 25.9721C9.82407 20.094 13.4417 18.5096 10.1074 11.6007C8.9767 16.5298 5.57216 20.1884 3.12782 24.745C0.134438 30.3323 -1.72076 39.5016 2.34312 48C8.96165 43.2648 17.0242 40.4839 25.7286 40.4839C34.433 40.4839 42.4805 43.2597 49.094 47.9847C52.5362 34.7384 45.4288 22.4692 40.174 18.9867V18.9893ZM40.9938 14.226C42.824 12.5294 42.2824 8.23047 41.1292 6.17413C40.7256 5.45466 39.7554 3.66876 40.515 1.07409C37.479 2.96715 35.0647 6.61295 35.8695 10.3506C36.3609 12.6263 38.7601 16.2976 40.9938 14.226Z" fill="#F45E3F"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_3056_19665">
+                                    <rect width="50" height="48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                Супер                                
+                            </button>
+                        </div>
+                    </div>
+                    <button class="button variant-3">Отправить</button>
+                </div>
+                <div class="reviews__content">
+                    <h2>Отзывы (39823)</h2>
+                    <div class="reviews__list">
+                        <div class="reviews-item">
+    <div class="reviews-item__top">
+        <div class="review-user">
+            <img src="img/actor.png" alt="">
+            <span class="text size-18 weight-500 font-manrope color-white">cyber_wanderer</span>
+        </div>
+        <div class="review-rating">
+            <span class="text size-16 weight-500 font-manrope color-white">Супер</span>
+            <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3056_21532)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5323 14.2419C30.6752 15.1623 31.0982 20.2407 28.968 22.8736C28.1049 12.0472 21.299 11.5286 23.4159 0C15.6249 2.86255 9.48595 11.3507 10.029 19.4791C7.46629 15.0705 10.2157 13.8822 7.68159 8.70054C6.82229 12.3974 4.23484 15.1413 2.37714 18.5587C0.102173 22.7492 -1.30777 29.6262 1.78077 36C6.81086 32.4486 12.9384 30.3629 19.5537 30.3629C26.1691 30.3629 32.2852 32.4448 37.3115 35.9885C39.9275 26.0538 34.5259 16.8519 30.5323 14.24V14.2419ZM31.1553 10.6695C32.5462 9.39704 32.1347 6.17285 31.2582 4.63059C30.9515 4.091 30.2141 2.75157 30.7914 0.80557C28.484 2.22536 26.6492 4.95971 27.2608 7.76294C27.6343 9.46976 29.4577 12.2232 31.1553 10.6695Z" fill="#F45E3F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3056_21532">
+                <rect width="38" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                
+        </div>
+    </div>
+    <div class="reviews-item__bottom">
+        <p class="text size-18 weight-400 font-manrope color-gray-100">Один из самых интеллектуальных и визуально впечатляющих сериалов, которые я когда-либо видел. Потрясающее сочетание философии, sci-fi и драмы. Особенно зацепили вопросы сознания, свободы воли и природы реальности. Сезон 1 — шедевр. Дальше сложнее, но всё равно круто. Браво, Нолан и Джой!</p>
+        <div class="reviews-item__stats">
+            <span class="date text size-14 weight-400 font-manrope color-gray-400">12 апреля 2023</span>
+            <div class="reviews-item__buttons">
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5828 28.7505L19.1131 28.2201L19.0795 28.1865L19.0419 28.1574L18.5828 28.7505ZM27.0828 27.2505L26.3703 27.0162L26.3618 27.0421L26.3552 27.0686L27.0828 27.2505ZM29.4828 19.9505L28.7765 19.6982L28.7733 19.7072L28.7703 19.7162L29.4828 19.9505ZM22.5828 16.1505L21.8417 16.0347L21.8404 16.0444L22.5828 16.1505ZM23.0828 12.9505L22.3507 12.7878L22.3455 12.8111L22.3418 12.8347L23.0828 12.9505ZM21.7828 10.7505L21.5195 11.4527L21.5325 11.4576L21.5456 11.462L21.7828 10.7505ZM19.5828 11.4505L20.2053 11.8688L20.2069 11.8665L19.5828 11.4505ZM15.4828 26.3505L15.0237 26.9435L18.1237 29.3435L18.5828 28.7505L19.0419 28.1574L15.9419 25.7574L15.4828 26.3505ZM18.5828 28.7505L18.0525 29.2808C18.3858 29.6141 18.8558 29.8085 19.2518 29.9216C19.6661 30.04 20.1104 30.1005 20.4828 30.1005V29.3505V28.6005C20.2552 28.6005 19.9495 28.5609 19.6639 28.4793C19.3598 28.3924 19.1798 28.2868 19.1131 28.2201L18.5828 28.7505ZM20.4828 29.3505V30.1005H24.2828V29.3505V28.6005H20.4828V29.3505ZM24.2828 29.3505V30.1005C25.0626 30.1005 25.8398 29.8119 26.4632 29.3557C27.0871 28.8992 27.6097 28.2353 27.8104 27.4324L27.0828 27.2505L26.3552 27.0686C26.2559 27.4656 25.9785 27.8517 25.5774 28.1452C25.1758 28.439 24.703 28.6005 24.2828 28.6005V29.3505ZM27.0828 27.2505L27.7953 27.4847L30.1953 20.1847L29.4828 19.9505L28.7703 19.7162L26.3703 27.0162L27.0828 27.2505ZM29.4828 19.9505L30.1891 20.2027C30.5131 19.2955 30.4013 18.379 29.8866 17.6806C29.3755 16.9869 28.5357 16.6005 27.5828 16.6005V17.3505V18.1005C28.1299 18.1005 28.4901 18.314 28.679 18.5704C28.8644 18.8219 28.9525 19.2055 28.7765 19.6982L29.4828 19.9505ZM27.5828 17.3505V16.6005H23.5828V17.3505V18.1005H27.5828V17.3505ZM23.5828 17.3505V16.6005C23.493 16.6005 23.4245 16.5641 23.3827 16.5167C23.3463 16.4755 23.3051 16.3979 23.3253 16.2565L22.5828 16.1505L21.8404 16.0444C21.674 17.2091 22.5395 18.1005 23.5828 18.1005V17.3505ZM22.5828 16.1505L23.3238 16.2662L23.8238 13.0662L23.0828 12.9505L22.3418 12.8347L21.8418 16.0347L22.5828 16.1505ZM23.0828 12.9505L23.815 13.1132C24.1043 11.8112 23.2579 10.4516 22.02 10.0389L21.7828 10.7505L21.5456 11.462C22.1077 11.6493 22.4613 12.2897 22.3507 12.7878L23.0828 12.9505ZM21.7828 10.7505L22.0462 10.0482C21.4491 9.82432 20.8159 9.87258 20.289 10.0537C19.7672 10.2331 19.2679 10.5708 18.9588 11.0344L19.5828 11.4505L20.2069 11.8665C20.2977 11.7302 20.4984 11.5678 20.7766 11.4722C21.0497 11.3783 21.3165 11.3766 21.5195 11.4527L21.7828 10.7505ZM19.5828 11.4505L18.9603 11.0321L14.8603 17.1321L15.4828 17.5505L16.1053 17.9688L20.2053 11.8688L19.5828 11.4505ZM10.3828 26.3505H11.1328V16.5505H10.3828H9.63281V26.3505H10.3828ZM10.3828 16.5505H11.1328C11.1328 15.935 11.2678 15.7177 11.3665 15.6266C11.48 15.5218 11.7403 15.4005 12.3828 15.4005V14.6505V13.9005C11.6253 13.9005 10.8856 14.0291 10.3491 14.5244C9.79782 15.0332 9.63281 15.7659 9.63281 16.5505H10.3828ZM12.3828 14.6505V15.4005H13.3828V14.6505V13.9005H12.3828V14.6505ZM13.3828 14.6505V15.4005C14.0253 15.4005 14.2856 15.5218 14.3991 15.6266C14.4978 15.7177 14.6328 15.935 14.6328 16.5505H15.3828H16.1328C16.1328 15.7659 15.9678 15.0332 15.4165 14.5244C14.88 14.0291 14.1403 13.9005 13.3828 13.9005V14.6505ZM15.3828 16.5505H14.6328V26.3505H15.3828H16.1328V16.5505H15.3828ZM15.3828 26.3505H14.6328C14.6328 26.9659 14.4978 27.1832 14.3991 27.2744C14.2856 27.3791 14.0253 27.5005 13.3828 27.5005V28.2505V29.0005C14.1403 29.0005 14.88 28.8718 15.4165 28.3766C15.9678 27.8677 16.1328 27.135 16.1328 26.3505H15.3828ZM13.3828 28.2505V27.5005H12.3828V28.2505V29.0005H13.3828V28.2505ZM12.3828 28.2505V27.5005C11.7403 27.5005 11.48 27.3791 11.3665 27.2744C11.2678 27.1832 11.1328 26.9659 11.1328 26.3505H10.3828H9.63281C9.63281 27.135 9.79782 27.8677 10.3491 28.3766C10.8856 28.8718 11.6253 29.0005 12.3828 29.0005V28.2505Z" fill="#EFF1F5"/>
+                    </svg>
+                    832                        
+                </button>
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4217 11.2504L20.8914 11.7807L20.925 11.8143L20.9626 11.8434L21.4217 11.2504ZM12.9217 12.7504L13.6342 12.9846L13.6427 12.9587L13.6493 12.9323L12.9217 12.7504ZM10.5217 20.0504L11.228 20.3026L11.2312 20.2937L11.2342 20.2846L10.5217 20.0504ZM17.4217 23.8504L18.1628 23.9662L18.1641 23.9565L17.4217 23.8504ZM16.9217 27.0504L17.6538 27.2131L17.659 27.1898L17.6627 27.1662L16.9217 27.0504ZM18.2217 29.2504L18.485 28.5481L18.472 28.5433L18.4589 28.5389L18.2217 29.2504ZM20.4217 28.5504L19.7992 28.132L19.7976 28.1344L20.4217 28.5504ZM24.5217 13.6504L24.9808 13.0573L21.8808 10.6573L21.4217 11.2504L20.9626 11.8434L24.0626 14.2434L24.5217 13.6504ZM21.4217 11.2504L21.952 10.7201C21.6187 10.3867 21.1487 10.1924 20.7527 10.0792C20.3384 9.96087 19.8941 9.90039 19.5217 9.90039V10.6504V11.4004C19.7493 11.4004 20.055 11.4399 20.3406 11.5215C20.6447 11.6084 20.8247 11.7141 20.8914 11.7807L21.4217 11.2504ZM19.5217 10.6504V9.90039H15.7217V10.6504V11.4004H19.5217V10.6504ZM15.7217 10.6504V9.90039C14.9419 9.90039 14.1647 10.189 13.5413 10.6451C12.9174 11.1017 12.3948 11.7655 12.1941 12.5685L12.9217 12.7504L13.6493 12.9323C13.7486 12.5353 14.026 12.1491 14.4271 11.8557C14.8287 11.5618 15.3015 11.4004 15.7217 11.4004V10.6504ZM12.9217 12.7504L12.2092 12.5161L9.8092 19.8161L10.5217 20.0504L11.2342 20.2846L13.6342 12.9846L12.9217 12.7504ZM10.5217 20.0504L9.81538 19.7981C9.49136 20.7054 9.60324 21.6218 10.1179 22.3203C10.629 23.014 11.4688 23.4004 12.4217 23.4004V22.6504V21.9004C11.8746 21.9004 11.5144 21.6868 11.3255 21.4305C11.1401 21.1789 11.052 20.7954 11.228 20.3026L10.5217 20.0504ZM12.4217 22.6504V23.4004H16.4217V22.6504V21.9004H12.4217V22.6504ZM16.4217 22.6504V23.4004C16.5115 23.4004 16.58 23.4367 16.6218 23.4841C16.6582 23.5254 16.6994 23.603 16.6792 23.7443L17.4217 23.8504L18.1641 23.9565C18.3305 22.7918 17.465 21.9004 16.4217 21.9004V22.6504ZM17.4217 23.8504L16.6807 23.7346L16.1807 26.9346L16.9217 27.0504L17.6627 27.1662L18.1627 23.9662L17.4217 23.8504ZM16.9217 27.0504L16.1895 26.8877C15.9002 28.1897 16.7465 29.5492 17.9845 29.9619L18.2217 29.2504L18.4589 28.5389C17.8968 28.3515 17.5432 27.7111 17.6538 27.2131L16.9217 27.0504ZM18.2217 29.2504L17.9583 29.9526C18.5554 30.1765 19.1886 30.1283 19.7155 29.9472C20.2373 29.7678 20.7366 29.4301 21.0457 28.9664L20.4217 28.5504L19.7976 28.1344C19.7068 28.2707 19.506 28.433 19.2279 28.5286C18.9548 28.6225 18.688 28.6243 18.485 28.5481L18.2217 29.2504ZM20.4217 28.5504L21.0441 28.9688L25.1441 22.8688L24.5217 22.4504L23.8992 22.032L19.7992 28.132L20.4217 28.5504ZM29.6217 13.6504H28.8717V23.4504H29.6217H30.3717V13.6504H29.6217ZM29.6217 23.4504H28.8717C28.8717 24.0659 28.7367 24.2832 28.638 24.3743C28.5245 24.479 28.2642 24.6004 27.6217 24.6004V25.3504V26.1004C28.3792 26.1004 29.1189 25.9718 29.6554 25.4765C30.2067 24.9676 30.3717 24.2349 30.3717 23.4504H29.6217ZM27.6217 25.3504V24.6004H26.6217V25.3504V26.1004H27.6217V25.3504ZM26.6217 25.3504V24.6004C25.9792 24.6004 25.7189 24.479 25.6054 24.3743C25.5067 24.2832 25.3717 24.0659 25.3717 23.4504H24.6217H23.8717C23.8717 24.2349 24.0367 24.9676 24.588 25.4765C25.1245 25.9718 25.8642 26.1004 26.6217 26.1004V25.3504ZM24.6217 23.4504H25.3717V13.6504H24.6217H23.8717V23.4504H24.6217ZM24.6217 13.6504H25.3717C25.3717 13.0349 25.5067 12.8176 25.6054 12.7265C25.7189 12.6218 25.9792 12.5004 26.6217 12.5004V11.7504V11.0004C25.8642 11.0004 25.1245 11.129 24.588 11.6243C24.0367 12.1332 23.8717 12.8659 23.8717 13.6504H24.6217ZM26.6217 11.7504V12.5004H27.6217V11.7504V11.0004H26.6217V11.7504ZM27.6217 11.7504V12.5004C28.2642 12.5004 28.5245 12.6218 28.638 12.7265C28.7367 12.8176 28.8717 13.0349 28.8717 13.6504H29.6217H30.3717C30.3717 12.8659 30.2067 12.1332 29.6554 11.6243C29.1189 11.129 28.3792 11.0004 27.6217 11.0004V11.7504Z" fill="#EFF1F5"/>
+                    </svg>                 
+                    1                             
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+                        <div class="reviews-item">
+    <div class="reviews-item__top">
+        <div class="review-user">
+            <img src="img/actor.png" alt="">
+            <span class="text size-18 weight-500 font-manrope color-white">cyber_wanderer</span>
+        </div>
+        <div class="review-rating">
+            <span class="text size-16 weight-500 font-manrope color-white">Супер</span>
+            <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3056_21532)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5323 14.2419C30.6752 15.1623 31.0982 20.2407 28.968 22.8736C28.1049 12.0472 21.299 11.5286 23.4159 0C15.6249 2.86255 9.48595 11.3507 10.029 19.4791C7.46629 15.0705 10.2157 13.8822 7.68159 8.70054C6.82229 12.3974 4.23484 15.1413 2.37714 18.5587C0.102173 22.7492 -1.30777 29.6262 1.78077 36C6.81086 32.4486 12.9384 30.3629 19.5537 30.3629C26.1691 30.3629 32.2852 32.4448 37.3115 35.9885C39.9275 26.0538 34.5259 16.8519 30.5323 14.24V14.2419ZM31.1553 10.6695C32.5462 9.39704 32.1347 6.17285 31.2582 4.63059C30.9515 4.091 30.2141 2.75157 30.7914 0.80557C28.484 2.22536 26.6492 4.95971 27.2608 7.76294C27.6343 9.46976 29.4577 12.2232 31.1553 10.6695Z" fill="#F45E3F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3056_21532">
+                <rect width="38" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                
+        </div>
+    </div>
+    <div class="reviews-item__bottom">
+        <p class="text size-18 weight-400 font-manrope color-gray-100">Один из самых интеллектуальных и визуально впечатляющих сериалов, которые я когда-либо видел. Потрясающее сочетание философии, sci-fi и драмы. Особенно зацепили вопросы сознания, свободы воли и природы реальности. Сезон 1 — шедевр. Дальше сложнее, но всё равно круто. Браво, Нолан и Джой!</p>
+        <div class="reviews-item__stats">
+            <span class="date text size-14 weight-400 font-manrope color-gray-400">12 апреля 2023</span>
+            <div class="reviews-item__buttons">
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5828 28.7505L19.1131 28.2201L19.0795 28.1865L19.0419 28.1574L18.5828 28.7505ZM27.0828 27.2505L26.3703 27.0162L26.3618 27.0421L26.3552 27.0686L27.0828 27.2505ZM29.4828 19.9505L28.7765 19.6982L28.7733 19.7072L28.7703 19.7162L29.4828 19.9505ZM22.5828 16.1505L21.8417 16.0347L21.8404 16.0444L22.5828 16.1505ZM23.0828 12.9505L22.3507 12.7878L22.3455 12.8111L22.3418 12.8347L23.0828 12.9505ZM21.7828 10.7505L21.5195 11.4527L21.5325 11.4576L21.5456 11.462L21.7828 10.7505ZM19.5828 11.4505L20.2053 11.8688L20.2069 11.8665L19.5828 11.4505ZM15.4828 26.3505L15.0237 26.9435L18.1237 29.3435L18.5828 28.7505L19.0419 28.1574L15.9419 25.7574L15.4828 26.3505ZM18.5828 28.7505L18.0525 29.2808C18.3858 29.6141 18.8558 29.8085 19.2518 29.9216C19.6661 30.04 20.1104 30.1005 20.4828 30.1005V29.3505V28.6005C20.2552 28.6005 19.9495 28.5609 19.6639 28.4793C19.3598 28.3924 19.1798 28.2868 19.1131 28.2201L18.5828 28.7505ZM20.4828 29.3505V30.1005H24.2828V29.3505V28.6005H20.4828V29.3505ZM24.2828 29.3505V30.1005C25.0626 30.1005 25.8398 29.8119 26.4632 29.3557C27.0871 28.8992 27.6097 28.2353 27.8104 27.4324L27.0828 27.2505L26.3552 27.0686C26.2559 27.4656 25.9785 27.8517 25.5774 28.1452C25.1758 28.439 24.703 28.6005 24.2828 28.6005V29.3505ZM27.0828 27.2505L27.7953 27.4847L30.1953 20.1847L29.4828 19.9505L28.7703 19.7162L26.3703 27.0162L27.0828 27.2505ZM29.4828 19.9505L30.1891 20.2027C30.5131 19.2955 30.4013 18.379 29.8866 17.6806C29.3755 16.9869 28.5357 16.6005 27.5828 16.6005V17.3505V18.1005C28.1299 18.1005 28.4901 18.314 28.679 18.5704C28.8644 18.8219 28.9525 19.2055 28.7765 19.6982L29.4828 19.9505ZM27.5828 17.3505V16.6005H23.5828V17.3505V18.1005H27.5828V17.3505ZM23.5828 17.3505V16.6005C23.493 16.6005 23.4245 16.5641 23.3827 16.5167C23.3463 16.4755 23.3051 16.3979 23.3253 16.2565L22.5828 16.1505L21.8404 16.0444C21.674 17.2091 22.5395 18.1005 23.5828 18.1005V17.3505ZM22.5828 16.1505L23.3238 16.2662L23.8238 13.0662L23.0828 12.9505L22.3418 12.8347L21.8418 16.0347L22.5828 16.1505ZM23.0828 12.9505L23.815 13.1132C24.1043 11.8112 23.2579 10.4516 22.02 10.0389L21.7828 10.7505L21.5456 11.462C22.1077 11.6493 22.4613 12.2897 22.3507 12.7878L23.0828 12.9505ZM21.7828 10.7505L22.0462 10.0482C21.4491 9.82432 20.8159 9.87258 20.289 10.0537C19.7672 10.2331 19.2679 10.5708 18.9588 11.0344L19.5828 11.4505L20.2069 11.8665C20.2977 11.7302 20.4984 11.5678 20.7766 11.4722C21.0497 11.3783 21.3165 11.3766 21.5195 11.4527L21.7828 10.7505ZM19.5828 11.4505L18.9603 11.0321L14.8603 17.1321L15.4828 17.5505L16.1053 17.9688L20.2053 11.8688L19.5828 11.4505ZM10.3828 26.3505H11.1328V16.5505H10.3828H9.63281V26.3505H10.3828ZM10.3828 16.5505H11.1328C11.1328 15.935 11.2678 15.7177 11.3665 15.6266C11.48 15.5218 11.7403 15.4005 12.3828 15.4005V14.6505V13.9005C11.6253 13.9005 10.8856 14.0291 10.3491 14.5244C9.79782 15.0332 9.63281 15.7659 9.63281 16.5505H10.3828ZM12.3828 14.6505V15.4005H13.3828V14.6505V13.9005H12.3828V14.6505ZM13.3828 14.6505V15.4005C14.0253 15.4005 14.2856 15.5218 14.3991 15.6266C14.4978 15.7177 14.6328 15.935 14.6328 16.5505H15.3828H16.1328C16.1328 15.7659 15.9678 15.0332 15.4165 14.5244C14.88 14.0291 14.1403 13.9005 13.3828 13.9005V14.6505ZM15.3828 16.5505H14.6328V26.3505H15.3828H16.1328V16.5505H15.3828ZM15.3828 26.3505H14.6328C14.6328 26.9659 14.4978 27.1832 14.3991 27.2744C14.2856 27.3791 14.0253 27.5005 13.3828 27.5005V28.2505V29.0005C14.1403 29.0005 14.88 28.8718 15.4165 28.3766C15.9678 27.8677 16.1328 27.135 16.1328 26.3505H15.3828ZM13.3828 28.2505V27.5005H12.3828V28.2505V29.0005H13.3828V28.2505ZM12.3828 28.2505V27.5005C11.7403 27.5005 11.48 27.3791 11.3665 27.2744C11.2678 27.1832 11.1328 26.9659 11.1328 26.3505H10.3828H9.63281C9.63281 27.135 9.79782 27.8677 10.3491 28.3766C10.8856 28.8718 11.6253 29.0005 12.3828 29.0005V28.2505Z" fill="#EFF1F5"/>
+                    </svg>
+                    832                        
+                </button>
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4217 11.2504L20.8914 11.7807L20.925 11.8143L20.9626 11.8434L21.4217 11.2504ZM12.9217 12.7504L13.6342 12.9846L13.6427 12.9587L13.6493 12.9323L12.9217 12.7504ZM10.5217 20.0504L11.228 20.3026L11.2312 20.2937L11.2342 20.2846L10.5217 20.0504ZM17.4217 23.8504L18.1628 23.9662L18.1641 23.9565L17.4217 23.8504ZM16.9217 27.0504L17.6538 27.2131L17.659 27.1898L17.6627 27.1662L16.9217 27.0504ZM18.2217 29.2504L18.485 28.5481L18.472 28.5433L18.4589 28.5389L18.2217 29.2504ZM20.4217 28.5504L19.7992 28.132L19.7976 28.1344L20.4217 28.5504ZM24.5217 13.6504L24.9808 13.0573L21.8808 10.6573L21.4217 11.2504L20.9626 11.8434L24.0626 14.2434L24.5217 13.6504ZM21.4217 11.2504L21.952 10.7201C21.6187 10.3867 21.1487 10.1924 20.7527 10.0792C20.3384 9.96087 19.8941 9.90039 19.5217 9.90039V10.6504V11.4004C19.7493 11.4004 20.055 11.4399 20.3406 11.5215C20.6447 11.6084 20.8247 11.7141 20.8914 11.7807L21.4217 11.2504ZM19.5217 10.6504V9.90039H15.7217V10.6504V11.4004H19.5217V10.6504ZM15.7217 10.6504V9.90039C14.9419 9.90039 14.1647 10.189 13.5413 10.6451C12.9174 11.1017 12.3948 11.7655 12.1941 12.5685L12.9217 12.7504L13.6493 12.9323C13.7486 12.5353 14.026 12.1491 14.4271 11.8557C14.8287 11.5618 15.3015 11.4004 15.7217 11.4004V10.6504ZM12.9217 12.7504L12.2092 12.5161L9.8092 19.8161L10.5217 20.0504L11.2342 20.2846L13.6342 12.9846L12.9217 12.7504ZM10.5217 20.0504L9.81538 19.7981C9.49136 20.7054 9.60324 21.6218 10.1179 22.3203C10.629 23.014 11.4688 23.4004 12.4217 23.4004V22.6504V21.9004C11.8746 21.9004 11.5144 21.6868 11.3255 21.4305C11.1401 21.1789 11.052 20.7954 11.228 20.3026L10.5217 20.0504ZM12.4217 22.6504V23.4004H16.4217V22.6504V21.9004H12.4217V22.6504ZM16.4217 22.6504V23.4004C16.5115 23.4004 16.58 23.4367 16.6218 23.4841C16.6582 23.5254 16.6994 23.603 16.6792 23.7443L17.4217 23.8504L18.1641 23.9565C18.3305 22.7918 17.465 21.9004 16.4217 21.9004V22.6504ZM17.4217 23.8504L16.6807 23.7346L16.1807 26.9346L16.9217 27.0504L17.6627 27.1662L18.1627 23.9662L17.4217 23.8504ZM16.9217 27.0504L16.1895 26.8877C15.9002 28.1897 16.7465 29.5492 17.9845 29.9619L18.2217 29.2504L18.4589 28.5389C17.8968 28.3515 17.5432 27.7111 17.6538 27.2131L16.9217 27.0504ZM18.2217 29.2504L17.9583 29.9526C18.5554 30.1765 19.1886 30.1283 19.7155 29.9472C20.2373 29.7678 20.7366 29.4301 21.0457 28.9664L20.4217 28.5504L19.7976 28.1344C19.7068 28.2707 19.506 28.433 19.2279 28.5286C18.9548 28.6225 18.688 28.6243 18.485 28.5481L18.2217 29.2504ZM20.4217 28.5504L21.0441 28.9688L25.1441 22.8688L24.5217 22.4504L23.8992 22.032L19.7992 28.132L20.4217 28.5504ZM29.6217 13.6504H28.8717V23.4504H29.6217H30.3717V13.6504H29.6217ZM29.6217 23.4504H28.8717C28.8717 24.0659 28.7367 24.2832 28.638 24.3743C28.5245 24.479 28.2642 24.6004 27.6217 24.6004V25.3504V26.1004C28.3792 26.1004 29.1189 25.9718 29.6554 25.4765C30.2067 24.9676 30.3717 24.2349 30.3717 23.4504H29.6217ZM27.6217 25.3504V24.6004H26.6217V25.3504V26.1004H27.6217V25.3504ZM26.6217 25.3504V24.6004C25.9792 24.6004 25.7189 24.479 25.6054 24.3743C25.5067 24.2832 25.3717 24.0659 25.3717 23.4504H24.6217H23.8717C23.8717 24.2349 24.0367 24.9676 24.588 25.4765C25.1245 25.9718 25.8642 26.1004 26.6217 26.1004V25.3504ZM24.6217 23.4504H25.3717V13.6504H24.6217H23.8717V23.4504H24.6217ZM24.6217 13.6504H25.3717C25.3717 13.0349 25.5067 12.8176 25.6054 12.7265C25.7189 12.6218 25.9792 12.5004 26.6217 12.5004V11.7504V11.0004C25.8642 11.0004 25.1245 11.129 24.588 11.6243C24.0367 12.1332 23.8717 12.8659 23.8717 13.6504H24.6217ZM26.6217 11.7504V12.5004H27.6217V11.7504V11.0004H26.6217V11.7504ZM27.6217 11.7504V12.5004C28.2642 12.5004 28.5245 12.6218 28.638 12.7265C28.7367 12.8176 28.8717 13.0349 28.8717 13.6504H29.6217H30.3717C30.3717 12.8659 30.2067 12.1332 29.6554 11.6243C29.1189 11.129 28.3792 11.0004 27.6217 11.0004V11.7504Z" fill="#EFF1F5"/>
+                    </svg>                 
+                    1                             
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+                        <div class="reviews-item">
+    <div class="reviews-item__top">
+        <div class="review-user">
+            <img src="img/actor.png" alt="">
+            <span class="text size-18 weight-500 font-manrope color-white">cyber_wanderer</span>
+        </div>
+        <div class="review-rating">
+            <span class="text size-16 weight-500 font-manrope color-white">Супер</span>
+            <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3056_21532)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5323 14.2419C30.6752 15.1623 31.0982 20.2407 28.968 22.8736C28.1049 12.0472 21.299 11.5286 23.4159 0C15.6249 2.86255 9.48595 11.3507 10.029 19.4791C7.46629 15.0705 10.2157 13.8822 7.68159 8.70054C6.82229 12.3974 4.23484 15.1413 2.37714 18.5587C0.102173 22.7492 -1.30777 29.6262 1.78077 36C6.81086 32.4486 12.9384 30.3629 19.5537 30.3629C26.1691 30.3629 32.2852 32.4448 37.3115 35.9885C39.9275 26.0538 34.5259 16.8519 30.5323 14.24V14.2419ZM31.1553 10.6695C32.5462 9.39704 32.1347 6.17285 31.2582 4.63059C30.9515 4.091 30.2141 2.75157 30.7914 0.80557C28.484 2.22536 26.6492 4.95971 27.2608 7.76294C27.6343 9.46976 29.4577 12.2232 31.1553 10.6695Z" fill="#F45E3F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3056_21532">
+                <rect width="38" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                
+        </div>
+    </div>
+    <div class="reviews-item__bottom">
+        <p class="text size-18 weight-400 font-manrope color-gray-100">Один из самых интеллектуальных и визуально впечатляющих сериалов, которые я когда-либо видел. Потрясающее сочетание философии, sci-fi и драмы. Особенно зацепили вопросы сознания, свободы воли и природы реальности. Сезон 1 — шедевр. Дальше сложнее, но всё равно круто. Браво, Нолан и Джой!</p>
+        <div class="reviews-item__stats">
+            <span class="date text size-14 weight-400 font-manrope color-gray-400">12 апреля 2023</span>
+            <div class="reviews-item__buttons">
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5828 28.7505L19.1131 28.2201L19.0795 28.1865L19.0419 28.1574L18.5828 28.7505ZM27.0828 27.2505L26.3703 27.0162L26.3618 27.0421L26.3552 27.0686L27.0828 27.2505ZM29.4828 19.9505L28.7765 19.6982L28.7733 19.7072L28.7703 19.7162L29.4828 19.9505ZM22.5828 16.1505L21.8417 16.0347L21.8404 16.0444L22.5828 16.1505ZM23.0828 12.9505L22.3507 12.7878L22.3455 12.8111L22.3418 12.8347L23.0828 12.9505ZM21.7828 10.7505L21.5195 11.4527L21.5325 11.4576L21.5456 11.462L21.7828 10.7505ZM19.5828 11.4505L20.2053 11.8688L20.2069 11.8665L19.5828 11.4505ZM15.4828 26.3505L15.0237 26.9435L18.1237 29.3435L18.5828 28.7505L19.0419 28.1574L15.9419 25.7574L15.4828 26.3505ZM18.5828 28.7505L18.0525 29.2808C18.3858 29.6141 18.8558 29.8085 19.2518 29.9216C19.6661 30.04 20.1104 30.1005 20.4828 30.1005V29.3505V28.6005C20.2552 28.6005 19.9495 28.5609 19.6639 28.4793C19.3598 28.3924 19.1798 28.2868 19.1131 28.2201L18.5828 28.7505ZM20.4828 29.3505V30.1005H24.2828V29.3505V28.6005H20.4828V29.3505ZM24.2828 29.3505V30.1005C25.0626 30.1005 25.8398 29.8119 26.4632 29.3557C27.0871 28.8992 27.6097 28.2353 27.8104 27.4324L27.0828 27.2505L26.3552 27.0686C26.2559 27.4656 25.9785 27.8517 25.5774 28.1452C25.1758 28.439 24.703 28.6005 24.2828 28.6005V29.3505ZM27.0828 27.2505L27.7953 27.4847L30.1953 20.1847L29.4828 19.9505L28.7703 19.7162L26.3703 27.0162L27.0828 27.2505ZM29.4828 19.9505L30.1891 20.2027C30.5131 19.2955 30.4013 18.379 29.8866 17.6806C29.3755 16.9869 28.5357 16.6005 27.5828 16.6005V17.3505V18.1005C28.1299 18.1005 28.4901 18.314 28.679 18.5704C28.8644 18.8219 28.9525 19.2055 28.7765 19.6982L29.4828 19.9505ZM27.5828 17.3505V16.6005H23.5828V17.3505V18.1005H27.5828V17.3505ZM23.5828 17.3505V16.6005C23.493 16.6005 23.4245 16.5641 23.3827 16.5167C23.3463 16.4755 23.3051 16.3979 23.3253 16.2565L22.5828 16.1505L21.8404 16.0444C21.674 17.2091 22.5395 18.1005 23.5828 18.1005V17.3505ZM22.5828 16.1505L23.3238 16.2662L23.8238 13.0662L23.0828 12.9505L22.3418 12.8347L21.8418 16.0347L22.5828 16.1505ZM23.0828 12.9505L23.815 13.1132C24.1043 11.8112 23.2579 10.4516 22.02 10.0389L21.7828 10.7505L21.5456 11.462C22.1077 11.6493 22.4613 12.2897 22.3507 12.7878L23.0828 12.9505ZM21.7828 10.7505L22.0462 10.0482C21.4491 9.82432 20.8159 9.87258 20.289 10.0537C19.7672 10.2331 19.2679 10.5708 18.9588 11.0344L19.5828 11.4505L20.2069 11.8665C20.2977 11.7302 20.4984 11.5678 20.7766 11.4722C21.0497 11.3783 21.3165 11.3766 21.5195 11.4527L21.7828 10.7505ZM19.5828 11.4505L18.9603 11.0321L14.8603 17.1321L15.4828 17.5505L16.1053 17.9688L20.2053 11.8688L19.5828 11.4505ZM10.3828 26.3505H11.1328V16.5505H10.3828H9.63281V26.3505H10.3828ZM10.3828 16.5505H11.1328C11.1328 15.935 11.2678 15.7177 11.3665 15.6266C11.48 15.5218 11.7403 15.4005 12.3828 15.4005V14.6505V13.9005C11.6253 13.9005 10.8856 14.0291 10.3491 14.5244C9.79782 15.0332 9.63281 15.7659 9.63281 16.5505H10.3828ZM12.3828 14.6505V15.4005H13.3828V14.6505V13.9005H12.3828V14.6505ZM13.3828 14.6505V15.4005C14.0253 15.4005 14.2856 15.5218 14.3991 15.6266C14.4978 15.7177 14.6328 15.935 14.6328 16.5505H15.3828H16.1328C16.1328 15.7659 15.9678 15.0332 15.4165 14.5244C14.88 14.0291 14.1403 13.9005 13.3828 13.9005V14.6505ZM15.3828 16.5505H14.6328V26.3505H15.3828H16.1328V16.5505H15.3828ZM15.3828 26.3505H14.6328C14.6328 26.9659 14.4978 27.1832 14.3991 27.2744C14.2856 27.3791 14.0253 27.5005 13.3828 27.5005V28.2505V29.0005C14.1403 29.0005 14.88 28.8718 15.4165 28.3766C15.9678 27.8677 16.1328 27.135 16.1328 26.3505H15.3828ZM13.3828 28.2505V27.5005H12.3828V28.2505V29.0005H13.3828V28.2505ZM12.3828 28.2505V27.5005C11.7403 27.5005 11.48 27.3791 11.3665 27.2744C11.2678 27.1832 11.1328 26.9659 11.1328 26.3505H10.3828H9.63281C9.63281 27.135 9.79782 27.8677 10.3491 28.3766C10.8856 28.8718 11.6253 29.0005 12.3828 29.0005V28.2505Z" fill="#EFF1F5"/>
+                    </svg>
+                    832                        
+                </button>
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4217 11.2504L20.8914 11.7807L20.925 11.8143L20.9626 11.8434L21.4217 11.2504ZM12.9217 12.7504L13.6342 12.9846L13.6427 12.9587L13.6493 12.9323L12.9217 12.7504ZM10.5217 20.0504L11.228 20.3026L11.2312 20.2937L11.2342 20.2846L10.5217 20.0504ZM17.4217 23.8504L18.1628 23.9662L18.1641 23.9565L17.4217 23.8504ZM16.9217 27.0504L17.6538 27.2131L17.659 27.1898L17.6627 27.1662L16.9217 27.0504ZM18.2217 29.2504L18.485 28.5481L18.472 28.5433L18.4589 28.5389L18.2217 29.2504ZM20.4217 28.5504L19.7992 28.132L19.7976 28.1344L20.4217 28.5504ZM24.5217 13.6504L24.9808 13.0573L21.8808 10.6573L21.4217 11.2504L20.9626 11.8434L24.0626 14.2434L24.5217 13.6504ZM21.4217 11.2504L21.952 10.7201C21.6187 10.3867 21.1487 10.1924 20.7527 10.0792C20.3384 9.96087 19.8941 9.90039 19.5217 9.90039V10.6504V11.4004C19.7493 11.4004 20.055 11.4399 20.3406 11.5215C20.6447 11.6084 20.8247 11.7141 20.8914 11.7807L21.4217 11.2504ZM19.5217 10.6504V9.90039H15.7217V10.6504V11.4004H19.5217V10.6504ZM15.7217 10.6504V9.90039C14.9419 9.90039 14.1647 10.189 13.5413 10.6451C12.9174 11.1017 12.3948 11.7655 12.1941 12.5685L12.9217 12.7504L13.6493 12.9323C13.7486 12.5353 14.026 12.1491 14.4271 11.8557C14.8287 11.5618 15.3015 11.4004 15.7217 11.4004V10.6504ZM12.9217 12.7504L12.2092 12.5161L9.8092 19.8161L10.5217 20.0504L11.2342 20.2846L13.6342 12.9846L12.9217 12.7504ZM10.5217 20.0504L9.81538 19.7981C9.49136 20.7054 9.60324 21.6218 10.1179 22.3203C10.629 23.014 11.4688 23.4004 12.4217 23.4004V22.6504V21.9004C11.8746 21.9004 11.5144 21.6868 11.3255 21.4305C11.1401 21.1789 11.052 20.7954 11.228 20.3026L10.5217 20.0504ZM12.4217 22.6504V23.4004H16.4217V22.6504V21.9004H12.4217V22.6504ZM16.4217 22.6504V23.4004C16.5115 23.4004 16.58 23.4367 16.6218 23.4841C16.6582 23.5254 16.6994 23.603 16.6792 23.7443L17.4217 23.8504L18.1641 23.9565C18.3305 22.7918 17.465 21.9004 16.4217 21.9004V22.6504ZM17.4217 23.8504L16.6807 23.7346L16.1807 26.9346L16.9217 27.0504L17.6627 27.1662L18.1627 23.9662L17.4217 23.8504ZM16.9217 27.0504L16.1895 26.8877C15.9002 28.1897 16.7465 29.5492 17.9845 29.9619L18.2217 29.2504L18.4589 28.5389C17.8968 28.3515 17.5432 27.7111 17.6538 27.2131L16.9217 27.0504ZM18.2217 29.2504L17.9583 29.9526C18.5554 30.1765 19.1886 30.1283 19.7155 29.9472C20.2373 29.7678 20.7366 29.4301 21.0457 28.9664L20.4217 28.5504L19.7976 28.1344C19.7068 28.2707 19.506 28.433 19.2279 28.5286C18.9548 28.6225 18.688 28.6243 18.485 28.5481L18.2217 29.2504ZM20.4217 28.5504L21.0441 28.9688L25.1441 22.8688L24.5217 22.4504L23.8992 22.032L19.7992 28.132L20.4217 28.5504ZM29.6217 13.6504H28.8717V23.4504H29.6217H30.3717V13.6504H29.6217ZM29.6217 23.4504H28.8717C28.8717 24.0659 28.7367 24.2832 28.638 24.3743C28.5245 24.479 28.2642 24.6004 27.6217 24.6004V25.3504V26.1004C28.3792 26.1004 29.1189 25.9718 29.6554 25.4765C30.2067 24.9676 30.3717 24.2349 30.3717 23.4504H29.6217ZM27.6217 25.3504V24.6004H26.6217V25.3504V26.1004H27.6217V25.3504ZM26.6217 25.3504V24.6004C25.9792 24.6004 25.7189 24.479 25.6054 24.3743C25.5067 24.2832 25.3717 24.0659 25.3717 23.4504H24.6217H23.8717C23.8717 24.2349 24.0367 24.9676 24.588 25.4765C25.1245 25.9718 25.8642 26.1004 26.6217 26.1004V25.3504ZM24.6217 23.4504H25.3717V13.6504H24.6217H23.8717V23.4504H24.6217ZM24.6217 13.6504H25.3717C25.3717 13.0349 25.5067 12.8176 25.6054 12.7265C25.7189 12.6218 25.9792 12.5004 26.6217 12.5004V11.7504V11.0004C25.8642 11.0004 25.1245 11.129 24.588 11.6243C24.0367 12.1332 23.8717 12.8659 23.8717 13.6504H24.6217ZM26.6217 11.7504V12.5004H27.6217V11.7504V11.0004H26.6217V11.7504ZM27.6217 11.7504V12.5004C28.2642 12.5004 28.5245 12.6218 28.638 12.7265C28.7367 12.8176 28.8717 13.0349 28.8717 13.6504H29.6217H30.3717C30.3717 12.8659 30.2067 12.1332 29.6554 11.6243C29.1189 11.129 28.3792 11.0004 27.6217 11.0004V11.7504Z" fill="#EFF1F5"/>
+                    </svg>                 
+                    1                             
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+                        <div class="reviews-item">
+    <div class="reviews-item__top">
+        <div class="review-user">
+            <img src="img/actor.png" alt="">
+            <span class="text size-18 weight-500 font-manrope color-white">cyber_wanderer</span>
+        </div>
+        <div class="review-rating">
+            <span class="text size-16 weight-500 font-manrope color-white">Супер</span>
+            <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3056_21532)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5323 14.2419C30.6752 15.1623 31.0982 20.2407 28.968 22.8736C28.1049 12.0472 21.299 11.5286 23.4159 0C15.6249 2.86255 9.48595 11.3507 10.029 19.4791C7.46629 15.0705 10.2157 13.8822 7.68159 8.70054C6.82229 12.3974 4.23484 15.1413 2.37714 18.5587C0.102173 22.7492 -1.30777 29.6262 1.78077 36C6.81086 32.4486 12.9384 30.3629 19.5537 30.3629C26.1691 30.3629 32.2852 32.4448 37.3115 35.9885C39.9275 26.0538 34.5259 16.8519 30.5323 14.24V14.2419ZM31.1553 10.6695C32.5462 9.39704 32.1347 6.17285 31.2582 4.63059C30.9515 4.091 30.2141 2.75157 30.7914 0.80557C28.484 2.22536 26.6492 4.95971 27.2608 7.76294C27.6343 9.46976 29.4577 12.2232 31.1553 10.6695Z" fill="#F45E3F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3056_21532">
+                <rect width="38" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                
+        </div>
+    </div>
+    <div class="reviews-item__bottom">
+        <p class="text size-18 weight-400 font-manrope color-gray-100">Один из самых интеллектуальных и визуально впечатляющих сериалов, которые я когда-либо видел. Потрясающее сочетание философии, sci-fi и драмы. Особенно зацепили вопросы сознания, свободы воли и природы реальности. Сезон 1 — шедевр. Дальше сложнее, но всё равно круто. Браво, Нолан и Джой!</p>
+        <div class="reviews-item__stats">
+            <span class="date text size-14 weight-400 font-manrope color-gray-400">12 апреля 2023</span>
+            <div class="reviews-item__buttons">
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5828 28.7505L19.1131 28.2201L19.0795 28.1865L19.0419 28.1574L18.5828 28.7505ZM27.0828 27.2505L26.3703 27.0162L26.3618 27.0421L26.3552 27.0686L27.0828 27.2505ZM29.4828 19.9505L28.7765 19.6982L28.7733 19.7072L28.7703 19.7162L29.4828 19.9505ZM22.5828 16.1505L21.8417 16.0347L21.8404 16.0444L22.5828 16.1505ZM23.0828 12.9505L22.3507 12.7878L22.3455 12.8111L22.3418 12.8347L23.0828 12.9505ZM21.7828 10.7505L21.5195 11.4527L21.5325 11.4576L21.5456 11.462L21.7828 10.7505ZM19.5828 11.4505L20.2053 11.8688L20.2069 11.8665L19.5828 11.4505ZM15.4828 26.3505L15.0237 26.9435L18.1237 29.3435L18.5828 28.7505L19.0419 28.1574L15.9419 25.7574L15.4828 26.3505ZM18.5828 28.7505L18.0525 29.2808C18.3858 29.6141 18.8558 29.8085 19.2518 29.9216C19.6661 30.04 20.1104 30.1005 20.4828 30.1005V29.3505V28.6005C20.2552 28.6005 19.9495 28.5609 19.6639 28.4793C19.3598 28.3924 19.1798 28.2868 19.1131 28.2201L18.5828 28.7505ZM20.4828 29.3505V30.1005H24.2828V29.3505V28.6005H20.4828V29.3505ZM24.2828 29.3505V30.1005C25.0626 30.1005 25.8398 29.8119 26.4632 29.3557C27.0871 28.8992 27.6097 28.2353 27.8104 27.4324L27.0828 27.2505L26.3552 27.0686C26.2559 27.4656 25.9785 27.8517 25.5774 28.1452C25.1758 28.439 24.703 28.6005 24.2828 28.6005V29.3505ZM27.0828 27.2505L27.7953 27.4847L30.1953 20.1847L29.4828 19.9505L28.7703 19.7162L26.3703 27.0162L27.0828 27.2505ZM29.4828 19.9505L30.1891 20.2027C30.5131 19.2955 30.4013 18.379 29.8866 17.6806C29.3755 16.9869 28.5357 16.6005 27.5828 16.6005V17.3505V18.1005C28.1299 18.1005 28.4901 18.314 28.679 18.5704C28.8644 18.8219 28.9525 19.2055 28.7765 19.6982L29.4828 19.9505ZM27.5828 17.3505V16.6005H23.5828V17.3505V18.1005H27.5828V17.3505ZM23.5828 17.3505V16.6005C23.493 16.6005 23.4245 16.5641 23.3827 16.5167C23.3463 16.4755 23.3051 16.3979 23.3253 16.2565L22.5828 16.1505L21.8404 16.0444C21.674 17.2091 22.5395 18.1005 23.5828 18.1005V17.3505ZM22.5828 16.1505L23.3238 16.2662L23.8238 13.0662L23.0828 12.9505L22.3418 12.8347L21.8418 16.0347L22.5828 16.1505ZM23.0828 12.9505L23.815 13.1132C24.1043 11.8112 23.2579 10.4516 22.02 10.0389L21.7828 10.7505L21.5456 11.462C22.1077 11.6493 22.4613 12.2897 22.3507 12.7878L23.0828 12.9505ZM21.7828 10.7505L22.0462 10.0482C21.4491 9.82432 20.8159 9.87258 20.289 10.0537C19.7672 10.2331 19.2679 10.5708 18.9588 11.0344L19.5828 11.4505L20.2069 11.8665C20.2977 11.7302 20.4984 11.5678 20.7766 11.4722C21.0497 11.3783 21.3165 11.3766 21.5195 11.4527L21.7828 10.7505ZM19.5828 11.4505L18.9603 11.0321L14.8603 17.1321L15.4828 17.5505L16.1053 17.9688L20.2053 11.8688L19.5828 11.4505ZM10.3828 26.3505H11.1328V16.5505H10.3828H9.63281V26.3505H10.3828ZM10.3828 16.5505H11.1328C11.1328 15.935 11.2678 15.7177 11.3665 15.6266C11.48 15.5218 11.7403 15.4005 12.3828 15.4005V14.6505V13.9005C11.6253 13.9005 10.8856 14.0291 10.3491 14.5244C9.79782 15.0332 9.63281 15.7659 9.63281 16.5505H10.3828ZM12.3828 14.6505V15.4005H13.3828V14.6505V13.9005H12.3828V14.6505ZM13.3828 14.6505V15.4005C14.0253 15.4005 14.2856 15.5218 14.3991 15.6266C14.4978 15.7177 14.6328 15.935 14.6328 16.5505H15.3828H16.1328C16.1328 15.7659 15.9678 15.0332 15.4165 14.5244C14.88 14.0291 14.1403 13.9005 13.3828 13.9005V14.6505ZM15.3828 16.5505H14.6328V26.3505H15.3828H16.1328V16.5505H15.3828ZM15.3828 26.3505H14.6328C14.6328 26.9659 14.4978 27.1832 14.3991 27.2744C14.2856 27.3791 14.0253 27.5005 13.3828 27.5005V28.2505V29.0005C14.1403 29.0005 14.88 28.8718 15.4165 28.3766C15.9678 27.8677 16.1328 27.135 16.1328 26.3505H15.3828ZM13.3828 28.2505V27.5005H12.3828V28.2505V29.0005H13.3828V28.2505ZM12.3828 28.2505V27.5005C11.7403 27.5005 11.48 27.3791 11.3665 27.2744C11.2678 27.1832 11.1328 26.9659 11.1328 26.3505H10.3828H9.63281C9.63281 27.135 9.79782 27.8677 10.3491 28.3766C10.8856 28.8718 11.6253 29.0005 12.3828 29.0005V28.2505Z" fill="#EFF1F5"/>
+                    </svg>
+                    832                        
+                </button>
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4217 11.2504L20.8914 11.7807L20.925 11.8143L20.9626 11.8434L21.4217 11.2504ZM12.9217 12.7504L13.6342 12.9846L13.6427 12.9587L13.6493 12.9323L12.9217 12.7504ZM10.5217 20.0504L11.228 20.3026L11.2312 20.2937L11.2342 20.2846L10.5217 20.0504ZM17.4217 23.8504L18.1628 23.9662L18.1641 23.9565L17.4217 23.8504ZM16.9217 27.0504L17.6538 27.2131L17.659 27.1898L17.6627 27.1662L16.9217 27.0504ZM18.2217 29.2504L18.485 28.5481L18.472 28.5433L18.4589 28.5389L18.2217 29.2504ZM20.4217 28.5504L19.7992 28.132L19.7976 28.1344L20.4217 28.5504ZM24.5217 13.6504L24.9808 13.0573L21.8808 10.6573L21.4217 11.2504L20.9626 11.8434L24.0626 14.2434L24.5217 13.6504ZM21.4217 11.2504L21.952 10.7201C21.6187 10.3867 21.1487 10.1924 20.7527 10.0792C20.3384 9.96087 19.8941 9.90039 19.5217 9.90039V10.6504V11.4004C19.7493 11.4004 20.055 11.4399 20.3406 11.5215C20.6447 11.6084 20.8247 11.7141 20.8914 11.7807L21.4217 11.2504ZM19.5217 10.6504V9.90039H15.7217V10.6504V11.4004H19.5217V10.6504ZM15.7217 10.6504V9.90039C14.9419 9.90039 14.1647 10.189 13.5413 10.6451C12.9174 11.1017 12.3948 11.7655 12.1941 12.5685L12.9217 12.7504L13.6493 12.9323C13.7486 12.5353 14.026 12.1491 14.4271 11.8557C14.8287 11.5618 15.3015 11.4004 15.7217 11.4004V10.6504ZM12.9217 12.7504L12.2092 12.5161L9.8092 19.8161L10.5217 20.0504L11.2342 20.2846L13.6342 12.9846L12.9217 12.7504ZM10.5217 20.0504L9.81538 19.7981C9.49136 20.7054 9.60324 21.6218 10.1179 22.3203C10.629 23.014 11.4688 23.4004 12.4217 23.4004V22.6504V21.9004C11.8746 21.9004 11.5144 21.6868 11.3255 21.4305C11.1401 21.1789 11.052 20.7954 11.228 20.3026L10.5217 20.0504ZM12.4217 22.6504V23.4004H16.4217V22.6504V21.9004H12.4217V22.6504ZM16.4217 22.6504V23.4004C16.5115 23.4004 16.58 23.4367 16.6218 23.4841C16.6582 23.5254 16.6994 23.603 16.6792 23.7443L17.4217 23.8504L18.1641 23.9565C18.3305 22.7918 17.465 21.9004 16.4217 21.9004V22.6504ZM17.4217 23.8504L16.6807 23.7346L16.1807 26.9346L16.9217 27.0504L17.6627 27.1662L18.1627 23.9662L17.4217 23.8504ZM16.9217 27.0504L16.1895 26.8877C15.9002 28.1897 16.7465 29.5492 17.9845 29.9619L18.2217 29.2504L18.4589 28.5389C17.8968 28.3515 17.5432 27.7111 17.6538 27.2131L16.9217 27.0504ZM18.2217 29.2504L17.9583 29.9526C18.5554 30.1765 19.1886 30.1283 19.7155 29.9472C20.2373 29.7678 20.7366 29.4301 21.0457 28.9664L20.4217 28.5504L19.7976 28.1344C19.7068 28.2707 19.506 28.433 19.2279 28.5286C18.9548 28.6225 18.688 28.6243 18.485 28.5481L18.2217 29.2504ZM20.4217 28.5504L21.0441 28.9688L25.1441 22.8688L24.5217 22.4504L23.8992 22.032L19.7992 28.132L20.4217 28.5504ZM29.6217 13.6504H28.8717V23.4504H29.6217H30.3717V13.6504H29.6217ZM29.6217 23.4504H28.8717C28.8717 24.0659 28.7367 24.2832 28.638 24.3743C28.5245 24.479 28.2642 24.6004 27.6217 24.6004V25.3504V26.1004C28.3792 26.1004 29.1189 25.9718 29.6554 25.4765C30.2067 24.9676 30.3717 24.2349 30.3717 23.4504H29.6217ZM27.6217 25.3504V24.6004H26.6217V25.3504V26.1004H27.6217V25.3504ZM26.6217 25.3504V24.6004C25.9792 24.6004 25.7189 24.479 25.6054 24.3743C25.5067 24.2832 25.3717 24.0659 25.3717 23.4504H24.6217H23.8717C23.8717 24.2349 24.0367 24.9676 24.588 25.4765C25.1245 25.9718 25.8642 26.1004 26.6217 26.1004V25.3504ZM24.6217 23.4504H25.3717V13.6504H24.6217H23.8717V23.4504H24.6217ZM24.6217 13.6504H25.3717C25.3717 13.0349 25.5067 12.8176 25.6054 12.7265C25.7189 12.6218 25.9792 12.5004 26.6217 12.5004V11.7504V11.0004C25.8642 11.0004 25.1245 11.129 24.588 11.6243C24.0367 12.1332 23.8717 12.8659 23.8717 13.6504H24.6217ZM26.6217 11.7504V12.5004H27.6217V11.7504V11.0004H26.6217V11.7504ZM27.6217 11.7504V12.5004C28.2642 12.5004 28.5245 12.6218 28.638 12.7265C28.7367 12.8176 28.8717 13.0349 28.8717 13.6504H29.6217H30.3717C30.3717 12.8659 30.2067 12.1332 29.6554 11.6243C29.1189 11.129 28.3792 11.0004 27.6217 11.0004V11.7504Z" fill="#EFF1F5"/>
+                    </svg>                 
+                    1                             
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+                        <div class="reviews-item">
+    <div class="reviews-item__top">
+        <div class="review-user">
+            <img src="img/actor.png" alt="">
+            <span class="text size-18 weight-500 font-manrope color-white">cyber_wanderer</span>
+        </div>
+        <div class="review-rating">
+            <span class="text size-16 weight-500 font-manrope color-white">Супер</span>
+            <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3056_21532)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5323 14.2419C30.6752 15.1623 31.0982 20.2407 28.968 22.8736C28.1049 12.0472 21.299 11.5286 23.4159 0C15.6249 2.86255 9.48595 11.3507 10.029 19.4791C7.46629 15.0705 10.2157 13.8822 7.68159 8.70054C6.82229 12.3974 4.23484 15.1413 2.37714 18.5587C0.102173 22.7492 -1.30777 29.6262 1.78077 36C6.81086 32.4486 12.9384 30.3629 19.5537 30.3629C26.1691 30.3629 32.2852 32.4448 37.3115 35.9885C39.9275 26.0538 34.5259 16.8519 30.5323 14.24V14.2419ZM31.1553 10.6695C32.5462 9.39704 32.1347 6.17285 31.2582 4.63059C30.9515 4.091 30.2141 2.75157 30.7914 0.80557C28.484 2.22536 26.6492 4.95971 27.2608 7.76294C27.6343 9.46976 29.4577 12.2232 31.1553 10.6695Z" fill="#F45E3F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3056_21532">
+                <rect width="38" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                
+        </div>
+    </div>
+    <div class="reviews-item__bottom">
+        <p class="text size-18 weight-400 font-manrope color-gray-100">Один из самых интеллектуальных и визуально впечатляющих сериалов, которые я когда-либо видел. Потрясающее сочетание философии, sci-fi и драмы. Особенно зацепили вопросы сознания, свободы воли и природы реальности. Сезон 1 — шедевр. Дальше сложнее, но всё равно круто. Браво, Нолан и Джой!</p>
+        <div class="reviews-item__stats">
+            <span class="date text size-14 weight-400 font-manrope color-gray-400">12 апреля 2023</span>
+            <div class="reviews-item__buttons">
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5828 28.7505L19.1131 28.2201L19.0795 28.1865L19.0419 28.1574L18.5828 28.7505ZM27.0828 27.2505L26.3703 27.0162L26.3618 27.0421L26.3552 27.0686L27.0828 27.2505ZM29.4828 19.9505L28.7765 19.6982L28.7733 19.7072L28.7703 19.7162L29.4828 19.9505ZM22.5828 16.1505L21.8417 16.0347L21.8404 16.0444L22.5828 16.1505ZM23.0828 12.9505L22.3507 12.7878L22.3455 12.8111L22.3418 12.8347L23.0828 12.9505ZM21.7828 10.7505L21.5195 11.4527L21.5325 11.4576L21.5456 11.462L21.7828 10.7505ZM19.5828 11.4505L20.2053 11.8688L20.2069 11.8665L19.5828 11.4505ZM15.4828 26.3505L15.0237 26.9435L18.1237 29.3435L18.5828 28.7505L19.0419 28.1574L15.9419 25.7574L15.4828 26.3505ZM18.5828 28.7505L18.0525 29.2808C18.3858 29.6141 18.8558 29.8085 19.2518 29.9216C19.6661 30.04 20.1104 30.1005 20.4828 30.1005V29.3505V28.6005C20.2552 28.6005 19.9495 28.5609 19.6639 28.4793C19.3598 28.3924 19.1798 28.2868 19.1131 28.2201L18.5828 28.7505ZM20.4828 29.3505V30.1005H24.2828V29.3505V28.6005H20.4828V29.3505ZM24.2828 29.3505V30.1005C25.0626 30.1005 25.8398 29.8119 26.4632 29.3557C27.0871 28.8992 27.6097 28.2353 27.8104 27.4324L27.0828 27.2505L26.3552 27.0686C26.2559 27.4656 25.9785 27.8517 25.5774 28.1452C25.1758 28.439 24.703 28.6005 24.2828 28.6005V29.3505ZM27.0828 27.2505L27.7953 27.4847L30.1953 20.1847L29.4828 19.9505L28.7703 19.7162L26.3703 27.0162L27.0828 27.2505ZM29.4828 19.9505L30.1891 20.2027C30.5131 19.2955 30.4013 18.379 29.8866 17.6806C29.3755 16.9869 28.5357 16.6005 27.5828 16.6005V17.3505V18.1005C28.1299 18.1005 28.4901 18.314 28.679 18.5704C28.8644 18.8219 28.9525 19.2055 28.7765 19.6982L29.4828 19.9505ZM27.5828 17.3505V16.6005H23.5828V17.3505V18.1005H27.5828V17.3505ZM23.5828 17.3505V16.6005C23.493 16.6005 23.4245 16.5641 23.3827 16.5167C23.3463 16.4755 23.3051 16.3979 23.3253 16.2565L22.5828 16.1505L21.8404 16.0444C21.674 17.2091 22.5395 18.1005 23.5828 18.1005V17.3505ZM22.5828 16.1505L23.3238 16.2662L23.8238 13.0662L23.0828 12.9505L22.3418 12.8347L21.8418 16.0347L22.5828 16.1505ZM23.0828 12.9505L23.815 13.1132C24.1043 11.8112 23.2579 10.4516 22.02 10.0389L21.7828 10.7505L21.5456 11.462C22.1077 11.6493 22.4613 12.2897 22.3507 12.7878L23.0828 12.9505ZM21.7828 10.7505L22.0462 10.0482C21.4491 9.82432 20.8159 9.87258 20.289 10.0537C19.7672 10.2331 19.2679 10.5708 18.9588 11.0344L19.5828 11.4505L20.2069 11.8665C20.2977 11.7302 20.4984 11.5678 20.7766 11.4722C21.0497 11.3783 21.3165 11.3766 21.5195 11.4527L21.7828 10.7505ZM19.5828 11.4505L18.9603 11.0321L14.8603 17.1321L15.4828 17.5505L16.1053 17.9688L20.2053 11.8688L19.5828 11.4505ZM10.3828 26.3505H11.1328V16.5505H10.3828H9.63281V26.3505H10.3828ZM10.3828 16.5505H11.1328C11.1328 15.935 11.2678 15.7177 11.3665 15.6266C11.48 15.5218 11.7403 15.4005 12.3828 15.4005V14.6505V13.9005C11.6253 13.9005 10.8856 14.0291 10.3491 14.5244C9.79782 15.0332 9.63281 15.7659 9.63281 16.5505H10.3828ZM12.3828 14.6505V15.4005H13.3828V14.6505V13.9005H12.3828V14.6505ZM13.3828 14.6505V15.4005C14.0253 15.4005 14.2856 15.5218 14.3991 15.6266C14.4978 15.7177 14.6328 15.935 14.6328 16.5505H15.3828H16.1328C16.1328 15.7659 15.9678 15.0332 15.4165 14.5244C14.88 14.0291 14.1403 13.9005 13.3828 13.9005V14.6505ZM15.3828 16.5505H14.6328V26.3505H15.3828H16.1328V16.5505H15.3828ZM15.3828 26.3505H14.6328C14.6328 26.9659 14.4978 27.1832 14.3991 27.2744C14.2856 27.3791 14.0253 27.5005 13.3828 27.5005V28.2505V29.0005C14.1403 29.0005 14.88 28.8718 15.4165 28.3766C15.9678 27.8677 16.1328 27.135 16.1328 26.3505H15.3828ZM13.3828 28.2505V27.5005H12.3828V28.2505V29.0005H13.3828V28.2505ZM12.3828 28.2505V27.5005C11.7403 27.5005 11.48 27.3791 11.3665 27.2744C11.2678 27.1832 11.1328 26.9659 11.1328 26.3505H10.3828H9.63281C9.63281 27.135 9.79782 27.8677 10.3491 28.3766C10.8856 28.8718 11.6253 29.0005 12.3828 29.0005V28.2505Z" fill="#EFF1F5"/>
+                    </svg>
+                    832                        
+                </button>
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4217 11.2504L20.8914 11.7807L20.925 11.8143L20.9626 11.8434L21.4217 11.2504ZM12.9217 12.7504L13.6342 12.9846L13.6427 12.9587L13.6493 12.9323L12.9217 12.7504ZM10.5217 20.0504L11.228 20.3026L11.2312 20.2937L11.2342 20.2846L10.5217 20.0504ZM17.4217 23.8504L18.1628 23.9662L18.1641 23.9565L17.4217 23.8504ZM16.9217 27.0504L17.6538 27.2131L17.659 27.1898L17.6627 27.1662L16.9217 27.0504ZM18.2217 29.2504L18.485 28.5481L18.472 28.5433L18.4589 28.5389L18.2217 29.2504ZM20.4217 28.5504L19.7992 28.132L19.7976 28.1344L20.4217 28.5504ZM24.5217 13.6504L24.9808 13.0573L21.8808 10.6573L21.4217 11.2504L20.9626 11.8434L24.0626 14.2434L24.5217 13.6504ZM21.4217 11.2504L21.952 10.7201C21.6187 10.3867 21.1487 10.1924 20.7527 10.0792C20.3384 9.96087 19.8941 9.90039 19.5217 9.90039V10.6504V11.4004C19.7493 11.4004 20.055 11.4399 20.3406 11.5215C20.6447 11.6084 20.8247 11.7141 20.8914 11.7807L21.4217 11.2504ZM19.5217 10.6504V9.90039H15.7217V10.6504V11.4004H19.5217V10.6504ZM15.7217 10.6504V9.90039C14.9419 9.90039 14.1647 10.189 13.5413 10.6451C12.9174 11.1017 12.3948 11.7655 12.1941 12.5685L12.9217 12.7504L13.6493 12.9323C13.7486 12.5353 14.026 12.1491 14.4271 11.8557C14.8287 11.5618 15.3015 11.4004 15.7217 11.4004V10.6504ZM12.9217 12.7504L12.2092 12.5161L9.8092 19.8161L10.5217 20.0504L11.2342 20.2846L13.6342 12.9846L12.9217 12.7504ZM10.5217 20.0504L9.81538 19.7981C9.49136 20.7054 9.60324 21.6218 10.1179 22.3203C10.629 23.014 11.4688 23.4004 12.4217 23.4004V22.6504V21.9004C11.8746 21.9004 11.5144 21.6868 11.3255 21.4305C11.1401 21.1789 11.052 20.7954 11.228 20.3026L10.5217 20.0504ZM12.4217 22.6504V23.4004H16.4217V22.6504V21.9004H12.4217V22.6504ZM16.4217 22.6504V23.4004C16.5115 23.4004 16.58 23.4367 16.6218 23.4841C16.6582 23.5254 16.6994 23.603 16.6792 23.7443L17.4217 23.8504L18.1641 23.9565C18.3305 22.7918 17.465 21.9004 16.4217 21.9004V22.6504ZM17.4217 23.8504L16.6807 23.7346L16.1807 26.9346L16.9217 27.0504L17.6627 27.1662L18.1627 23.9662L17.4217 23.8504ZM16.9217 27.0504L16.1895 26.8877C15.9002 28.1897 16.7465 29.5492 17.9845 29.9619L18.2217 29.2504L18.4589 28.5389C17.8968 28.3515 17.5432 27.7111 17.6538 27.2131L16.9217 27.0504ZM18.2217 29.2504L17.9583 29.9526C18.5554 30.1765 19.1886 30.1283 19.7155 29.9472C20.2373 29.7678 20.7366 29.4301 21.0457 28.9664L20.4217 28.5504L19.7976 28.1344C19.7068 28.2707 19.506 28.433 19.2279 28.5286C18.9548 28.6225 18.688 28.6243 18.485 28.5481L18.2217 29.2504ZM20.4217 28.5504L21.0441 28.9688L25.1441 22.8688L24.5217 22.4504L23.8992 22.032L19.7992 28.132L20.4217 28.5504ZM29.6217 13.6504H28.8717V23.4504H29.6217H30.3717V13.6504H29.6217ZM29.6217 23.4504H28.8717C28.8717 24.0659 28.7367 24.2832 28.638 24.3743C28.5245 24.479 28.2642 24.6004 27.6217 24.6004V25.3504V26.1004C28.3792 26.1004 29.1189 25.9718 29.6554 25.4765C30.2067 24.9676 30.3717 24.2349 30.3717 23.4504H29.6217ZM27.6217 25.3504V24.6004H26.6217V25.3504V26.1004H27.6217V25.3504ZM26.6217 25.3504V24.6004C25.9792 24.6004 25.7189 24.479 25.6054 24.3743C25.5067 24.2832 25.3717 24.0659 25.3717 23.4504H24.6217H23.8717C23.8717 24.2349 24.0367 24.9676 24.588 25.4765C25.1245 25.9718 25.8642 26.1004 26.6217 26.1004V25.3504ZM24.6217 23.4504H25.3717V13.6504H24.6217H23.8717V23.4504H24.6217ZM24.6217 13.6504H25.3717C25.3717 13.0349 25.5067 12.8176 25.6054 12.7265C25.7189 12.6218 25.9792 12.5004 26.6217 12.5004V11.7504V11.0004C25.8642 11.0004 25.1245 11.129 24.588 11.6243C24.0367 12.1332 23.8717 12.8659 23.8717 13.6504H24.6217ZM26.6217 11.7504V12.5004H27.6217V11.7504V11.0004H26.6217V11.7504ZM27.6217 11.7504V12.5004C28.2642 12.5004 28.5245 12.6218 28.638 12.7265C28.7367 12.8176 28.8717 13.0349 28.8717 13.6504H29.6217H30.3717C30.3717 12.8659 30.2067 12.1332 29.6554 11.6243C29.1189 11.129 28.3792 11.0004 27.6217 11.0004V11.7504Z" fill="#EFF1F5"/>
+                    </svg>                 
+                    1                             
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+                        <div class="reviews-item">
+    <div class="reviews-item__top">
+        <div class="review-user">
+            <img src="img/actor.png" alt="">
+            <span class="text size-18 weight-500 font-manrope color-white">cyber_wanderer</span>
+        </div>
+        <div class="review-rating">
+            <span class="text size-16 weight-500 font-manrope color-white">Супер</span>
+            <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_3056_21532)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5323 14.2419C30.6752 15.1623 31.0982 20.2407 28.968 22.8736C28.1049 12.0472 21.299 11.5286 23.4159 0C15.6249 2.86255 9.48595 11.3507 10.029 19.4791C7.46629 15.0705 10.2157 13.8822 7.68159 8.70054C6.82229 12.3974 4.23484 15.1413 2.37714 18.5587C0.102173 22.7492 -1.30777 29.6262 1.78077 36C6.81086 32.4486 12.9384 30.3629 19.5537 30.3629C26.1691 30.3629 32.2852 32.4448 37.3115 35.9885C39.9275 26.0538 34.5259 16.8519 30.5323 14.24V14.2419ZM31.1553 10.6695C32.5462 9.39704 32.1347 6.17285 31.2582 4.63059C30.9515 4.091 30.2141 2.75157 30.7914 0.80557C28.484 2.22536 26.6492 4.95971 27.2608 7.76294C27.6343 9.46976 29.4577 12.2232 31.1553 10.6695Z" fill="#F45E3F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_3056_21532">
+                <rect width="38" height="36" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>                
+        </div>
+    </div>
+    <div class="reviews-item__bottom">
+        <p class="text size-18 weight-400 font-manrope color-gray-100">Один из самых интеллектуальных и визуально впечатляющих сериалов, которые я когда-либо видел. Потрясающее сочетание философии, sci-fi и драмы. Особенно зацепили вопросы сознания, свободы воли и природы реальности. Сезон 1 — шедевр. Дальше сложнее, но всё равно круто. Браво, Нолан и Джой!</p>
+        <div class="reviews-item__stats">
+            <span class="date text size-14 weight-400 font-manrope color-gray-400">12 апреля 2023</span>
+            <div class="reviews-item__buttons">
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5828 28.7505L19.1131 28.2201L19.0795 28.1865L19.0419 28.1574L18.5828 28.7505ZM27.0828 27.2505L26.3703 27.0162L26.3618 27.0421L26.3552 27.0686L27.0828 27.2505ZM29.4828 19.9505L28.7765 19.6982L28.7733 19.7072L28.7703 19.7162L29.4828 19.9505ZM22.5828 16.1505L21.8417 16.0347L21.8404 16.0444L22.5828 16.1505ZM23.0828 12.9505L22.3507 12.7878L22.3455 12.8111L22.3418 12.8347L23.0828 12.9505ZM21.7828 10.7505L21.5195 11.4527L21.5325 11.4576L21.5456 11.462L21.7828 10.7505ZM19.5828 11.4505L20.2053 11.8688L20.2069 11.8665L19.5828 11.4505ZM15.4828 26.3505L15.0237 26.9435L18.1237 29.3435L18.5828 28.7505L19.0419 28.1574L15.9419 25.7574L15.4828 26.3505ZM18.5828 28.7505L18.0525 29.2808C18.3858 29.6141 18.8558 29.8085 19.2518 29.9216C19.6661 30.04 20.1104 30.1005 20.4828 30.1005V29.3505V28.6005C20.2552 28.6005 19.9495 28.5609 19.6639 28.4793C19.3598 28.3924 19.1798 28.2868 19.1131 28.2201L18.5828 28.7505ZM20.4828 29.3505V30.1005H24.2828V29.3505V28.6005H20.4828V29.3505ZM24.2828 29.3505V30.1005C25.0626 30.1005 25.8398 29.8119 26.4632 29.3557C27.0871 28.8992 27.6097 28.2353 27.8104 27.4324L27.0828 27.2505L26.3552 27.0686C26.2559 27.4656 25.9785 27.8517 25.5774 28.1452C25.1758 28.439 24.703 28.6005 24.2828 28.6005V29.3505ZM27.0828 27.2505L27.7953 27.4847L30.1953 20.1847L29.4828 19.9505L28.7703 19.7162L26.3703 27.0162L27.0828 27.2505ZM29.4828 19.9505L30.1891 20.2027C30.5131 19.2955 30.4013 18.379 29.8866 17.6806C29.3755 16.9869 28.5357 16.6005 27.5828 16.6005V17.3505V18.1005C28.1299 18.1005 28.4901 18.314 28.679 18.5704C28.8644 18.8219 28.9525 19.2055 28.7765 19.6982L29.4828 19.9505ZM27.5828 17.3505V16.6005H23.5828V17.3505V18.1005H27.5828V17.3505ZM23.5828 17.3505V16.6005C23.493 16.6005 23.4245 16.5641 23.3827 16.5167C23.3463 16.4755 23.3051 16.3979 23.3253 16.2565L22.5828 16.1505L21.8404 16.0444C21.674 17.2091 22.5395 18.1005 23.5828 18.1005V17.3505ZM22.5828 16.1505L23.3238 16.2662L23.8238 13.0662L23.0828 12.9505L22.3418 12.8347L21.8418 16.0347L22.5828 16.1505ZM23.0828 12.9505L23.815 13.1132C24.1043 11.8112 23.2579 10.4516 22.02 10.0389L21.7828 10.7505L21.5456 11.462C22.1077 11.6493 22.4613 12.2897 22.3507 12.7878L23.0828 12.9505ZM21.7828 10.7505L22.0462 10.0482C21.4491 9.82432 20.8159 9.87258 20.289 10.0537C19.7672 10.2331 19.2679 10.5708 18.9588 11.0344L19.5828 11.4505L20.2069 11.8665C20.2977 11.7302 20.4984 11.5678 20.7766 11.4722C21.0497 11.3783 21.3165 11.3766 21.5195 11.4527L21.7828 10.7505ZM19.5828 11.4505L18.9603 11.0321L14.8603 17.1321L15.4828 17.5505L16.1053 17.9688L20.2053 11.8688L19.5828 11.4505ZM10.3828 26.3505H11.1328V16.5505H10.3828H9.63281V26.3505H10.3828ZM10.3828 16.5505H11.1328C11.1328 15.935 11.2678 15.7177 11.3665 15.6266C11.48 15.5218 11.7403 15.4005 12.3828 15.4005V14.6505V13.9005C11.6253 13.9005 10.8856 14.0291 10.3491 14.5244C9.79782 15.0332 9.63281 15.7659 9.63281 16.5505H10.3828ZM12.3828 14.6505V15.4005H13.3828V14.6505V13.9005H12.3828V14.6505ZM13.3828 14.6505V15.4005C14.0253 15.4005 14.2856 15.5218 14.3991 15.6266C14.4978 15.7177 14.6328 15.935 14.6328 16.5505H15.3828H16.1328C16.1328 15.7659 15.9678 15.0332 15.4165 14.5244C14.88 14.0291 14.1403 13.9005 13.3828 13.9005V14.6505ZM15.3828 16.5505H14.6328V26.3505H15.3828H16.1328V16.5505H15.3828ZM15.3828 26.3505H14.6328C14.6328 26.9659 14.4978 27.1832 14.3991 27.2744C14.2856 27.3791 14.0253 27.5005 13.3828 27.5005V28.2505V29.0005C14.1403 29.0005 14.88 28.8718 15.4165 28.3766C15.9678 27.8677 16.1328 27.135 16.1328 26.3505H15.3828ZM13.3828 28.2505V27.5005H12.3828V28.2505V29.0005H13.3828V28.2505ZM12.3828 28.2505V27.5005C11.7403 27.5005 11.48 27.3791 11.3665 27.2744C11.2678 27.1832 11.1328 26.9659 11.1328 26.3505H10.3828H9.63281C9.63281 27.135 9.79782 27.8677 10.3491 28.3766C10.8856 28.8718 11.6253 29.0005 12.3828 29.0005V28.2505Z" fill="#EFF1F5"/>
+                    </svg>
+                    832                        
+                </button>
+                <button class="flex text size-16 weight-400 font-manrope color-gray-100">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4217 11.2504L20.8914 11.7807L20.925 11.8143L20.9626 11.8434L21.4217 11.2504ZM12.9217 12.7504L13.6342 12.9846L13.6427 12.9587L13.6493 12.9323L12.9217 12.7504ZM10.5217 20.0504L11.228 20.3026L11.2312 20.2937L11.2342 20.2846L10.5217 20.0504ZM17.4217 23.8504L18.1628 23.9662L18.1641 23.9565L17.4217 23.8504ZM16.9217 27.0504L17.6538 27.2131L17.659 27.1898L17.6627 27.1662L16.9217 27.0504ZM18.2217 29.2504L18.485 28.5481L18.472 28.5433L18.4589 28.5389L18.2217 29.2504ZM20.4217 28.5504L19.7992 28.132L19.7976 28.1344L20.4217 28.5504ZM24.5217 13.6504L24.9808 13.0573L21.8808 10.6573L21.4217 11.2504L20.9626 11.8434L24.0626 14.2434L24.5217 13.6504ZM21.4217 11.2504L21.952 10.7201C21.6187 10.3867 21.1487 10.1924 20.7527 10.0792C20.3384 9.96087 19.8941 9.90039 19.5217 9.90039V10.6504V11.4004C19.7493 11.4004 20.055 11.4399 20.3406 11.5215C20.6447 11.6084 20.8247 11.7141 20.8914 11.7807L21.4217 11.2504ZM19.5217 10.6504V9.90039H15.7217V10.6504V11.4004H19.5217V10.6504ZM15.7217 10.6504V9.90039C14.9419 9.90039 14.1647 10.189 13.5413 10.6451C12.9174 11.1017 12.3948 11.7655 12.1941 12.5685L12.9217 12.7504L13.6493 12.9323C13.7486 12.5353 14.026 12.1491 14.4271 11.8557C14.8287 11.5618 15.3015 11.4004 15.7217 11.4004V10.6504ZM12.9217 12.7504L12.2092 12.5161L9.8092 19.8161L10.5217 20.0504L11.2342 20.2846L13.6342 12.9846L12.9217 12.7504ZM10.5217 20.0504L9.81538 19.7981C9.49136 20.7054 9.60324 21.6218 10.1179 22.3203C10.629 23.014 11.4688 23.4004 12.4217 23.4004V22.6504V21.9004C11.8746 21.9004 11.5144 21.6868 11.3255 21.4305C11.1401 21.1789 11.052 20.7954 11.228 20.3026L10.5217 20.0504ZM12.4217 22.6504V23.4004H16.4217V22.6504V21.9004H12.4217V22.6504ZM16.4217 22.6504V23.4004C16.5115 23.4004 16.58 23.4367 16.6218 23.4841C16.6582 23.5254 16.6994 23.603 16.6792 23.7443L17.4217 23.8504L18.1641 23.9565C18.3305 22.7918 17.465 21.9004 16.4217 21.9004V22.6504ZM17.4217 23.8504L16.6807 23.7346L16.1807 26.9346L16.9217 27.0504L17.6627 27.1662L18.1627 23.9662L17.4217 23.8504ZM16.9217 27.0504L16.1895 26.8877C15.9002 28.1897 16.7465 29.5492 17.9845 29.9619L18.2217 29.2504L18.4589 28.5389C17.8968 28.3515 17.5432 27.7111 17.6538 27.2131L16.9217 27.0504ZM18.2217 29.2504L17.9583 29.9526C18.5554 30.1765 19.1886 30.1283 19.7155 29.9472C20.2373 29.7678 20.7366 29.4301 21.0457 28.9664L20.4217 28.5504L19.7976 28.1344C19.7068 28.2707 19.506 28.433 19.2279 28.5286C18.9548 28.6225 18.688 28.6243 18.485 28.5481L18.2217 29.2504ZM20.4217 28.5504L21.0441 28.9688L25.1441 22.8688L24.5217 22.4504L23.8992 22.032L19.7992 28.132L20.4217 28.5504ZM29.6217 13.6504H28.8717V23.4504H29.6217H30.3717V13.6504H29.6217ZM29.6217 23.4504H28.8717C28.8717 24.0659 28.7367 24.2832 28.638 24.3743C28.5245 24.479 28.2642 24.6004 27.6217 24.6004V25.3504V26.1004C28.3792 26.1004 29.1189 25.9718 29.6554 25.4765C30.2067 24.9676 30.3717 24.2349 30.3717 23.4504H29.6217ZM27.6217 25.3504V24.6004H26.6217V25.3504V26.1004H27.6217V25.3504ZM26.6217 25.3504V24.6004C25.9792 24.6004 25.7189 24.479 25.6054 24.3743C25.5067 24.2832 25.3717 24.0659 25.3717 23.4504H24.6217H23.8717C23.8717 24.2349 24.0367 24.9676 24.588 25.4765C25.1245 25.9718 25.8642 26.1004 26.6217 26.1004V25.3504ZM24.6217 23.4504H25.3717V13.6504H24.6217H23.8717V23.4504H24.6217ZM24.6217 13.6504H25.3717C25.3717 13.0349 25.5067 12.8176 25.6054 12.7265C25.7189 12.6218 25.9792 12.5004 26.6217 12.5004V11.7504V11.0004C25.8642 11.0004 25.1245 11.129 24.588 11.6243C24.0367 12.1332 23.8717 12.8659 23.8717 13.6504H24.6217ZM26.6217 11.7504V12.5004H27.6217V11.7504V11.0004H26.6217V11.7504ZM27.6217 11.7504V12.5004C28.2642 12.5004 28.5245 12.6218 28.638 12.7265C28.7367 12.8176 28.8717 13.0349 28.8717 13.6504H29.6217H30.3717C30.3717 12.8659 30.2067 12.1332 29.6554 11.6243C29.1189 11.129 28.3792 11.0004 27.6217 11.0004V11.7504Z" fill="#EFF1F5"/>
+                    </svg>                 
+                    1                             
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+			</main>
+			<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__content flex justify-between">
+        <div class="footer__left flex justify-between">
+            <div class="footer__logo">
+              <a href="/">
+                <img src="img/logo-white.png" alt="" />
+              </a>
+              <p class="text color-beige-500 famaly-narope weight-500 size-16">© 2023 "redheadsound.studio" <br>Смотрите лучшие фильмы онлайн.</p>
+            </div>
+            <div class="footer__links flex direction-column gap-12">
+              <a href="" class="button variant-4">Правообладателям</a>
+              <a href="for-distributor.html" class="button variant-4">Кинопрокатчикам</a>
+              <a href="for-advertisers.html" class="button variant-4">Рекламодателям</a>
+              <a href="support.html" class="button variant-4">Техподдержка</a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__contacts flex direction-column gap-40">
+                <div class="soc flex justify-between align-center gap-40">
+                    <a href="" class="button variant-3 only-icon">
+                        <svg class="icon" width="32" height="32" viewBox="0 0 32 32">
+                            <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                        </svg> 
+                    </a>
+                    <a href="" class="button variant-3 only-icon">
+                        <svg class="icon" width="32" height="33" viewBox="0 0 32 33">
+                            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                        </svg> 
+                    </a>
+                    <a href="" class="button variant-3 only-icon">
+                        <svg class="icon" width="32" height="32" viewBox="0 0 32 32">
+                            <use xlink:href="img/sprite.svg#icon-vk"></use>
+                        </svg> 
+                    </a>
+                    <a href="" class="button variant-3 only-icon">
+                        <svg class="icon" width="32" height="32" viewBox="0 0 32 32">
+                            <use xlink:href="img/sprite.svg#icon-rutube"></use>
+                        </svg>  
+                    </a>
+                </div>
+                <button class="button variant-3" onclick="openModal('callback-modal')">Написать нам</button>
+            </div>
+            <div class="footer__detail-liinks flex align-end direction-column gap-4">
+                <a href="" class="text color-beige-500 famaly-narope weight-500 size-14">Все права защищены, копирование запрещено.</a>
+                <a href="" class="text color-beige-500 famaly-narope weight-500 size-14">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</footer>
+<div class="modal position-rigth" id="auth-modal">
+    <div class="modal__container">
+        <button class="button variant-3 only-icon close-btn" onclick="setTab('auth-modal-tab', '1')">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg> 
+        </button>
+        <div class="auth-modal__content">
+            <div class="auth-modal__form flex direction-column gap-48">
+                <div class="auth-modal__title flex direction-column gap-16 " id="auth-modal-main-title">
+                    <h2 class="text color-white famaly-manrope weight-500 size-32">Войдите или зарегистрируйтесь</h2>
+                    <p class="text color-white famaly-manrope weight-500 size-16">
+                        Чтобы получить доступ ко всем функциям <span class="color-beige-500">REDHEADSOUND</span>
+                    </p>
+                </div>
+                <div class="tabs flex direction-column gap-48" id="auth-modal-tab">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="1" data-parent="login-tab">Войти</button>
+                        <button type="button" class="tab-button" data-tab="2">Регистрация</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-content__item active" data-tab="1">
+                            <form action="" class="login-form flex direction-column gap-24">
+                                <label for="login-1" class="input-text" data-validate="email">
+                                    <span class="input">
+                                        <input type="text" placeholder="Электронная почта" name="login" id="login-1">
+                                    </span>
+                                </label>
+                                <label for="password" class="input-text">
+                                    <span class="input">
+                                        <input type="password" placeholder="Пароль" name="password" id="password">
+                                    </span>
+                                </label>
+                                <button type="button" class="button default bg-red-600 color-white" onclick="closeModal('auth-modal')">Войти</button>
+                                <button type="button" class="button default color-gray-400 forgot-pass-btn">Забыли пароль?</button>
+                            </form>
+                            <div class="auth-modal__alert">
+                                <p class="text color-gray-400 famaly-manrope weight-500 size-16">
+                                    Продолжая, я соглашаюсь с  
+                                     <a href="" class="color-beige-500"> Пользовательским соглашением</a>,
+                                     <a href="" class="color-beige-500"> Политикой конфиденциальности</a> и  <a href="" class="color-beige-500"> Правилами сервиса</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-content__item" data-tab="2">
+                            <form action="" class="login-form flex direction-column gap-24">
+                                <label for="login-1" class="input-text" data-validate="email">
+                                    <span class="input">
+                                        <input type="text" placeholder="Электронная почта" name="login" id="login-1">
+                                    </span>
+                                </label>
+                                <label for="password" class="input-text" data-validate="password">
+                                    <span class="input">
+                                        <input type="password" placeholder="Пароль" name="password" id="password">
+                                    </span>
+                                </label>
+                                <label for="password-repeat" class="input-text" data-validate="password">
+                                    <span class="input">
+                                        <input type="password" placeholder="Повторите пароль" name="password-repeat" id="password-repeat">
+                                    </span>
+                                </label>
+                                <button type="button" class="button default bg-red-600 color-white" onclick="setTab('auth-modal-tab', '3')">Продолжить</button>
+                                <button type="button" class="button default color-gray-400 forgot-pass-btn">Забыли пароль?</button>
+                            </form>
+                            <div class="auth-modal__alert">
+                                <p class="text color-gray-400 famaly-manrope weight-500 size-16">
+                                    Продолжая, я соглашаюсь с  
+                                     <a href="" class="color-beige-500"> Пользовательским соглашением</a>,
+                                     <a href="" class="color-beige-500"> Политикой конфиденциальности</a> и  <a href="" class="color-beige-500"> Правилами сервиса</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-content__item" data-tab="3">
+                            <div class="auth-modal__title flex direction-column gap-16">
+                                <h2 class="text color-white famaly-manrope weight-500 size-32">Введите код</h2>
+                                <p class="text color-white famaly-manrope weight-500 size-16">
+                                    Мы отправили код подтверждения на <span class="color-beige-500">postexample@gmail.com</span>
+                                </p>
+                            </div>
+                            <form action="authorized.html" class="verify-form flex direction-column gap-24">
+                                <div class="code-inputs flex justify-center align-center gap-24">
+                                    <label for="code-1-2" class="input-text">
+                                        <span class="input">
+                                            <input type="text" id="code-1-2" max="1" name="code1">
+                                        </span>
+                                    </label>
+                                    <label for="code-2-2" class="input-text">
+                                        <span class="input">
+                                            <input type="text" id="code-2-2" max="1" name="code2">
+                                        </span>
+                                    </label>
+                                    <label for="code-3-2" class="input-text">
+                                        <span class="input">
+                                            <input type="text" id="code-3-2" max="1" name="code3">
+                                        </span>
+                                    </label>
+                                    <span class="line"></span>
+                                    <label for="code-4-2" class="input-text">
+                                        <span class="input">
+                                            <input type="text" id="code-4-2" max="1" name="code4">
+                                        </span>
+                                    </label>
+                                    <label for="code-5-2" class="input-text">
+                                        <span class="input">
+                                            <input type="text" id="code-5-2" max="1" name="code5">
+                                        </span>
+                                    </label>
+                                    <label for="code-6-2" class="input-text">
+                                        <span class="input">
+                                            <input type="text" id="code-6-2" max="1" name="code6">
+                                        </span>
+                                    </label>
+                                </div>
+                                <button class="button variant-3 diabled">Продолжить</button>
+                            </form>
+                        </div>
+                        <div class="tab-content__item" data-tab="4">
+                            <div class="auth-modal__title flex direction-column gap-16">
+                                <h2 class="text color-white famaly-manrope weight-500 size-32">Введите почту </h2>
+                                <p class="text color-white famaly-manrope weight-500 size-16">Введите почту, которую вы использовали при регистрации. Мы отправим вам код подтверждения</p>
+                            </div>
+                            <form action="" class="login-form flex direction-column gap-24">
+                                <label for="login-2" class="input-text" data-validate="email">
+                                    <span class="input">
+                                        <input type="email" required placeholder="Электронная почта" name="login" id="login-2">
+                                    </span>
+                                </label>
+                                <button type="button" class="button default bg-red-600 color-white" onclick="setTab('auth-modal-tab', '5')">Продолжить</button>
+                            </form>
+                        </div>
+                        <div class="tab-content__item" data-tab="5">
+                            <div class="auth-modal__title flex direction-column gap-16">
+                                <h2 class="text color-white famaly-manrope weight-500 size-32">Введите новый пароль</h2>
+                                <p class="text color-white famaly-manrope weight-500 size-16">В целях безопасности не используйте старый пароль</p>
+                            </div>
+                            <form action="" class="login-form flex direction-column gap-24">
+                                <label for="login-3" class="input-text" data-validate="password">
+                                    <span class="input">
+                                        <input type="password" required placeholder="Пароль" name="login" id="login-3">
+                                    </span>
+                                </label>
+                                <label for="password-repeat" class="input-text" data-validate="password">
+                                    <span class="input">
+                                        <input type="password" required placeholder="Повторите пароль" name="passwordRepeat" id="password-repeat">
+                                    </span>
+                                </label>
+                                <button type="button" class="button default bg-red-600 color-white end-change-pass-btn">Продолжить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="callback-modal">
+    <div class="modal__container">
+        <button class="button variant-3 only-icon close-btn">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg> 
+        </button>
+        <div class="callback-modal__content flex direction-column gap-48">
+            <h2 class="text size-32 weight-500 font-manrope color-gray-100">Обратная связь</h2>
+            <form action="" class="callback-modal__form flex direction-column gap-48">
+                <div class="callback-modal__inputs flex direction-column gap-24">
+                    <label for="name" class="input-text">
+                        <span class="input">
+                            <input type="text" required placeholder="Имя" name="name" id="name">
+                        </span>
+                    </label>
+                    <label for="email" class="input-text">
+                        <span class="input">
+                            <input type="text" required placeholder="Почта" name="email" id="email">
+                        </span>
+                    </label>
+                    <label for="question" class="input-text">
+                        <span class="input">
+                            <input type="text" required placeholder="Вопрос" name="question" id="question">
+                        </span>
+                    </label>
+                    <label for="message" class="input-text">
+                        <span class="input textarea">
+                            <textarea required placeholder="Сообщение" name="message" id="message"></textarea>
+                        </span>
+                    </label>
+                </div>
+                <button class="button default bg-red-600 color-white">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+			<div class="modal" id="subscribe-modal">
+    <div class="modal__container">
+        <div class="subscribe-modal__title">
+            <div class="subscribe-modal__title-text flex direction-column gap-32">
+                <h2 class="text color-white weight-500 famaly-manrope size-32">Оформить подписку</h2>
+                <p class="text color-white weight-500 famaly-manrope size-16">
+                    Гарантируем качество! При подключения подписки мы дарим вам <span class="color-beige-500">3 дня бесплатно</span> (без списания средств): если сервис не понравится, просто отключите подписку в этот период
+                </p>
+            </div>
+            <button class="button variant-3 only-icon close-btn">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                </svg> 
+            </button>
+        </div>
+        <div class="subscribe-modal__items flex justify-between align-center">
+            <div class="subscribe-item">
+    <div class="subscribe-item__content">
+        <div class="subscribe-item__content-top">
+            <span class="tag text color-white weight-500 famaly-manrope size-20 bg-violet-700">Оплата 1 раз в месяц</span>
+            <span class="limit text color-white weight-500 famaly-manrope size-32">3 месяца</span>
+        </div>
+        <div class="subscribe-item__content-price">
+            <span class="price text color-beige-500 weight-700 size-64">249</span>
+            <span class="text color-gray-500 weight-500 famaly-manrope size-24">руб/месяц</span>
+        </div>
+        <div class="subscribe-item__advantages">
+            <ul>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Отсутствие рекламы
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Доступ к эксклюзивам
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Поддержка всех устройств
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Безлимитный просмотр
+                </li>
+            </ul>
+        </div>
+        <div class="subscribe-item__bottom">
+            <button class="button default bg-red-600">Оформить подписку</button>
+            <span class="text size-14 weight-500 famaly-manrope color-gray-500">Сумма единоразового списания: 749 руб</span>
+        </div>
+    </div>
+    <div class="subscribe-item__advantages mobile-advantages">
+        <ul>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Отсутствие рекламы
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Доступ к эксклюзивам
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Поддержка всех устройств
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Безлимитный просмотр
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="subscribe-item active">
+    <div class="subscribe-item__content">
+        <div class="subscribe-item__content-top">
+            <span class="tag text color-white weight-500 famaly-manrope size-20 bg-violet-900">Оплата 1 раз в месяц</span>
+            <span class="limit text color-white weight-500 famaly-manrope size-32">6 месяцев</span>
+        </div>
+        <div class="subscribe-item__content-price">
+            <span class="price text color-beige-500 weight-700 size-64">216</span>
+            <span class="text color-gray-500 weight-500 famaly-manrope size-24">руб/месяц</span>
+        </div>
+        <div class="subscribe-item__advantages">
+            <ul>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Отсутствие рекламы
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Доступ к эксклюзивам
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Поддержка всех устройств
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Безлимитный просмотр
+                </li>
+            </ul>
+        </div>
+        <div class="subscribe-item__bottom">
+            <button class="button default bg-red-600">Оформить подписку</button>
+            <span class="text size-14 weight-500 famaly-manrope color-gray-500">Сумма единоразового списания: 749 руб</span>
+        </div>
+    </div>
+    <div class="subscribe-item__advantages mobile-advantages">
+        <ul>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Отсутствие рекламы
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Доступ к эксклюзивам
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Поддержка всех устройств
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Безлимитный просмотр
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="subscribe-item">
+    <div class="subscribe-item__content">
+        <div class="subscribe-item__content-top">
+            <span class="tag text color-white weight-500 famaly-manrope size-20 bg-gray-500">Оплата 1 раз в месяц</span>
+            <span class="limit text color-white weight-500 famaly-manrope size-32">1 месяц</span>
+        </div>
+        <div class="subscribe-item__content-price">
+            <span class="price text color-beige-500 weight-700 size-64">349</span>
+            <span class="text color-gray-500 weight-500 famaly-manrope size-24">руб/месяц</span>
+        </div>
+        <div class="subscribe-item__advantages">
+            <ul>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Отсутствие рекламы
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Доступ к эксклюзивам
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Поддержка всех устройств
+                </li>
+                <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                    <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                        <use xlink:href="img/sprite.svg#icon-fire"></use>
+                    </svg> 
+                    Безлимитный просмотр
+                </li>
+            </ul>
+        </div>
+        <div class="subscribe-item__bottom">
+            <button class="button default bg-red-600">Оформить подписку</button>
+            <span class="text size-14 weight-500 famaly-manrope color-gray-500">Сумма единоразового списания: 749 руб</span>
+        </div>
+    </div>
+    <div class="subscribe-item__advantages mobile-advantages">
+        <ul>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Отсутствие рекламы
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Доступ к эксклюзивам
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Поддержка всех устройств
+            </li>
+            <li class="flex align-center gap-20 text size-20 weight-500 famaly-manrope color-white">
+                <svg class="icon" width="60" height="56" viewBox="0 0 60 56">
+                    <use xlink:href="img/sprite.svg#icon-fire"></use>
+                </svg> 
+                Безлимитный просмотр
+            </li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <div class="subscribe-modal__bottom">
+            <p class="text color-white weight-500 famaly-manrope size-16">
+                Гарантируем качество! При подключения подписки мы дарим вам <span class="color-beige-500">3 дня бесплатно</span> (без списания средств): если сервис не понравится, просто отключите подписку в этот период
+            </p>
+        </div>
+    </div>
+</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://wowjs.uk/dist/wow.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+<script>new WOW().init();</script>
+	</body>
+</html>
