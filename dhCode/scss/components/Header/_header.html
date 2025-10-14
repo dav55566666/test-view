@@ -1,0 +1,31 @@
+<header class="header" id="header">
+  <div class="header__container _container">
+    <div class="header__left">
+      <ul>
+		<li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="services.html">Services</a>
+        </li>
+        <li>
+          <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a href="contact.html">Contacts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  if (window.innerWidth < 769) {
+    var swiper = new Swiper(".header .swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      loop: true,
+      freeMode: true,
+    });
+  }
+</script>

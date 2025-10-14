@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script
+		src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<a href="#" id="trigger" class="btn btn-lg btn-secondary"></a>
+		<canvas id="reveal-effect"></canvas>
+		<header class="header one-block-header"  id="header">
+	<div class="header__container _container">
+		<a href="/" class="logo">
+			<img src="img/logo.svg" alt="">
+		</a>
+		<div class="header__right">
+			<button class="open-devices-modal">
+				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.0715 0.00638196C0.746006 0.115802 0.465271 0.328757 0.272175 0.612721C0.0790801 0.896684 -0.0157607 1.23605 0.00213866 1.57898V17.3049C0.00213866 17.722 0.167822 18.122 0.462741 18.4169C0.75766 18.7118 1.15766 18.8775 1.57473 18.8775H9.43771V22.0227H6.29252C4.56266 22.0227 3.14733 23.4381 3.14733 25.1679H22.0185C22.0185 23.4381 20.6031 22.0227 18.8733 22.0227H15.7281V18.8775H23.5911C24.0081 18.8775 24.4081 18.7118 24.7031 18.4169C24.998 18.122 25.1637 17.722 25.1637 17.3049V1.57898C25.1637 1.1619 24.998 0.761903 24.7031 0.466985C24.4081 0.172066 24.0081 0.00638196 23.5911 0.00638196L1.57473 0.00638196C1.48057 -0.00212732 1.38583 -0.00212732 1.29167 0.00638196C1.22882 0.00260433 1.1658 0.00260433 1.10296 0.00638196L1.0715 0.00638196ZM3.14733 3.15157H22.0185V15.7323H3.14733V3.15157Z" fill="white"/>
+				</svg>					
+			</button>
+			<div class="header__lang">
+				<button class="togglelang">
+					<svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11 7L5.75 3.96891L0.5 0.937822V7V13.0622L5.75 10.0311L11 7Z" fill="#FF0000"/>
+					</svg>
+					ENG						
+				</button>
+			</div>
+			<div class="header__right-buttons">
+				<button class="loginreg-btn">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5C10 4.73857 12.2386 2.5 15 2.5H21.875C24.9816 2.5 27.5 5.0184 27.5 8.125V21.875C27.5 24.9816 24.9816 27.5 21.875 27.5H15C12.2386 27.5 10 25.2614 10 22.5V21.25C10 20.5596 10.5596 20 11.25 20C11.9404 20 12.5 20.5596 12.5 21.25V22.5C12.5 23.8807 13.6193 25 15 25H21.875C23.6009 25 25 23.6009 25 21.875V8.125C25 6.39911 23.6009 5 21.875 5H15C13.6193 5 12.5 6.11929 12.5 7.5V8.75C12.5 9.44035 11.9404 10 11.25 10C10.5596 10 10 9.44035 10 8.75V7.5ZM15.3661 10.3661C15.8543 9.87796 16.6457 9.87796 17.1339 10.3661L20.8839 14.1161C21.372 14.6042 21.372 15.3957 20.8839 15.8839L17.1339 19.6339C16.6457 20.122 15.8543 20.122 15.3661 19.6339C14.878 19.1457 14.878 18.3542 15.3661 17.8661L16.9823 16.25H6.25C5.55965 16.25 5 15.6904 5 15C5 14.3096 5.55965 13.75 6.25 13.75H16.9823L15.3661 12.1339C14.878 11.6457 14.878 10.8543 15.3661 10.3661Z" fill="white"/>
+					</svg>						
+				</button>
+				<a href="">Register</a>
+				<a href="login.html">Log In</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<button class="change-theme">
+	<img src="img/sun-fog-svgrepo-com 1.svg" alt="">
+</button>
+		<main class="page">
+			<section class="login">
+    <div class="login__container _container">
+        <div class="login__text">
+            <h1>Добро пожаловать в ArmBox.TV!</h1>
+            <p>Войдите в Личный кабинет, чтобы продлить, изменить или приостановить свою подписку.</p>
+            <h4>Впервые на ArmBox.TV?</h4>
+            <p class="registrp"><a href="">Зарегистрируйтесь</a>и смотрите</p>
+            <ul>
+                <li>250+ ТВ каналов в прямом эфире и архиве</li>
+                <li>Эксклюзивные премьеры до эфира на ТВ</li>
+            </ul>
+        </div>
+        <div class="login__form">
+            <div class="login__title">
+                <p>Новый пользователь</p>
+                <a href="">Создайте учетную запись</a>
+            </div>
+            <form>
+                <label for="" class="input-text">
+                    <input type="text" placeholder="Логин">
+                </label>
+                <label for="" class="input-text">
+                    <input type="password" placeholder="Пароль">
+                </label>
+                <a href="">Забыли пароль?</a>
+                <label for="" class="input-btn">
+                    <input type="submit" value="Продолжить">
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__item">
+			<a href="/" class="logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+		</div>
+		<div class="footer__item">
+			<h4>Support</h4>
+			<ul>
+				<li><a href="">About us</a></li>
+				<li><a href="">Privacy Policy</a></li>
+				<li><a href="">Enter Promo Code</a></li>
+				<li><a href="">Install On TV</a></li>
+				<li><a href="">Paymenys@rombox.tv</a></li>
+			</ul>
+		</div>
+		<div class="footer__item">
+			<h4>Tools</h4>
+			<ul>
+				<li><a href="">Sansubg TV</a></li>
+				<li><a href="">LG TV</a></li>
+				<li><a href="">Android TV</a></li>
+				<li><a href="">Apple  TV</a></li>
+				<li><a href="">Amazon Fire TV</a></li>
+			</ul>
+		</div>
+		<div class="footer__item">
+			<ul>
+				<li>
+					<a href="">
+						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_7_95)">
+							<path d="M30.9162 21.2507C30.9724 27.3041 36.2265 29.3185 36.2847 29.3441C36.2403 29.4861 35.4452 32.2147 33.5166 35.0332C31.8494 37.4699 30.1191 39.8977 27.3933 39.9479C24.715 39.9973 23.8538 38.3597 20.7917 38.3597C17.7305 38.3597 16.7737 39.8977 14.2383 39.9974C11.6073 40.097 9.60367 37.3625 7.9227 34.9346C4.4877 29.9685 1.86265 20.9016 5.38743 14.7812C7.13847 11.7418 10.2677 9.81717 13.6642 9.76782C16.2478 9.71854 18.6864 11.506 20.2659 11.506C21.8443 11.506 24.8077 9.35642 27.9231 9.67211C29.2273 9.72639 32.8883 10.1989 35.239 13.6399C35.0496 13.7573 30.8708 16.19 30.9162 21.2507ZM25.8826 6.3866C27.2794 4.69578 28.2196 2.342 27.9631 0C25.9496 0.0809235 23.5149 1.3417 22.0707 3.0316C20.7765 4.52807 19.643 6.92328 19.9488 9.21892C22.193 9.39256 24.4857 8.0785 25.8826 6.3866Z" fill="white"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_7_95">
+							<rect width="40" height="40" fill="white"/>
+							</clipPath>
+							</defs>
+						</svg>							
+					</a>
+					<a href="">
+						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21.25 18.125L26.5 12.5L6.125 1.5C6 1.375 5.75 1.375 5.375 1.25L21.25 18.125Z" fill="white"/>
+							<path d="M28.75 26.25L36.125 22.25C37 21.75 37.5 21 37.5 20C37.5 19 37 18.125 36.125 17.75L28.75 13.75L22.875 20L28.75 26.25Z" fill="white"/>
+							<path d="M3 2.375C2.625 2.75 2.5 3.25 2.5 3.75V36.25C2.5 36.75 2.625 37.25 3 37.75L19.5 20L3 2.375Z" fill="white"/>
+							<path d="M21.25 21.875L5.375 38.75C5.625 38.75 5.875 38.625 6.125 38.5L26.5 27.5L21.25 21.875Z" fill="white"/>
+						</svg>							
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	</div>
+	<!-- Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>
