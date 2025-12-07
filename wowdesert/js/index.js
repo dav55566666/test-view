@@ -1,7 +1,7 @@
 var rot = -111
 var setarr = 0;
 var slidarr= $(".header_cont_central_slder_item")
-var swiper = new Swiper(".swiper-container1", {
+var swiper = new Swiper(".swiper1", {
   pagination: {
     el: ".swiper-pagination-main",
     type: "fraction",
@@ -12,7 +12,7 @@ var swiper = new Swiper(".swiper-container1", {
   },
   loop: true,
 });
-var swiper = new Swiper(".swiper-container-creat", {
+var swiper = new Swiper(".swiper-creat", {
   pagination: {
     el: ".swiper-pagination-creat",
   },

@@ -52,7 +52,7 @@ ul li {
 }
 @font-face {
     font-family: Montserrat;
-    src: url(../../fonts/Montserrat-Regular.woff2) format("woff2");
+    src: url("../../fonts/Montserrat-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
 }
@@ -116,7 +116,7 @@ body::-webkit-scrollbar {
     border: unset;
     width: 32px;
     height: 32px;
-    background-image: url(../../img/menuascf.svg);
+    background-image: url("../../img/menuascf.svg");
     transition: all 0.5s;
 }
 .header .header_cont {
@@ -436,7 +436,7 @@ body::-webkit-scrollbar {
 .typesofhoney {
     width: 100%;
     padding: 24px 88px;
-    background-image: url(../../img/Group\1png);
+    background-image: url("../../img/Group.png");
     background-size: cover;
     position: relative;
     background-attachment: fixed;
@@ -1251,7 +1251,7 @@ body::-webkit-scrollbar {
 }
 .oform .oform_cont .oform_cont_left .oform_cont_left_adreas .oform_cont_left_adreas_chek .chek span:after {
     opacity: 0;
-    content: url(../../img/chekbefore.svg);
+    content: url("../../img/chekbefore.svg");
     position: relative;
     transition: all 0.5s;
 }
